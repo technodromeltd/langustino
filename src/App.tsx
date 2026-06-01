@@ -15,6 +15,7 @@ import {
   saveUserState,
   todayKey,
   type DailySessionState,
+  type RecallCounts,
   type RecallQuality,
   type StoredPracticeItem,
   type UserState,
@@ -30,19 +31,11 @@ const qualityLabels: Record<RecallQuality, string> = {
   easy: "Easy",
 };
 
-const emptyQualityCounts: Record<RecallQuality, number> = {
-  forgot: 0,
-  hard: 0,
-  good: 0,
-  easy: 0,
-};
-
 export function App() {
   const [userState, setUserState] = useState<UserState>(() => loadUserState());
   const [view, setView] = useState<AppView>("today");
   const [isRevealed, setIsRevealed] = useState(false);
   const [detailCard, setDetailCard] = useState<ContentCard | null>(null);
-  const [qualityCounts, setQualityCounts] = useState<Record<RecallQuality, number>>(emptyQualityCounts);
 
   const activeSet = useMemo(
     () => availableSets.find((set) => set.id === userState.activeSetId) ?? availableSets[0],
@@ -56,7 +49,8 @@ export function App() {
   const progress = session?.items.length
     ? Math.min(100, Math.round((session.currentIndex / session.items.length) * 100))
     : 0;
-  const answeredCount = Object.values(qualityCounts).reduce((sum, count) => sum + count, 0);
+  const sessionRecallCounts = session?.recallCounts ?? { forgot: 0, hard: 0, good: 0, easy: 0 };
+  const answeredCount = session?.answeredCount ?? userState.activity[today]?.reviews ?? 0;
   const previewSession = useMemo(() => planDailySession(activeSet, userState, today), [activeSet, today, userState]);
   const summary = useMemo(() => summarizeSet(activeSet, userState, today), [activeSet, today, userState]);
 
@@ -68,7 +62,6 @@ export function App() {
   function startPractice() {
     const nextState = startDailySession(activeSet, userState, today);
     updateAndSave(nextState);
-    setQualityCounts(emptyQualityCounts);
     setIsRevealed(false);
     setView("today");
   }
@@ -77,11 +70,6 @@ export function App() {
     if (!currentItem) {
       return;
     }
-
-    setQualityCounts((counts) => ({
-      ...counts,
-      [quality]: counts[quality] + 1,
-    }));
 
     updateAndSave(advanceSession(userState, currentItem, quality, today));
     setIsRevealed(false);
@@ -93,7 +81,6 @@ export function App() {
       session: null,
     };
     updateAndSave(nextState);
-    setQualityCounts(emptyQualityCounts);
     setIsRevealed(false);
   }
 
@@ -118,7 +105,7 @@ export function App() {
           mode={mode}
           previewSession={previewSession}
           progress={progress}
-          qualityCounts={qualityCounts}
+          qualityCounts={sessionRecallCounts}
           session={session}
           onAnswer={answerCard}
           onOpenDetail={setDetailCard}
@@ -127,7 +114,7 @@ export function App() {
           onStart={startPractice}
         />
       ) : view === "stats" ? (
-        <StatsView answeredCount={answeredCount} qualityCounts={qualityCounts} summary={summary} />
+        <StatsView summary={summary} />
       ) : (
         <SetView activeSet={activeSet} />
       )}
@@ -172,7 +159,7 @@ interface TodayViewProps {
   mode: PracticeMode;
   previewSession: DailySessionState;
   progress: number;
-  qualityCounts: Record<RecallQuality, number>;
+  qualityCounts: RecallCounts;
   session: DailySessionState | null;
   onAnswer: (quality: RecallQuality) => void;
   onOpenDetail: (card: ContentCard) => void;
@@ -287,30 +274,28 @@ function TodayView({
   );
 }
 
-function StatsView({
-  answeredCount,
-  qualityCounts,
-  summary,
-}: {
-  answeredCount: number;
-  qualityCounts: Record<RecallQuality, number>;
-  summary: SetSummary;
-}) {
+function StatsView({ summary }: { summary: SetSummary }) {
   return (
     <section className="plain-panel" aria-label="Stats">
       <p className="set-label">Learning state</p>
       <h2>Recall snapshot</h2>
       <div className="stat-list">
-        <span>Reviewed this load</span>
-        <strong>{answeredCount}</strong>
-        <span>Forgot this load</span>
-        <strong>{qualityCounts.forgot}</strong>
+        <span>Total reviews</span>
+        <strong>{summary.totalReviews}</strong>
+        <span>Recall strength</span>
+        <strong>{summary.recallStrength}%</strong>
+        <span>Current streak</span>
+        <strong>{summary.currentStreak}</strong>
+        <span>Best streak</span>
+        <strong>{summary.bestStreak}</strong>
         <span>Learning</span>
         <strong>{summary.learning}</strong>
         <span>Learned</span>
         <strong>{summary.learned}</strong>
         <span>Mastered</span>
         <strong>{summary.mastered}</strong>
+        <span>Weak words</span>
+        <strong>{summary.weakWords.join(", ") || "None"}</strong>
       </div>
     </section>
   );
@@ -400,6 +385,11 @@ interface SetSummary {
   learned: number;
   mastered: number;
   dueToday: number;
+  totalReviews: number;
+  recallStrength: number;
+  currentStreak: number;
+  bestStreak: number;
+  weakWords: string[];
 }
 
 function summarizeSet(set: ContentSet, state: UserState, dateKey: string): SetSummary {
@@ -410,7 +400,22 @@ function summarizeSet(set: ContentSet, state: UserState, dateKey: string): SetSu
     learned: 0,
     mastered: 0,
     dueToday: 0,
+    totalReviews: 0,
+    recallStrength: 0,
+    currentStreak: state.streak.current,
+    bestStreak: state.streak.best,
+    weakWords: [],
   };
+  const recallCounts = Object.values(state.activity).reduce<RecallCounts>(
+    (counts, activity) => ({
+      forgot: counts.forgot + activity.recallCounts.forgot,
+      hard: counts.hard + activity.recallCounts.hard,
+      good: counts.good + activity.recallCounts.good,
+      easy: counts.easy + activity.recallCounts.easy,
+    }),
+    { forgot: 0, hard: 0, good: 0, easy: 0 },
+  );
+  const weakCards: Array<{ target: string; score: number }> = [];
 
   for (const card of set.cards) {
     const progress = getCardProgress(state, card.id);
@@ -424,7 +429,28 @@ function summarizeSet(set: ContentSet, state: UserState, dateKey: string): SetSu
     if (Object.values(progress.directions).some((direction) => direction.dueDate <= dateKey)) {
       summary.dueToday += 1;
     }
+
+    const score = Object.values(progress.directions).reduce(
+      (total, direction) =>
+        total +
+        direction.lapseCount * 3 +
+        (direction.lastQuality === "forgot" ? 2 : direction.lastQuality === "hard" ? 1 : 0),
+      0,
+    );
+
+    if (score > 0) {
+      weakCards.push({ target: card.target, score });
+    }
   }
+
+  summary.totalReviews = recallCounts.forgot + recallCounts.hard + recallCounts.good + recallCounts.easy;
+  summary.recallStrength = summary.totalReviews
+    ? Math.round(((recallCounts.good + recallCounts.easy) / summary.totalReviews) * 100)
+    : 0;
+  summary.weakWords = weakCards
+    .sort((a, b) => b.score - a.score || a.target.localeCompare(b.target))
+    .slice(0, 3)
+    .map((card) => card.target);
 
   return summary;
 }

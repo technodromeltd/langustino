@@ -16,6 +16,8 @@ export interface DirectionProgress {
 
 export type PracticeItemKind = "new" | "review" | "repeat";
 
+export type RecallCounts = Record<RecallQuality, number>;
+
 export interface StoredPracticeItem {
   id: string;
   cardId: string;
@@ -34,6 +36,8 @@ export interface DailySessionState {
   introducedCount: number;
   reviewCount: number;
   repeatCount: number;
+  answeredCount: number;
+  recallCounts: RecallCounts;
 }
 
 export type CardProgress = {
@@ -41,11 +45,21 @@ export type CardProgress = {
   directions: Record<PracticeDirection, DirectionProgress>;
 };
 
+export interface DailyActivity {
+  date: string;
+  completed: boolean;
+  reviews: number;
+  newIntroduced: number;
+  repeats: number;
+  recallCounts: RecallCounts;
+}
+
 export interface UserState {
   schemaVersion: 1;
   activeSetId: string;
   cards: Record<string, CardProgress>;
   session: DailySessionState | null;
+  activity: Record<string, DailyActivity>;
   streak: {
     current: number;
     best: number;
@@ -55,6 +69,15 @@ export interface UserState {
     dailyNewTarget: number;
     dailyReviewTarget: number;
     reduceMotion: boolean;
+  };
+}
+
+export function createRecallCounts(): RecallCounts {
+  return {
+    forgot: 0,
+    hard: 0,
+    good: 0,
+    easy: 0,
   };
 }
 
@@ -76,6 +99,7 @@ export function createInitialUserState(): UserState {
     activeSetId: "spanish-1000-common-en",
     cards: {},
     session: null,
+    activity: {},
     streak: {
       current: 0,
       best: 0,
@@ -116,12 +140,24 @@ export function migrateUserState(state: UserState): UserState {
     return createInitialUserState();
   }
 
+  const initial = createInitialUserState();
+
   return {
-    ...createInitialUserState(),
+    ...initial,
     ...state,
-    session: state.session ?? null,
+    session: state.session
+      ? {
+          ...state.session,
+          answeredCount: state.session.answeredCount ?? 0,
+          recallCounts: {
+            ...createRecallCounts(),
+            ...state.session.recallCounts,
+          },
+        }
+      : null,
+    activity: state.activity ?? {},
     settings: {
-      ...createInitialUserState().settings,
+      ...initial.settings,
       ...state.settings,
     },
   };

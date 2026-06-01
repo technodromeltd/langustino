@@ -2,8 +2,10 @@ import type { ContentCard, ContentSet, PracticeDirection } from "./content";
 import {
   addDays,
   createDirectionProgress,
+  createRecallCounts,
   type CardProgress,
   type DailySessionState,
+  type DailyActivity,
   type RecallQuality,
   type StoredPracticeItem,
   todayKey,
@@ -49,6 +51,8 @@ export function planDailySession(set: ContentSet, state: UserState, dateKey = to
     introducedCount: selectedNew.length,
     reviewCount: selectedReviews.length,
     repeatCount: 0,
+    answeredCount: 0,
+    recallCounts: createRecallCounts(),
   };
 }
 
@@ -118,6 +122,10 @@ export function advanceSession(
 
   const items = [...session.items];
   let repeatCount = session.repeatCount;
+  const recallCounts = {
+    ...session.recallCounts,
+    [quality]: session.recallCounts[quality] + 1,
+  };
 
   if (quality === "forgot") {
     const repeatAt = Math.min(session.currentIndex + 4, items.length);
@@ -132,17 +140,24 @@ export function advanceSession(
 
   const nextIndex = session.currentIndex + 1;
   const completed = nextIndex >= items.length;
+  const updatedSession: DailySessionState = {
+    ...session,
+    items,
+    currentIndex: completed ? session.currentIndex : nextIndex,
+    completed,
+    completedAt: completed ? new Date().toISOString() : null,
+    repeatCount,
+    answeredCount: session.answeredCount + 1,
+    recallCounts,
+  };
+  const activity = updateDailyActivity(reviewedState, updatedSession, quality, dateKey);
+  const streak = completed ? updateStreak(reviewedState.streak, dateKey) : reviewedState.streak;
 
   return {
     ...reviewedState,
-    session: {
-      ...session,
-      items,
-      currentIndex: completed ? session.currentIndex : nextIndex,
-      completed,
-      completedAt: completed ? new Date().toISOString() : null,
-      repeatCount,
-    },
+    session: updatedSession,
+    activity,
+    streak,
   };
 }
 
@@ -248,4 +263,56 @@ function nextInterval(previousInterval: number, ease: number, quality: RecallQua
   }
 
   return Math.max(5, Math.round(previousInterval ? previousInterval * ease * 1.45 : 5));
+}
+
+function updateDailyActivity(
+  state: UserState,
+  session: DailySessionState,
+  quality: RecallQuality,
+  dateKey: string,
+) {
+  const previous = state.activity[dateKey] ?? createDailyActivity(dateKey);
+  const recallCounts = {
+    ...previous.recallCounts,
+    [quality]: previous.recallCounts[quality] + 1,
+  };
+  const next: DailyActivity = {
+    ...previous,
+    completed: previous.completed || session.completed,
+    reviews: previous.reviews + 1,
+    newIntroduced: session.introducedCount,
+    repeats: session.repeatCount,
+    recallCounts,
+  };
+
+  return {
+    ...state.activity,
+    [dateKey]: next,
+  };
+}
+
+function createDailyActivity(dateKey: string): DailyActivity {
+  return {
+    date: dateKey,
+    completed: false,
+    reviews: 0,
+    newIntroduced: 0,
+    repeats: 0,
+    recallCounts: createRecallCounts(),
+  };
+}
+
+function updateStreak(streak: UserState["streak"], dateKey: string) {
+  if (streak.lastCompletedDate === dateKey) {
+    return streak;
+  }
+
+  const yesterday = addDays(dateKey, -1);
+  const current = streak.lastCompletedDate === yesterday ? streak.current + 1 : 1;
+
+  return {
+    current,
+    best: Math.max(streak.best, current),
+    lastCompletedDate: dateKey,
+  };
 }
