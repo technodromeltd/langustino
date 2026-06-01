@@ -1,12 +1,4 @@
 import type { ContentSet } from "../core/content";
+import { spanishCommonWords } from "./spanishCommon";
 
-export const availableSets: ContentSet[] = [
-  {
-    id: "spanish-1000-common-en",
-    title: "1000 Most Common Spanish Words",
-    sourceLanguage: "en",
-    targetLanguage: "es",
-    version: 1,
-    cards: [],
-  },
-];
+export const availableSets: ContentSet[] = [spanishCommonWords];
