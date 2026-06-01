@@ -83,8 +83,21 @@ export function applyRecall(
   quality: RecallQuality,
   dateKey = todayKey(),
 ): UserState {
-  const cardProgress = state.cards[item.cardId] ?? createCardProgress(dateKey);
+  const existingProgress = state.cards[item.cardId];
+  const isNewCard = !existingProgress?.introducedAt;
+  const cardProgress = existingProgress ?? createCardProgress(dateKey);
+  const otherDirection: PracticeDirection =
+    item.direction === "source_to_target" ? "target_to_source" : "source_to_target";
   const introducedAt = cardProgress.introducedAt ?? dateKey;
+  const directionsProgress = isNewCard
+    ? {
+        ...cardProgress.directions,
+        [otherDirection]: {
+          ...cardProgress.directions[otherDirection],
+          dueDate: addDays(dateKey, 1),
+        },
+      }
+    : cardProgress.directions;
   const previous = cardProgress.directions[item.direction] ?? createDirectionProgress();
   const nextDirection = scheduleDirection(previous, quality, dateKey);
 
@@ -95,7 +108,7 @@ export function applyRecall(
       [item.cardId]: {
         introducedAt,
         directions: {
-          ...cardProgress.directions,
+          ...directionsProgress,
           [item.direction]: nextDirection,
         },
       },
@@ -127,8 +140,11 @@ export function advanceSession(
     [quality]: session.recallCounts[quality] + 1,
   };
 
-  if (quality === "forgot") {
-    const repeatAt = Math.min(session.currentIndex + 4, items.length);
+  const shouldRepeat = quality === "forgot" || (quality === "hard" && item.kind !== "repeat");
+
+  if (shouldRepeat) {
+    const repeatOffset = quality === "hard" ? 8 : 4;
+    const repeatAt = Math.min(session.currentIndex + repeatOffset, items.length);
     const repeat: StoredPracticeItem = {
       ...item,
       id: `${item.cardId}-repeat-${Date.now()}`,

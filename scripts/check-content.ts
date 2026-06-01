@@ -25,6 +25,10 @@ for (const set of availableSets) {
       throw new Error(`Card ${card.id || "(missing id)"} is missing required text`);
     }
 
+    if (!card.examples?.length || card.examples.some((example) => !example.source || !example.target)) {
+      throw new Error(`Card ${card.id} is missing an example sentence`);
+    }
+
     if (card.type === "verb" && !card.details?.conjugations) {
       throw new Error(`Verb card ${card.id} is missing conjugations`);
     }

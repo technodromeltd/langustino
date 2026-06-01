@@ -256,8 +256,10 @@ h2 {
   position: relative;
   z-index: 1;
   max-width: 100%;
-  overflow-wrap: anywhere;
-  font-size: clamp(3.6rem, 18vw, 6.5rem);
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  font-size: var(--card-term-size, 5rem);
   font-weight: 950;
   line-height: 0.92;
   letter-spacing: 0;
@@ -265,12 +267,12 @@ h2 {
 
 .practice-actions {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
 }
 
 .practice-actions button {
-  min-height: 54px;
+  min-height: 58px;
   border-radius: 16px;
   color: #10231f;
   background: #f7f1df;
@@ -434,6 +436,74 @@ h2 {
   margin: 14px 0 0;
   color: #385149;
   font-weight: 750;
+}
+
+.setting-row,
+.setting-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-block: 18px;
+  border-top: 1px solid rgba(16, 35, 31, 0.12);
+}
+
+.setting-row strong,
+.setting-toggle strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.setting-row span,
+.setting-toggle small {
+  display: block;
+  margin-top: 4px;
+  color: #5f716b;
+  font-size: 0.88rem;
+}
+
+.stepper {
+  display: grid;
+  grid-template-columns: 38px 42px 38px;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(16, 35, 31, 0.1);
+}
+
+.stepper button {
+  height: 38px;
+  color: #10231f;
+  background: transparent;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.stepper button:disabled {
+  color: rgba(16, 35, 31, 0.28);
+}
+
+.stepper span {
+  margin: 0;
+  color: #10231f;
+  font-weight: 900;
+  text-align: center;
+}
+
+.setting-toggle input {
+  width: 24px;
+  height: 24px;
+  accent-color: #10231f;
+}
+
+.danger-action {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 16px;
+  border-radius: 999px;
+  color: #3d140c;
+  background: rgba(255, 138, 112, 0.5);
+  font-weight: 900;
 }
 
 .quick-stats div {

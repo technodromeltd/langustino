@@ -1,5 +1,5 @@
 import { BookOpen, Check, Flame, Info, LineChart, RotateCcw, Settings, Sparkles, X } from "lucide-react";
-import { useMemo, useState } from "react";
+import { type CSSProperties, useEffect, useMemo, useState } from "react";
 import { availableSets } from "./content/registry";
 import { getAnswer, getPrompt, type ContentCard, type ContentSet } from "./core/content";
 import {
@@ -35,7 +35,10 @@ export function App() {
   const [userState, setUserState] = useState<UserState>(() => loadUserState());
   const [view, setView] = useState<AppView>("today");
   const [isRevealed, setIsRevealed] = useState(false);
+  const [cardStartedAt, setCardStartedAt] = useState(() => Date.now());
+  const [revealedAt, setRevealedAt] = useState<number | null>(null);
   const [detailCard, setDetailCard] = useState<ContentCard | null>(null);
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   const activeSet = useMemo(
     () => availableSets.find((set) => set.id === userState.activeSetId) ?? availableSets[0],
@@ -54,6 +57,15 @@ export function App() {
   const previewSession = useMemo(() => planDailySession(activeSet, userState, today), [activeSet, today, userState]);
   const summary = useMemo(() => summarizeSet(activeSet, userState, today), [activeSet, today, userState]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: userState.settings.reduceMotion ? "auto" : "smooth" });
+  }, [mode, userState.settings.reduceMotion]);
+
+  useEffect(() => {
+    setCardStartedAt(Date.now());
+    setRevealedAt(null);
+  }, [currentItem?.id]);
+
   function updateAndSave(nextState: UserState) {
     setUserState(nextState);
     saveUserState(nextState);
@@ -66,13 +78,30 @@ export function App() {
     setView("today");
   }
 
-  function answerCard(quality: RecallQuality) {
+  function revealCard() {
+    setIsRevealed(true);
+    setRevealedAt((existing) => existing ?? Date.now());
+  }
+
+  function toggleCard() {
+    if (isRevealed) {
+      setIsRevealed(false);
+      return;
+    }
+
+    revealCard();
+  }
+
+  function answerCard(remembered: boolean) {
     if (!currentItem) {
       return;
     }
 
+    const recallMs = (revealedAt ?? Date.now()) - cardStartedAt;
+    const quality = qualityFromAnswer(remembered, recallMs);
     updateAndSave(advanceSession(userState, currentItem, quality, today));
     setIsRevealed(false);
+    setRevealedAt(null);
   }
 
   function resetPractice() {
@@ -84,6 +113,32 @@ export function App() {
     setIsRevealed(false);
   }
 
+  function updateSettings(settings: UserState["settings"]) {
+    updateAndSave({
+      ...userState,
+      settings,
+    });
+  }
+
+  function resetProgress() {
+    if (!window.confirm("Reset all local Langustino progress on this device?")) {
+      return;
+    }
+
+    const fresh = loadUserState();
+    fresh.cards = {};
+    fresh.session = null;
+    fresh.activity = {};
+    fresh.streak = {
+      current: 0,
+      best: 0,
+      lastCompletedDate: null,
+    };
+    updateAndSave(fresh);
+    setSettingsOpen(false);
+    setIsRevealed(false);
+  }
+
   return (
     <main className="app-shell">
       <section className="topbar" aria-label="Langustino status">
@@ -91,7 +146,7 @@ export function App() {
           <p className="eyebrow">Langustino</p>
           <h1>{view === "today" ? "Spanish practice, ready now." : "Your Spanish map."}</h1>
         </div>
-        <button className="icon-button" type="button" aria-label="Settings">
+        <button className="icon-button" type="button" aria-label="Settings" onClick={() => setSettingsOpen(true)}>
           <Settings size={20} />
         </button>
       </section>
@@ -110,7 +165,7 @@ export function App() {
           onAnswer={answerCard}
           onOpenDetail={setDetailCard}
           onReset={resetPractice}
-          onReveal={() => setIsRevealed(true)}
+          onToggleCard={toggleCard}
           onStart={startPractice}
         />
       ) : view === "stats" ? (
@@ -147,6 +202,14 @@ export function App() {
       </nav>
 
       {detailCard ? <CardDetail card={detailCard} onClose={() => setDetailCard(null)} /> : null}
+      {settingsOpen ? (
+        <SettingsSheet
+          settings={userState.settings}
+          onClose={() => setSettingsOpen(false)}
+          onResetProgress={resetProgress}
+          onUpdateSettings={updateSettings}
+        />
+      ) : null}
     </main>
   );
 }
@@ -161,10 +224,10 @@ interface TodayViewProps {
   progress: number;
   qualityCounts: RecallCounts;
   session: DailySessionState | null;
-  onAnswer: (quality: RecallQuality) => void;
+  onAnswer: (remembered: boolean) => void;
   onOpenDetail: (card: ContentCard) => void;
   onReset: () => void;
-  onReveal: () => void;
+  onToggleCard: () => void;
   onStart: () => void;
 }
 
@@ -181,7 +244,7 @@ function TodayView({
   onAnswer,
   onOpenDetail,
   onReset,
-  onReveal,
+  onToggleCard,
   onStart,
 }: TodayViewProps) {
   if (mode === "complete" && session) {
@@ -213,6 +276,7 @@ function TodayView({
   if (mode === "practice" && session && currentItem) {
     const prompt = getPrompt(currentCard, currentItem.direction);
     const answer = getAnswer(currentCard, currentItem.direction);
+    const visibleTerm = isRevealed ? answer : prompt;
     const directionLabel =
       currentItem.direction === "source_to_target" ? "English to Spanish" : "Spanish to English";
 
@@ -230,22 +294,30 @@ function TodayView({
         <button
           className={`flip-card ${isRevealed ? "revealed" : ""}`}
           type="button"
-          onClick={isRevealed ? undefined : onReveal}
-          aria-label={isRevealed ? "Card answer revealed" : "Reveal answer"}
+          onClick={onToggleCard}
+          aria-label={isRevealed ? "Show prompt again" : "Reveal answer"}
         >
           <span className="direction-label">{directionLabel}</span>
-          <span className="card-term">{isRevealed ? answer : prompt}</span>
+          <span
+            className="card-term"
+            style={{ "--card-term-size": termFontSize(visibleTerm) } as CSSProperties}
+          >
+            {visibleTerm}
+          </span>
           <span className="card-hint">
-            {isRevealed ? `${currentCard.partOfSpeech} · ${currentItem.kind}` : "Tap to reveal"}
+            {isRevealed
+              ? `${currentCard.partOfSpeech} · ${currentItem.kind}`
+              : `${currentCard.partOfSpeech} · tap to reveal`}
           </span>
         </button>
 
         <div className="practice-actions" aria-label="Recall quality">
-          {(["forgot", "hard", "good", "easy"] as RecallQuality[]).map((quality) => (
-            <button key={quality} type="button" disabled={!isRevealed} onClick={() => onAnswer(quality)}>
-              {qualityLabels[quality]}
-            </button>
-          ))}
+          <button type="button" disabled={!isRevealed} onClick={() => onAnswer(false)}>
+            {currentItem.kind === "new" ? "Didn't know" : "Forgot"}
+          </button>
+          <button type="button" disabled={!isRevealed} onClick={() => onAnswer(true)}>
+            {currentItem.kind === "new" ? "Knew" : "Remembered"}
+          </button>
         </div>
 
         <button className="detail-link" type="button" onClick={() => onOpenDetail(currentCard)}>
@@ -379,6 +451,98 @@ function CardDetail({ card, onClose }: { card: ContentCard; onClose: () => void 
   );
 }
 
+function SettingsSheet({
+  settings,
+  onClose,
+  onResetProgress,
+  onUpdateSettings,
+}: {
+  settings: UserState["settings"];
+  onClose: () => void;
+  onResetProgress: () => void;
+  onUpdateSettings: (settings: UserState["settings"]) => void;
+}) {
+  return (
+    <section className="detail-sheet" aria-label="Settings" role="dialog" aria-modal="true">
+      <div className="sheet-header">
+        <div>
+          <p className="set-label">Local settings</p>
+          <h2>Practice setup</h2>
+        </div>
+        <button className="icon-button" type="button" onClick={onClose} aria-label="Close settings">
+          <X size={20} />
+        </button>
+      </div>
+
+      <div className="setting-row">
+        <div>
+          <strong>Daily new words</strong>
+          <span>{settings.dailyNewTarget} per session</span>
+        </div>
+        <Stepper
+          value={settings.dailyNewTarget}
+          min={5}
+          max={45}
+          onChange={(dailyNewTarget) => onUpdateSettings({ ...settings, dailyNewTarget })}
+        />
+      </div>
+
+      <div className="setting-row">
+        <div>
+          <strong>Daily reviews</strong>
+          <span>{settings.dailyReviewTarget} per session</span>
+        </div>
+        <Stepper
+          value={settings.dailyReviewTarget}
+          min={5}
+          max={45}
+          onChange={(dailyReviewTarget) => onUpdateSettings({ ...settings, dailyReviewTarget })}
+        />
+      </div>
+
+      <label className="setting-toggle">
+        <span>
+          <strong>Reduced motion</strong>
+          <small>Use calmer transitions on this device.</small>
+        </span>
+        <input
+          checked={settings.reduceMotion}
+          type="checkbox"
+          onChange={(event) => onUpdateSettings({ ...settings, reduceMotion: event.currentTarget.checked })}
+        />
+      </label>
+
+      <button className="danger-action" type="button" onClick={onResetProgress}>
+        Reset local progress
+      </button>
+    </section>
+  );
+}
+
+function Stepper({
+  value,
+  min,
+  max,
+  onChange,
+}: {
+  value: number;
+  min: number;
+  max: number;
+  onChange: (value: number) => void;
+}) {
+  return (
+    <div className="stepper">
+      <button type="button" aria-label="Decrease" disabled={value <= min} onClick={() => onChange(value - 1)}>
+        -
+      </button>
+      <span>{value}</span>
+      <button type="button" aria-label="Increase" disabled={value >= max} onClick={() => onChange(value + 1)}>
+        +
+      </button>
+    </div>
+  );
+}
+
 interface SetSummary {
   new: number;
   seen: number;
@@ -454,4 +618,47 @@ function summarizeSet(set: ContentSet, state: UserState, dateKey: string): SetSu
     .map((card) => card.target);
 
   return summary;
+}
+
+function qualityFromAnswer(remembered: boolean, recallMs: number): RecallQuality {
+  if (!remembered) {
+    return "forgot";
+  }
+
+  if (recallMs <= 3500) {
+    return "easy";
+  }
+
+  if (recallMs <= 9000) {
+    return "good";
+  }
+
+  return "hard";
+}
+
+function termFontSize(term: string) {
+  const segments = term
+    .trim()
+    .split(/[\s,;/()]+/)
+    .filter(Boolean);
+  const longestSegment = Math.max(term.length, ...segments.map((segment) => segment.length));
+  const totalLength = term.trim().length;
+
+  if (longestSegment >= 14 || totalLength >= 30) {
+    return "2.5rem";
+  }
+
+  if (longestSegment >= 12 || totalLength >= 24) {
+    return "3rem";
+  }
+
+  if (longestSegment >= 9 || totalLength >= 16) {
+    return "3.65rem";
+  }
+
+  if (longestSegment >= 7 || totalLength >= 12) {
+    return "4.25rem";
+  }
+
+  return "5rem";
 }

@@ -1,0 +1,8 @@
+- [x] example sentences for all words
+- [x] details if word has specific use case, like ser estar differences, por para etc
+- [x] instead of forgot hard etc options we can just ask forgot, remembered, if asked before, and didnt know, knew, if new word
+- [x] use time to click as info about how easy it was for user to recall. easy ones can step further in the spaced repetition ladder, and hard ones repeat more often
+- [x] should tell if verb or substantive etc
+- [x] user should be able to click card to show again in source word freely
+- [x] knew didnt knew etc buttons should sit in one row, so easier to compare
+- [x] long card text should scale down so words like "something" fit on mobile

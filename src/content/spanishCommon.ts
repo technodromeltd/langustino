@@ -1,5 +1,5 @@
 import rows from "./spanishCommon1000.json";
-import type { CardDetails, ContentCard, ContentSet, VerbConjugations } from "../core/content";
+import type { CardDetails, ContentCard, ContentSet, ExampleSentence, VerbConjugations } from "../core/content";
 
 interface SpanishFrequencyRow {
   rank: number;
@@ -241,6 +241,49 @@ const enrichedVerbs: Record<string, CardDetails> = {
   },
 };
 
+const usageNotes: Record<string, string[]> = {
+  ser: ["Ser usually describes identity, origin, time, and lasting traits."],
+  estar: ["Estar usually describes location, temporary state, feelings, and conditions."],
+  por: ["Por often explains cause, route, exchange, duration, or the idea of 'by'."],
+  para: ["Para often points to purpose, destination, recipient, deadline, or intended use."],
+  que: ["Que connects ideas as 'that'; que with an accent asks 'what'."],
+  qué: ["Que with an accent asks 'what'; que without an accent often means 'that'."],
+  si: ["Si without an accent usually means 'if'; si with an accent means 'yes'."],
+  sí: ["Si with an accent means 'yes'; si without an accent usually means 'if'."],
+  de: ["De often means 'of' or 'from' and is used heavily in possession and origin."],
+  a: ["A often marks movement toward something and can also mark time or indirect objects."],
+  en: ["En covers both 'in' and 'on', depending on context."],
+  saber: ["Saber is for facts and skills; conocer is for familiarity with people or places."],
+  conocer: ["Conocer is for being familiar with people or places; saber is for facts and skills."],
+  tener: ["Tener means 'to have' and is also used in phrases like tener hambre, 'to be hungry'."],
+  haber: ["Haber is often an auxiliary verb and appears in hay, meaning 'there is' or 'there are'."],
+};
+
+const exampleOverrides: Record<string, ExampleSentence> = {
+  de: { target: "Soy de Helsinki.", source: "I am from Helsinki." },
+  que: { target: "Creo que si.", source: "I think so." },
+  no: { target: "No entiendo.", source: "I do not understand." },
+  a: { target: "Voy a casa.", source: "I am going home." },
+  y: { target: "Cafe y agua.", source: "Coffee and water." },
+  ser: { target: "Soy estudiante.", source: "I am a student." },
+  en: { target: "Estoy en casa.", source: "I am at home." },
+  por: { target: "Gracias por todo.", source: "Thanks for everything." },
+  qué: { target: "Que quieres?", source: "What do you want?" },
+  con: { target: "Cafe con leche.", source: "Coffee with milk." },
+  para: { target: "Es para ti.", source: "It is for you." },
+  estar: { target: "Estoy listo.", source: "I am ready." },
+  si: { target: "Si quieres, vamos.", source: "If you want, we go." },
+  sí: { target: "Si, claro.", source: "Yes, of course." },
+  tener: { target: "Tengo tiempo.", source: "I have time." },
+  hacer: { target: "Hago cafe.", source: "I make coffee." },
+  poder: { target: "Puedo ayudar.", source: "I can help." },
+  decir: { target: "Digo la verdad.", source: "I tell the truth." },
+  ir: { target: "Voy al trabajo.", source: "I go to work." },
+  ver: { target: "Veo el mar.", source: "I see the sea." },
+  saber: { target: "Se la respuesta.", source: "I know the answer." },
+  querer: { target: "Quiero agua.", source: "I want water." },
+};
+
 const cards: ContentCard[] = (rows as SpanishFrequencyRow[]).map((row) => ({
   id: `es-${String(row.rank).padStart(4, "0")}`,
   rank: row.rank,
@@ -248,6 +291,7 @@ const cards: ContentCard[] = (rows as SpanishFrequencyRow[]).map((row) => ({
   target: targetFor(row),
   source: row.translation,
   partOfSpeech: row.partOfSpeech,
+  examples: [exampleFor(row)],
   details: detailsFor(row),
   tags: tagsFor(row),
 }));
@@ -268,13 +312,78 @@ function targetFor(row: SpanishFrequencyRow) {
 }
 
 function detailsFor(row: SpanishFrequencyRow): CardDetails | undefined {
+  const notes = usageNotes[row.word] ?? [];
+
   if (row.partOfSpeech !== "verb") {
-    return undefined;
+    return notes.length ? { notes } : undefined;
   }
 
-  return enrichedVerbs[row.word] ?? {
+  const details = enrichedVerbs[row.word] ?? {
     conjugations: regularConjugations(row.word),
   };
+
+  return notes.length
+    ? {
+        ...details,
+        notes: [...(details.notes ?? []), ...notes],
+      }
+    : details;
+}
+
+function exampleFor(row: SpanishFrequencyRow): ExampleSentence {
+  const override = exampleOverrides[row.word];
+
+  if (override) {
+    return override;
+  }
+
+  const target = targetFor(row);
+  const translation = primaryTranslation(row.translation);
+
+  if (row.partOfSpeech === "noun" && row.article) {
+    return {
+      target: `Veo ${target}.`,
+      source: `I see the ${stripArticle(translation)}.`,
+    };
+  }
+
+  if (row.partOfSpeech === "verb") {
+    return {
+      target: `Quiero ${row.word}.`,
+      source: `I want to ${stripInfinitive(translation)}.`,
+    };
+  }
+
+  if (row.partOfSpeech === "adjective") {
+    return {
+      target: `Es ${row.word}.`,
+      source: `It is ${translation}.`,
+    };
+  }
+
+  if (row.partOfSpeech === "adverb") {
+    return {
+      target: `Lo hice ${row.word}.`,
+      source: `I did it ${translation}.`,
+    };
+  }
+
+  return {
+    target: `Uso "${target}".`,
+    source: `I use "${translation}".`,
+  };
+}
+
+function primaryTranslation(translation: string) {
+  return translation.split(",")[0].trim();
+}
+
+function stripArticle(translation: string) {
+  return translation.replace(/^(a|an|the)\s+/i, "");
+}
+
+function stripInfinitive(translation: string) {
+  return translation.replace(/^to\s+/i, "");
 }
 
 function tagsFor(row: SpanishFrequencyRow) {
