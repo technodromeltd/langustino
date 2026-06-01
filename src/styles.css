@@ -83,6 +83,10 @@ h2 {
   letter-spacing: 0;
 }
 
+.plain-panel h2 {
+  font-size: clamp(2.1rem, 11vw, 3.8rem);
+}
+
 .icon-button {
   width: 44px;
   height: 44px;
@@ -122,6 +126,10 @@ h2 {
   transform: rotate(-18deg);
 }
 
+.complete-stage::after {
+  background: rgba(103, 185, 154, 0.95);
+}
+
 .practice-copy {
   position: relative;
   z-index: 1;
@@ -158,6 +166,267 @@ h2 {
   overflow: hidden;
   border-radius: 20px;
   background: rgba(247, 241, 223, 0.1);
+}
+
+.practice-workspace {
+  display: grid;
+  grid-template-rows: auto minmax(280px, 1fr) auto auto;
+  gap: 16px;
+  min-height: 500px;
+}
+
+.session-line {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.progress-track {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(247, 241, 223, 0.12);
+}
+
+.progress-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+  transition: width 220ms ease;
+}
+
+.flip-card {
+  position: relative;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 18px;
+  min-height: 100%;
+  width: 100%;
+  padding: 28px;
+  overflow: hidden;
+  border-radius: 28px;
+  color: var(--ink);
+  background:
+    linear-gradient(155deg, rgba(103, 185, 154, 0.24), transparent 40%),
+    linear-gradient(145deg, #21463f, #10231f 74%);
+  box-shadow: var(--shadow);
+  text-align: center;
+  touch-action: manipulation;
+}
+
+.flip-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -36px -80px auto;
+  width: 170px;
+  height: 170px;
+  border-radius: 44% 56% 62% 38%;
+  background: rgba(244, 208, 111, 0.86);
+  transform: rotate(18deg);
+}
+
+.flip-card.revealed {
+  background:
+    linear-gradient(155deg, rgba(244, 208, 111, 0.2), transparent 42%),
+    linear-gradient(145deg, #274f47, #10231f 74%);
+}
+
+.direction-label,
+.card-hint {
+  position: relative;
+  z-index: 1;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card-hint {
+  color: var(--muted);
+}
+
+.card-term {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  font-size: clamp(3.6rem, 18vw, 6.5rem);
+  font-weight: 950;
+  line-height: 0.92;
+  letter-spacing: 0;
+}
+
+.practice-actions {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.practice-actions button {
+  min-height: 54px;
+  border-radius: 16px;
+  color: #10231f;
+  background: #f7f1df;
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+.practice-actions button:first-child {
+  color: #37140e;
+  background: var(--danger);
+}
+
+.practice-actions button:disabled {
+  color: rgba(247, 241, 223, 0.34);
+  background: rgba(247, 241, 223, 0.1);
+}
+
+.detail-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--muted);
+  background: transparent;
+  font-weight: 800;
+}
+
+.quality-strip {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.quality-strip span {
+  padding: 8px 10px;
+  border-radius: 999px;
+  color: var(--ink);
+  background: rgba(247, 241, 223, 0.11);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.plain-panel {
+  min-height: 430px;
+  padding: clamp(24px, 7vw, 36px);
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgba(33, 70, 63, 0.86), rgba(16, 35, 31, 0.94));
+  box-shadow: var(--shadow);
+}
+
+.stat-list {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px 18px;
+  margin-top: 30px;
+  align-items: baseline;
+}
+
+.stat-list span {
+  color: var(--muted);
+  font-weight: 760;
+}
+
+.stat-list strong {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.detail-sheet {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 10;
+  max-height: min(82svh, 720px);
+  overflow: auto;
+  padding: 20px 18px max(24px, env(safe-area-inset-bottom));
+  border-radius: 28px 28px 0 0;
+  background: #f7f1df;
+  color: #10231f;
+  box-shadow: 0 -20px 80px rgba(0, 0, 0, 0.4);
+}
+
+.sheet-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.sheet-header .set-label {
+  color: #577d6e;
+}
+
+.sheet-header h2 {
+  color: #10231f;
+  font-size: clamp(2.5rem, 14vw, 4.6rem);
+}
+
+.sheet-header .icon-button {
+  color: #10231f;
+  background: rgba(16, 35, 31, 0.1);
+}
+
+.detail-pair,
+.example-block,
+.conjugations > div {
+  padding-block: 16px;
+  border-top: 1px solid rgba(16, 35, 31, 0.12);
+}
+
+.detail-pair {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  font-size: 1.05rem;
+}
+
+.detail-pair span,
+.example-block span,
+.conjugations span {
+  color: #5f716b;
+}
+
+.example-block p {
+  margin-bottom: 4px;
+  font-size: 1.22rem;
+  font-weight: 850;
+}
+
+.conjugations {
+  display: grid;
+  gap: 2px;
+}
+
+.conjugations h3 {
+  margin: 0 0 10px;
+  text-transform: capitalize;
+}
+
+.conjugations p {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  margin: 0;
+  padding: 6px 0;
+}
+
+.note-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 14px 0 0;
+  color: #385149;
+  font-weight: 750;
 }
 
 .quick-stats div {
@@ -209,6 +478,24 @@ h2 {
     animation: stage-rise 540ms cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
+  .flip-card {
+    transition:
+      transform 180ms ease,
+      background 180ms ease;
+  }
+
+  .flip-card:active {
+    transform: scale(0.99);
+  }
+
+  .flip-card.revealed .card-term {
+    animation: answer-pop 220ms ease both;
+  }
+
+  .detail-sheet {
+    animation: sheet-in 220ms ease both;
+  }
+
   .primary-action {
     transition:
       transform 160ms ease,
@@ -229,5 +516,25 @@ h2 {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes answer-pop {
+  from {
+    opacity: 0;
+    transform: rotateX(16deg) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0) scale(1);
+  }
+}
+
+@keyframes sheet-in {
+  from {
+    transform: translateY(24px);
+  }
+  to {
+    transform: translateY(0);
   }
 }
