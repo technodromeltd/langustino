@@ -1,348 +1,337 @@
-import type { ContentCard, ContentSet } from "../core/content";
+import rows from "./spanishCommon1000.json";
+import type { CardDetails, ContentCard, ContentSet, VerbConjugations } from "../core/content";
 
-const cards: ContentCard[] = [
-  {
-    id: "es-0001",
-    rank: 1,
-    type: "verb",
-    target: "ser",
-    source: "to be",
-    partOfSpeech: "verb",
-    examples: [{ target: "Soy estudiante.", source: "I am a student." }],
-    details: {
-      conjugations: {
-        present: {
-          yo: "soy",
-          tu: "eres",
-          el_ella_usted: "es",
-          nosotros: "somos",
-          ellos_ustedes: "son",
-        },
-        preterite: {
-          yo: "fui",
-          tu: "fuiste",
-          el_ella_usted: "fue",
-          nosotros: "fuimos",
-          ellos_ustedes: "fueron",
-        },
-        notes: ["Used for identity, origin, time, and lasting traits."],
+interface SpanishFrequencyRow {
+  rank: number;
+  article: string;
+  word: string;
+  translation: string;
+  partOfSpeech: string;
+}
+
+const enrichedVerbs: Record<string, CardDetails> = {
+  ser: {
+    conjugations: {
+      present: {
+        yo: "soy",
+        tu: "eres",
+        el_ella_usted: "es",
+        nosotros: "somos",
+        ellos_ustedes: "son",
       },
-      notes: ["One of two common Spanish verbs for 'to be'."],
-    },
-    tags: ["common", "irregular", "beginner"],
-  },
-  {
-    id: "es-0002",
-    rank: 2,
-    type: "verb",
-    target: "estar",
-    source: "to be",
-    partOfSpeech: "verb",
-    examples: [{ target: "Estoy en casa.", source: "I am at home." }],
-    details: {
-      conjugations: {
-        present: {
-          yo: "estoy",
-          tu: "estas",
-          el_ella_usted: "esta",
-          nosotros: "estamos",
-          ellos_ustedes: "estan",
-        },
-        preterite: {
-          yo: "estuve",
-          tu: "estuviste",
-          el_ella_usted: "estuvo",
-          nosotros: "estuvimos",
-          ellos_ustedes: "estuvieron",
-        },
-        notes: ["Used for location, conditions, feelings, and temporary states."],
+      preterite: {
+        yo: "fui",
+        tu: "fuiste",
+        el_ella_usted: "fue",
+        nosotros: "fuimos",
+        ellos_ustedes: "fueron",
       },
-      notes: ["Accents are shown in detail later; prompts stay simple for fast review."],
+      notes: ["Used for identity, origin, time, and lasting traits."],
     },
-    tags: ["common", "irregular", "beginner"],
+    notes: ["One of two common Spanish verbs for 'to be'."],
   },
-  {
-    id: "es-0003",
-    rank: 3,
-    type: "verb",
-    target: "tener",
-    source: "to have",
-    partOfSpeech: "verb",
-    examples: [{ target: "Tengo tiempo.", source: "I have time." }],
-    details: {
-      conjugations: {
-        present: {
-          yo: "tengo",
-          tu: "tienes",
-          el_ella_usted: "tiene",
-          nosotros: "tenemos",
-          ellos_ustedes: "tienen",
-        },
-        preterite: {
-          yo: "tuve",
-          tu: "tuviste",
-          el_ella_usted: "tuvo",
-          nosotros: "tuvimos",
-          ellos_ustedes: "tuvieron",
-        },
+  estar: {
+    conjugations: {
+      present: {
+        yo: "estoy",
+        tu: "estas",
+        el_ella_usted: "esta",
+        nosotros: "estamos",
+        ellos_ustedes: "estan",
+      },
+      preterite: {
+        yo: "estuve",
+        tu: "estuviste",
+        el_ella_usted: "estuvo",
+        nosotros: "estuvimos",
+        ellos_ustedes: "estuvieron",
+      },
+      notes: ["Used for location, conditions, feelings, and temporary states."],
+    },
+    notes: ["One of two common Spanish verbs for 'to be'."],
+  },
+  haber: {
+    conjugations: {
+      present: {
+        yo: "he",
+        tu: "has",
+        el_ella_usted: "ha",
+        nosotros: "hemos",
+        ellos_ustedes: "han",
+      },
+      notes: ["Usually used as an auxiliary verb, as in 'he comido'."],
+    },
+  },
+  ir: {
+    conjugations: {
+      present: {
+        yo: "voy",
+        tu: "vas",
+        el_ella_usted: "va",
+        nosotros: "vamos",
+        ellos_ustedes: "van",
+      },
+      preterite: {
+        yo: "fui",
+        tu: "fuiste",
+        el_ella_usted: "fue",
+        nosotros: "fuimos",
+        ellos_ustedes: "fueron",
       },
     },
-    tags: ["common", "irregular", "beginner"],
   },
-  {
-    id: "es-0004",
-    rank: 4,
-    type: "verb",
-    target: "hacer",
-    source: "to do, to make",
-    partOfSpeech: "verb",
-    examples: [{ target: "Hago cafe.", source: "I make coffee." }],
-    details: {
-      conjugations: {
-        present: {
-          yo: "hago",
-          tu: "haces",
-          el_ella_usted: "hace",
-          nosotros: "hacemos",
-          ellos_ustedes: "hacen",
-        },
-        preterite: {
-          yo: "hice",
-          tu: "hiciste",
-          el_ella_usted: "hizo",
-          nosotros: "hicimos",
-          ellos_ustedes: "hicieron",
-        },
+  tener: {
+    conjugations: {
+      present: {
+        yo: "tengo",
+        tu: "tienes",
+        el_ella_usted: "tiene",
+        nosotros: "tenemos",
+        ellos_ustedes: "tienen",
+      },
+      preterite: {
+        yo: "tuve",
+        tu: "tuviste",
+        el_ella_usted: "tuvo",
+        nosotros: "tuvimos",
+        ellos_ustedes: "tuvieron",
       },
     },
-    tags: ["common", "irregular", "beginner"],
   },
-  {
-    id: "es-0005",
-    rank: 5,
-    type: "verb",
-    target: "ir",
-    source: "to go",
-    partOfSpeech: "verb",
-    examples: [{ target: "Voy al trabajo.", source: "I go to work." }],
-    details: {
-      conjugations: {
-        present: {
-          yo: "voy",
-          tu: "vas",
-          el_ella_usted: "va",
-          nosotros: "vamos",
-          ellos_ustedes: "van",
-        },
-        preterite: {
-          yo: "fui",
-          tu: "fuiste",
-          el_ella_usted: "fue",
-          nosotros: "fuimos",
-          ellos_ustedes: "fueron",
-        },
+  saber: {
+    conjugations: {
+      present: {
+        yo: "se",
+        tu: "sabes",
+        el_ella_usted: "sabe",
+        nosotros: "sabemos",
+        ellos_ustedes: "saben",
+      },
+      preterite: {
+        yo: "supe",
+        tu: "supiste",
+        el_ella_usted: "supo",
+        nosotros: "supimos",
+        ellos_ustedes: "supieron",
+      },
+      notes: ["Use saber for facts and skills; conocer is for familiarity."],
+    },
+  },
+  poder: {
+    conjugations: {
+      present: {
+        yo: "puedo",
+        tu: "puedes",
+        el_ella_usted: "puede",
+        nosotros: "podemos",
+        ellos_ustedes: "pueden",
+      },
+      preterite: {
+        yo: "pude",
+        tu: "pudiste",
+        el_ella_usted: "pudo",
+        nosotros: "pudimos",
+        ellos_ustedes: "pudieron",
       },
     },
-    tags: ["common", "irregular", "beginner"],
   },
-  {
-    id: "es-0006",
-    rank: 6,
-    type: "verb",
-    target: "poder",
-    source: "to be able to, can",
-    partOfSpeech: "verb",
-    examples: [{ target: "Puedo ayudar.", source: "I can help." }],
-    details: {
-      conjugations: {
-        present: {
-          yo: "puedo",
-          tu: "puedes",
-          el_ella_usted: "puede",
-          nosotros: "podemos",
-          ellos_ustedes: "pueden",
-        },
-        preterite: {
-          yo: "pude",
-          tu: "pudiste",
-          el_ella_usted: "pudo",
-          nosotros: "pudimos",
-          ellos_ustedes: "pudieron",
-        },
+  querer: {
+    conjugations: {
+      present: {
+        yo: "quiero",
+        tu: "quieres",
+        el_ella_usted: "quiere",
+        nosotros: "queremos",
+        ellos_ustedes: "quieren",
+      },
+      preterite: {
+        yo: "quise",
+        tu: "quisiste",
+        el_ella_usted: "quiso",
+        nosotros: "quisimos",
+        ellos_ustedes: "quisieron",
       },
     },
-    tags: ["common", "stem-changing", "beginner"],
   },
-  {
-    id: "es-0007",
-    rank: 7,
-    type: "verb",
-    target: "decir",
-    source: "to say, to tell",
-    partOfSpeech: "verb",
-    examples: [{ target: "Digo la verdad.", source: "I tell the truth." }],
-    details: {
-      conjugations: {
-        present: {
-          yo: "digo",
-          tu: "dices",
-          el_ella_usted: "dice",
-          nosotros: "decimos",
-          ellos_ustedes: "dicen",
-        },
-        preterite: {
-          yo: "dije",
-          tu: "dijiste",
-          el_ella_usted: "dijo",
-          nosotros: "dijimos",
-          ellos_ustedes: "dijeron",
-        },
+  hacer: {
+    conjugations: {
+      present: {
+        yo: "hago",
+        tu: "haces",
+        el_ella_usted: "hace",
+        nosotros: "hacemos",
+        ellos_ustedes: "hacen",
+      },
+      preterite: {
+        yo: "hice",
+        tu: "hiciste",
+        el_ella_usted: "hizo",
+        nosotros: "hicimos",
+        ellos_ustedes: "hicieron",
       },
     },
-    tags: ["common", "irregular", "communication"],
   },
-  {
-    id: "es-0008",
-    rank: 8,
-    type: "verb",
-    target: "ver",
-    source: "to see",
-    partOfSpeech: "verb",
-    examples: [{ target: "Veo el mar.", source: "I see the sea." }],
-    details: {
-      conjugations: {
-        present: {
-          yo: "veo",
-          tu: "ves",
-          el_ella_usted: "ve",
-          nosotros: "vemos",
-          ellos_ustedes: "ven",
-        },
-        preterite: {
-          yo: "vi",
-          tu: "viste",
-          el_ella_usted: "vio",
-          nosotros: "vimos",
-          ellos_ustedes: "vieron",
-        },
+  decir: {
+    conjugations: {
+      present: {
+        yo: "digo",
+        tu: "dices",
+        el_ella_usted: "dice",
+        nosotros: "decimos",
+        ellos_ustedes: "dicen",
+      },
+      preterite: {
+        yo: "dije",
+        tu: "dijiste",
+        el_ella_usted: "dijo",
+        nosotros: "dijimos",
+        ellos_ustedes: "dijeron",
       },
     },
-    tags: ["common", "beginner"],
   },
-  {
-    id: "es-0009",
-    rank: 9,
-    type: "verb",
-    target: "saber",
-    source: "to know",
-    partOfSpeech: "verb",
-    examples: [{ target: "Se la respuesta.", source: "I know the answer." }],
-    details: {
-      conjugations: {
-        present: {
-          yo: "se",
-          tu: "sabes",
-          el_ella_usted: "sabe",
-          nosotros: "sabemos",
-          ellos_ustedes: "saben",
-        },
-        preterite: {
-          yo: "supe",
-          tu: "supiste",
-          el_ella_usted: "supo",
-          nosotros: "supimos",
-          ellos_ustedes: "supieron",
-        },
-        notes: ["Use saber for facts and skills; conocer is for familiarity."],
+  ver: {
+    conjugations: {
+      present: {
+        yo: "veo",
+        tu: "ves",
+        el_ella_usted: "ve",
+        nosotros: "vemos",
+        ellos_ustedes: "ven",
+      },
+      preterite: {
+        yo: "vi",
+        tu: "viste",
+        el_ella_usted: "vio",
+        nosotros: "vimos",
+        ellos_ustedes: "vieron",
       },
     },
-    tags: ["common", "irregular", "beginner"],
   },
-  {
-    id: "es-0010",
-    rank: 10,
-    type: "verb",
-    target: "querer",
-    source: "to want, to love",
-    partOfSpeech: "verb",
-    examples: [{ target: "Quiero agua.", source: "I want water." }],
-    details: {
-      conjugations: {
-        present: {
-          yo: "quiero",
-          tu: "quieres",
-          el_ella_usted: "quiere",
-          nosotros: "queremos",
-          ellos_ustedes: "quieren",
-        },
-        preterite: {
-          yo: "quise",
-          tu: "quisiste",
-          el_ella_usted: "quiso",
-          nosotros: "quisimos",
-          ellos_ustedes: "quisieron",
-        },
+  sentir: {
+    conjugations: {
+      present: {
+        yo: "siento",
+        tu: "sientes",
+        el_ella_usted: "siente",
+        nosotros: "sentimos",
+        ellos_ustedes: "sienten",
+      },
+      notes: ["Stem changes from e to ie in most present-tense forms."],
+    },
+  },
+  creer: {
+    conjugations: regularConjugations("creer"),
+  },
+  parecer: {
+    conjugations: {
+      present: {
+        yo: "parezco",
+        tu: "pareces",
+        el_ella_usted: "parece",
+        nosotros: "parecemos",
+        ellos_ustedes: "parecen",
       },
     },
-    tags: ["common", "stem-changing", "beginner"],
   },
-  { id: "es-0011", rank: 11, type: "word", target: "el", source: "the", partOfSpeech: "article", examples: [{ target: "El libro esta aqui.", source: "The book is here." }], tags: ["article", "beginner"] },
-  { id: "es-0012", rank: 12, type: "word", target: "la", source: "the", partOfSpeech: "article", examples: [{ target: "La casa es grande.", source: "The house is big." }], tags: ["article", "beginner"] },
-  { id: "es-0013", rank: 13, type: "word", target: "de", source: "of, from", partOfSpeech: "preposition", examples: [{ target: "Soy de Madrid.", source: "I am from Madrid." }], tags: ["preposition"] },
-  { id: "es-0014", rank: 14, type: "word", target: "que", source: "that, what", partOfSpeech: "conjunction", examples: [{ target: "Creo que si.", source: "I think so." }], tags: ["connector"] },
-  { id: "es-0015", rank: 15, type: "word", target: "y", source: "and", partOfSpeech: "conjunction", examples: [{ target: "Pan y agua.", source: "Bread and water." }], tags: ["connector"] },
-  { id: "es-0016", rank: 16, type: "word", target: "a", source: "to, at", partOfSpeech: "preposition", examples: [{ target: "Voy a casa.", source: "I go home." }], tags: ["preposition"] },
-  { id: "es-0017", rank: 17, type: "word", target: "en", source: "in, on", partOfSpeech: "preposition", examples: [{ target: "Estoy en clase.", source: "I am in class." }], tags: ["preposition"] },
-  { id: "es-0018", rank: 18, type: "word", target: "un", source: "a, an", partOfSpeech: "article", examples: [{ target: "Un dia bueno.", source: "A good day." }], tags: ["article"] },
-  { id: "es-0019", rank: 19, type: "word", target: "una", source: "a, an", partOfSpeech: "article", examples: [{ target: "Una idea buena.", source: "A good idea." }], tags: ["article"] },
-  { id: "es-0020", rank: 20, type: "word", target: "no", source: "no, not", partOfSpeech: "adverb", examples: [{ target: "No entiendo.", source: "I do not understand." }], tags: ["beginner"] },
-  { id: "es-0021", rank: 21, type: "word", target: "si", source: "yes, if", partOfSpeech: "adverb", examples: [{ target: "Si, claro.", source: "Yes, of course." }], tags: ["beginner"] },
-  { id: "es-0022", rank: 22, type: "word", target: "por", source: "for, by, through", partOfSpeech: "preposition", examples: [{ target: "Gracias por todo.", source: "Thanks for everything." }], tags: ["preposition"] },
-  { id: "es-0023", rank: 23, type: "word", target: "con", source: "with", partOfSpeech: "preposition", examples: [{ target: "Cafe con leche.", source: "Coffee with milk." }], tags: ["preposition"] },
-  { id: "es-0024", rank: 24, type: "word", target: "para", source: "for, in order to", partOfSpeech: "preposition", examples: [{ target: "Es para ti.", source: "It is for you." }], tags: ["preposition"] },
-  { id: "es-0025", rank: 25, type: "word", target: "como", source: "like, as, how", partOfSpeech: "adverb", examples: [{ target: "Como estas?", source: "How are you?" }], tags: ["question"] },
-  { id: "es-0026", rank: 26, type: "word", target: "yo", source: "I", partOfSpeech: "pronoun", examples: [{ target: "Yo soy Eero.", source: "I am Eero." }], tags: ["pronoun"] },
-  { id: "es-0027", rank: 27, type: "word", target: "tu", source: "you", partOfSpeech: "pronoun", examples: [{ target: "Tu tienes razon.", source: "You are right." }], tags: ["pronoun"] },
-  { id: "es-0028", rank: 28, type: "word", target: "el", source: "he", partOfSpeech: "pronoun", examples: [{ target: "El vive aqui.", source: "He lives here." }], tags: ["pronoun"] },
-  { id: "es-0029", rank: 29, type: "word", target: "ella", source: "she", partOfSpeech: "pronoun", examples: [{ target: "Ella trabaja hoy.", source: "She works today." }], tags: ["pronoun"] },
-  { id: "es-0030", rank: 30, type: "word", target: "nosotros", source: "we", partOfSpeech: "pronoun", examples: [{ target: "Nosotros vamos juntos.", source: "We go together." }], tags: ["pronoun"] },
-  { id: "es-0031", rank: 31, type: "word", target: "ellos", source: "they", partOfSpeech: "pronoun", examples: [{ target: "Ellos comen ahora.", source: "They eat now." }], tags: ["pronoun"] },
-  { id: "es-0032", rank: 32, type: "word", target: "me", source: "me", partOfSpeech: "pronoun", examples: [{ target: "Me gusta.", source: "I like it." }], tags: ["pronoun"] },
-  { id: "es-0033", rank: 33, type: "word", target: "te", source: "you, to you", partOfSpeech: "pronoun", examples: [{ target: "Te veo.", source: "I see you." }], tags: ["pronoun"] },
-  { id: "es-0034", rank: 34, type: "word", target: "lo", source: "it, him", partOfSpeech: "pronoun", examples: [{ target: "Lo tengo.", source: "I have it." }], tags: ["pronoun"] },
-  { id: "es-0035", rank: 35, type: "word", target: "se", source: "himself, herself, itself", partOfSpeech: "pronoun", examples: [{ target: "Se llama Ana.", source: "Her name is Ana." }], tags: ["pronoun"] },
-  { id: "es-0036", rank: 36, type: "word", target: "mi", source: "my", partOfSpeech: "determiner", examples: [{ target: "Mi casa.", source: "My house." }], tags: ["possessive"] },
-  { id: "es-0037", rank: 37, type: "word", target: "su", source: "his, her, your, their", partOfSpeech: "determiner", examples: [{ target: "Su nombre.", source: "His or her name." }], tags: ["possessive"] },
-  { id: "es-0038", rank: 38, type: "word", target: "este", source: "this", partOfSpeech: "determiner", examples: [{ target: "Este dia.", source: "This day." }], tags: ["demonstrative"] },
-  { id: "es-0039", rank: 39, type: "word", target: "ese", source: "that", partOfSpeech: "determiner", examples: [{ target: "Ese momento.", source: "That moment." }], tags: ["demonstrative"] },
-  { id: "es-0040", rank: 40, type: "word", target: "todo", source: "all, everything", partOfSpeech: "pronoun", examples: [{ target: "Todo esta bien.", source: "Everything is fine." }], tags: ["common"] },
-  { id: "es-0041", rank: 41, type: "word", target: "mas", source: "more", partOfSpeech: "adverb", examples: [{ target: "Quiero mas.", source: "I want more." }], tags: ["common"] },
-  { id: "es-0042", rank: 42, type: "word", target: "muy", source: "very", partOfSpeech: "adverb", examples: [{ target: "Muy bien.", source: "Very good." }], tags: ["common"] },
-  { id: "es-0043", rank: 43, type: "word", target: "bien", source: "well, good", partOfSpeech: "adverb", examples: [{ target: "Estoy bien.", source: "I am well." }], tags: ["common"] },
-  { id: "es-0044", rank: 44, type: "word", target: "mal", source: "bad, badly", partOfSpeech: "adverb", examples: [{ target: "Me siento mal.", source: "I feel bad." }], tags: ["common"] },
-  { id: "es-0045", rank: 45, type: "word", target: "aqui", source: "here", partOfSpeech: "adverb", examples: [{ target: "Estoy aqui.", source: "I am here." }], tags: ["place"] },
-  { id: "es-0046", rank: 46, type: "word", target: "alli", source: "there", partOfSpeech: "adverb", examples: [{ target: "El esta alli.", source: "He is there." }], tags: ["place"] },
-  { id: "es-0047", rank: 47, type: "word", target: "ahora", source: "now", partOfSpeech: "adverb", examples: [{ target: "Ahora no.", source: "Not now." }], tags: ["time"] },
-  { id: "es-0048", rank: 48, type: "word", target: "hoy", source: "today", partOfSpeech: "adverb", examples: [{ target: "Hoy trabajo.", source: "Today I work." }], tags: ["time"] },
-  { id: "es-0049", rank: 49, type: "word", target: "ayer", source: "yesterday", partOfSpeech: "adverb", examples: [{ target: "Ayer fui.", source: "I went yesterday." }], tags: ["time"] },
-  { id: "es-0050", rank: 50, type: "word", target: "mañana", source: "tomorrow, morning", partOfSpeech: "noun", examples: [{ target: "Hasta mañana.", source: "See you tomorrow." }], tags: ["time"] },
-  { id: "es-0051", rank: 51, type: "word", target: "dia", source: "day", partOfSpeech: "noun", examples: [{ target: "Buen dia.", source: "Good day." }], tags: ["time"] },
-  { id: "es-0052", rank: 52, type: "word", target: "tiempo", source: "time, weather", partOfSpeech: "noun", examples: [{ target: "No tengo tiempo.", source: "I do not have time." }], tags: ["time"] },
-  { id: "es-0053", rank: 53, type: "word", target: "casa", source: "house, home", partOfSpeech: "noun", examples: [{ target: "Voy a casa.", source: "I am going home." }], tags: ["place"] },
-  { id: "es-0054", rank: 54, type: "word", target: "trabajo", source: "work, job", partOfSpeech: "noun", examples: [{ target: "Tengo trabajo.", source: "I have work." }], tags: ["life"] },
-  { id: "es-0055", rank: 55, type: "word", target: "persona", source: "person", partOfSpeech: "noun", examples: [{ target: "Es una buena persona.", source: "He or she is a good person." }], tags: ["people"] },
-  { id: "es-0056", rank: 56, type: "word", target: "gente", source: "people", partOfSpeech: "noun", examples: [{ target: "Hay mucha gente.", source: "There are many people." }], tags: ["people"] },
-  { id: "es-0057", rank: 57, type: "word", target: "hombre", source: "man", partOfSpeech: "noun", examples: [{ target: "El hombre habla.", source: "The man speaks." }], tags: ["people"] },
-  { id: "es-0058", rank: 58, type: "word", target: "mujer", source: "woman", partOfSpeech: "noun", examples: [{ target: "La mujer lee.", source: "The woman reads." }], tags: ["people"] },
-  { id: "es-0059", rank: 59, type: "word", target: "niño", source: "child, boy", partOfSpeech: "noun", examples: [{ target: "El niño juega.", source: "The child plays." }], tags: ["people"] },
-  { id: "es-0060", rank: 60, type: "word", target: "amigo", source: "friend", partOfSpeech: "noun", examples: [{ target: "Mi amigo esta aqui.", source: "My friend is here." }], tags: ["people"] },
-];
+  mirar: {
+    conjugations: regularConjugations("mirar"),
+  },
+  hablar: {
+    conjugations: regularConjugations("hablar"),
+  },
+};
+
+const cards: ContentCard[] = (rows as SpanishFrequencyRow[]).map((row) => ({
+  id: `es-${String(row.rank).padStart(4, "0")}`,
+  rank: row.rank,
+  type: row.partOfSpeech === "verb" ? "verb" : "word",
+  target: targetFor(row),
+  source: row.translation,
+  partOfSpeech: row.partOfSpeech,
+  details: detailsFor(row),
+  tags: tagsFor(row),
+}));
 
 export const spanishCommonWords: ContentSet = {
   id: "spanish-1000-common-en",
   title: "1000 Most Common Spanish Words",
   sourceLanguage: "en",
   targetLanguage: "es",
-  version: 1,
+  version: 2,
+  sourceNote: "Frequency ranks based on OPUS subtitle data via Adsonant CSV.",
+  sourceUrl: "https://www.adsonant.com/resources/spanish/1000-most-common-words/",
   cards,
 };
+
+function targetFor(row: SpanishFrequencyRow) {
+  return row.article ? `${row.article} ${row.word}` : row.word;
+}
+
+function detailsFor(row: SpanishFrequencyRow): CardDetails | undefined {
+  if (row.partOfSpeech !== "verb") {
+    return undefined;
+  }
+
+  return enrichedVerbs[row.word] ?? {
+    conjugations: regularConjugations(row.word),
+  };
+}
+
+function tagsFor(row: SpanishFrequencyRow) {
+  return [
+    "common",
+    row.partOfSpeech,
+    row.rank <= 100 ? "top-100" : row.rank <= 500 ? "top-500" : "top-1000",
+  ];
+}
+
+function regularConjugations(infinitive: string): VerbConjugations {
+  const stem = infinitive.slice(0, -2);
+  const ending = infinitive.slice(-2);
+
+  if (ending === "ar") {
+    return {
+      present: {
+        yo: `${stem}o`,
+        tu: `${stem}as`,
+        el_ella_usted: `${stem}a`,
+        nosotros: `${stem}amos`,
+        ellos_ustedes: `${stem}an`,
+      },
+      notes: ["Regular -ar present-tense pattern."],
+    };
+  }
+
+  if (ending === "er") {
+    return {
+      present: {
+        yo: `${stem}o`,
+        tu: `${stem}es`,
+        el_ella_usted: `${stem}e`,
+        nosotros: `${stem}emos`,
+        ellos_ustedes: `${stem}en`,
+      },
+      notes: ["Regular -er present-tense pattern."],
+    };
+  }
+
+  if (ending === "ir") {
+    return {
+      present: {
+        yo: `${stem}o`,
+        tu: `${stem}es`,
+        el_ella_usted: `${stem}e`,
+        nosotros: `${stem}imos`,
+        ellos_ustedes: `${stem}en`,
+      },
+      notes: ["Regular -ir present-tense pattern."],
+    };
+  }
+
+  return {
+    present: {
+      infinitive,
+    },
+    notes: ["Conjugation needs manual review."],
+  };
+}

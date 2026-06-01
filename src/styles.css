@@ -342,6 +342,13 @@ h2 {
   font-size: 1.2rem;
 }
 
+.source-note {
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 .detail-sheet {
   position: fixed;
   inset: auto 0 0;

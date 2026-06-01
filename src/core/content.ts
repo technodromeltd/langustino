@@ -39,6 +39,8 @@ export interface ContentSet {
   sourceLanguage: LanguageCode;
   targetLanguage: LanguageCode;
   version: number;
+  sourceNote?: string;
+  sourceUrl?: string;
   cards: ContentCard[];
 }
 

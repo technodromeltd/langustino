@@ -318,6 +318,7 @@ function SetView({ activeSet }: { activeSet: ContentSet }) {
         <span>First word</span>
         <strong>{activeSet.cards[0]?.target ?? "None"}</strong>
       </div>
+      {activeSet.sourceNote ? <p className="source-note">{activeSet.sourceNote}</p> : null}
     </section>
   );
 }

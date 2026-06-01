@@ -8,6 +8,10 @@ for (const set of availableSets) {
     throw new Error(`${set.id} has no cards`);
   }
 
+  if (set.id === "spanish-1000-common-en" && set.cards.length !== 1000) {
+    throw new Error(`${set.id} should contain exactly 1000 cards, found ${set.cards.length}`);
+  }
+
   for (const card of set.cards) {
     if (ids.has(card.id)) {
       throw new Error(`Duplicate card id ${card.id} in ${set.id}`);
@@ -25,8 +29,20 @@ for (const set of availableSets) {
       throw new Error(`Verb card ${card.id} is missing conjugations`);
     }
 
+    if (set.id === "spanish-1000-common-en" && (card.rank < 1 || card.rank > 1000)) {
+      throw new Error(`Card ${card.id} has rank outside the top 1000`);
+    }
+
     ids.add(card.id);
     ranks.add(card.rank);
+  }
+
+  if (set.id === "spanish-1000-common-en") {
+    for (let rank = 1; rank <= 1000; rank += 1) {
+      if (!ranks.has(rank)) {
+        throw new Error(`${set.id} is missing rank ${rank}`);
+      }
+    }
   }
 }
 
