@@ -1,0 +1,19 @@
+{
+  "name": "Langustino",
+  "short_name": "Langustino",
+  "description": "The fastest way to learn languages.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#10231f",
+  "theme_color": "#10231f",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
