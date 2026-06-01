@@ -14,6 +14,28 @@ export interface DirectionProgress {
   lastQuality: RecallQuality | null;
 }
 
+export type PracticeItemKind = "new" | "review" | "repeat";
+
+export interface StoredPracticeItem {
+  id: string;
+  cardId: string;
+  direction: PracticeDirection;
+  kind: PracticeItemKind;
+}
+
+export interface DailySessionState {
+  id: string;
+  date: string;
+  setId: string;
+  items: StoredPracticeItem[];
+  currentIndex: number;
+  completed: boolean;
+  completedAt: string | null;
+  introducedCount: number;
+  reviewCount: number;
+  repeatCount: number;
+}
+
 export type CardProgress = {
   introducedAt: string | null;
   directions: Record<PracticeDirection, DirectionProgress>;
@@ -23,6 +45,7 @@ export interface UserState {
   schemaVersion: 1;
   activeSetId: string;
   cards: Record<string, CardProgress>;
+  session: DailySessionState | null;
   streak: {
     current: number;
     best: number;
@@ -52,6 +75,7 @@ export function createInitialUserState(): UserState {
     schemaVersion: 1,
     activeSetId: "spanish-1000-common-en",
     cards: {},
+    session: null,
     streak: {
       current: 0,
       best: 0,
@@ -95,6 +119,7 @@ export function migrateUserState(state: UserState): UserState {
   return {
     ...createInitialUserState(),
     ...state,
+    session: state.session ?? null,
     settings: {
       ...createInitialUserState().settings,
       ...state.settings,
@@ -103,5 +128,15 @@ export function migrateUserState(state: UserState): UserState {
 }
 
 export function todayKey(date = new Date()) {
-  return date.toISOString().slice(0, 10);
+  const year = date.getFullYear();
+  const month = `${date.getMonth() + 1}`.padStart(2, "0");
+  const day = `${date.getDate()}`.padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+export function addDays(dateKey: string, days: number) {
+  const [year, month, day] = dateKey.split("-").map(Number);
+  const date = new Date(year, month - 1, day);
+  date.setDate(date.getDate() + days);
+  return todayKey(date);
 }

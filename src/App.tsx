@@ -1,20 +1,27 @@
 import { BookOpen, Check, Flame, Info, LineChart, RotateCcw, Settings, Sparkles, X } from "lucide-react";
 import { useMemo, useState } from "react";
 import { availableSets } from "./content/registry";
-import { getAnswer, getPrompt, type ContentCard, type PracticeDirection } from "./core/content";
-import { loadUserState, type RecallQuality } from "./core/storage";
-
-const userState = loadUserState();
-const activeSet = availableSets.find((set) => set.id === userState.activeSetId) ?? availableSets[0];
+import { getAnswer, getPrompt, type ContentCard, type ContentSet } from "./core/content";
+import {
+  advanceSession,
+  getCardProgress,
+  getLearningBucket,
+  getTodaySession,
+  planDailySession,
+  startDailySession,
+} from "./core/scheduler";
+import {
+  loadUserState,
+  saveUserState,
+  todayKey,
+  type DailySessionState,
+  type RecallQuality,
+  type StoredPracticeItem,
+  type UserState,
+} from "./core/storage";
 
 type AppView = "today" | "stats" | "set";
 type PracticeMode = "home" | "practice" | "complete";
-
-interface PracticeItem {
-  id: string;
-  cardId: string;
-  direction: PracticeDirection;
-}
 
 const qualityLabels: Record<RecallQuality, string> = {
   forgot: "Forgot",
@@ -23,84 +30,71 @@ const qualityLabels: Record<RecallQuality, string> = {
   easy: "Easy",
 };
 
-function createStarterDeck(cards: ContentCard[]): PracticeItem[] {
-  return cards.slice(0, Math.min(50, cards.length)).map((card, index) => ({
-    id: `${card.id}-${index}`,
-    cardId: card.id,
-    direction: index % 3 === 2 ? "target_to_source" : "source_to_target",
-  }));
-}
+const emptyQualityCounts: Record<RecallQuality, number> = {
+  forgot: 0,
+  hard: 0,
+  good: 0,
+  easy: 0,
+};
 
 export function App() {
-  const starterDeck = useMemo(() => createStarterDeck(activeSet.cards), []);
+  const [userState, setUserState] = useState<UserState>(() => loadUserState());
   const [view, setView] = useState<AppView>("today");
-  const [mode, setMode] = useState<PracticeMode>("home");
-  const [deck, setDeck] = useState<PracticeItem[]>(starterDeck);
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [isRevealed, setIsRevealed] = useState(false);
   const [detailCard, setDetailCard] = useState<ContentCard | null>(null);
-  const [qualityCounts, setQualityCounts] = useState<Record<RecallQuality, number>>({
-    forgot: 0,
-    hard: 0,
-    good: 0,
-    easy: 0,
-  });
+  const [qualityCounts, setQualityCounts] = useState<Record<RecallQuality, number>>(emptyQualityCounts);
 
-  const currentItem = deck[currentIndex];
+  const activeSet = useMemo(
+    () => availableSets.find((set) => set.id === userState.activeSetId) ?? availableSets[0],
+    [userState.activeSetId],
+  );
+  const today = todayKey();
+  const session = getTodaySession(activeSet, userState, today);
+  const mode: PracticeMode = session?.completed ? "complete" : session ? "practice" : "home";
+  const currentItem = session?.items[session.currentIndex];
   const currentCard = activeSet.cards.find((card) => card.id === currentItem?.cardId) ?? activeSet.cards[0];
-  const progress = deck.length ? Math.min(100, Math.round((currentIndex / deck.length) * 100)) : 0;
+  const progress = session?.items.length
+    ? Math.min(100, Math.round((session.currentIndex / session.items.length) * 100))
+    : 0;
   const answeredCount = Object.values(qualityCounts).reduce((sum, count) => sum + count, 0);
+  const previewSession = useMemo(() => planDailySession(activeSet, userState, today), [activeSet, today, userState]);
+  const summary = useMemo(() => summarizeSet(activeSet, userState, today), [activeSet, today, userState]);
+
+  function updateAndSave(nextState: UserState) {
+    setUserState(nextState);
+    saveUserState(nextState);
+  }
 
   function startPractice() {
-    setDeck(createStarterDeck(activeSet.cards));
-    setCurrentIndex(0);
+    const nextState = startDailySession(activeSet, userState, today);
+    updateAndSave(nextState);
+    setQualityCounts(emptyQualityCounts);
     setIsRevealed(false);
-    setQualityCounts({ forgot: 0, hard: 0, good: 0, easy: 0 });
-    setMode("practice");
     setView("today");
   }
 
   function answerCard(quality: RecallQuality) {
-    const repeatForgotten = quality === "forgot" && currentItem;
-    const nextDeckLength = deck.length + (repeatForgotten ? 1 : 0);
+    if (!currentItem) {
+      return;
+    }
 
     setQualityCounts((counts) => ({
       ...counts,
       [quality]: counts[quality] + 1,
     }));
 
-    setDeck((items) => {
-      if (!repeatForgotten) {
-        return items;
-      }
-
-      const repeatAt = Math.min(currentIndex + 4, items.length);
-      const repeat: PracticeItem = {
-        ...currentItem,
-        id: `${currentItem.cardId}-repeat-${Date.now()}`,
-      };
-      const next = [...items];
-      next.splice(repeatAt, 0, repeat);
-      return next;
-    });
-
+    updateAndSave(advanceSession(userState, currentItem, quality, today));
     setIsRevealed(false);
-    setCurrentIndex((index) => {
-      const nextIndex = index + 1;
-      if (nextIndex >= nextDeckLength) {
-        setMode("complete");
-        return index;
-      }
-
-      return nextIndex;
-    });
   }
 
   function resetPractice() {
-    setDeck(createStarterDeck(activeSet.cards));
-    setCurrentIndex(0);
+    const nextState: UserState = {
+      ...userState,
+      session: null,
+    };
+    updateAndSave(nextState);
+    setQualityCounts(emptyQualityCounts);
     setIsRevealed(false);
-    setMode("home");
   }
 
   return (
@@ -119,13 +113,13 @@ export function App() {
         <TodayView
           answeredCount={answeredCount}
           currentCard={currentCard}
-          currentIndex={currentIndex}
           currentItem={currentItem}
-          deckLength={deck.length}
           isRevealed={isRevealed}
           mode={mode}
+          previewSession={previewSession}
           progress={progress}
           qualityCounts={qualityCounts}
+          session={session}
           onAnswer={answerCard}
           onOpenDetail={setDetailCard}
           onReset={resetPractice}
@@ -133,19 +127,19 @@ export function App() {
           onStart={startPractice}
         />
       ) : view === "stats" ? (
-        <StatsView answeredCount={answeredCount} qualityCounts={qualityCounts} />
+        <StatsView answeredCount={answeredCount} qualityCounts={qualityCounts} summary={summary} />
       ) : (
-        <SetView />
+        <SetView activeSet={activeSet} />
       )}
 
       <section className="quick-stats" aria-label="Progress summary">
         <div>
           <BookOpen size={19} />
-          <span>{activeSet.cards.length} words</span>
+          <span>{summary.learned + summary.mastered} learned</span>
         </div>
         <div>
           <LineChart size={19} />
-          <span>{answeredCount} reviewed</span>
+          <span>{summary.dueToday} due</span>
         </div>
         <div>
           <Flame size={19} />
@@ -173,13 +167,13 @@ export function App() {
 interface TodayViewProps {
   answeredCount: number;
   currentCard: ContentCard;
-  currentIndex: number;
-  currentItem: PracticeItem | undefined;
-  deckLength: number;
+  currentItem: StoredPracticeItem | undefined;
   isRevealed: boolean;
   mode: PracticeMode;
+  previewSession: DailySessionState;
   progress: number;
   qualityCounts: Record<RecallQuality, number>;
+  session: DailySessionState | null;
   onAnswer: (quality: RecallQuality) => void;
   onOpenDetail: (card: ContentCard) => void;
   onReset: () => void;
@@ -190,28 +184,28 @@ interface TodayViewProps {
 function TodayView({
   answeredCount,
   currentCard,
-  currentIndex,
   currentItem,
-  deckLength,
   isRevealed,
   mode,
+  previewSession,
   progress,
   qualityCounts,
+  session,
   onAnswer,
   onOpenDetail,
   onReset,
   onReveal,
   onStart,
 }: TodayViewProps) {
-  if (mode === "complete") {
+  if (mode === "complete" && session) {
     return (
       <section className="practice-stage complete-stage" aria-label="Session complete">
         <div className="practice-copy">
           <p className="set-label">Daily session complete</p>
           <h2>Nice work.</h2>
           <p>
-            You reviewed {answeredCount} cards. Forgotten words were folded back into the session
-            so the weak spots got one more pass.
+            You finished {session.items.length} prompts, including {session.introducedCount} new
+            words, {session.reviewCount} scheduled reviews, and {session.repeatCount} extra repeats.
           </p>
         </div>
         <div className="quality-strip" aria-label="Session recall breakdown">
@@ -223,13 +217,13 @@ function TodayView({
         </div>
         <button className="primary-action" type="button" onClick={onReset}>
           <RotateCcw size={20} />
-          Back to today
+          Plan another session
         </button>
       </section>
     );
   }
 
-  if (mode === "practice" && currentItem) {
+  if (mode === "practice" && session && currentItem) {
     const prompt = getPrompt(currentCard, currentItem.direction);
     const answer = getAnswer(currentCard, currentItem.direction);
     const directionLabel =
@@ -239,7 +233,7 @@ function TodayView({
       <section className="practice-workspace" aria-label="Flipcard practice">
         <div className="session-line">
           <span>
-            {currentIndex + 1} / {deckLength}
+            {session.currentIndex + 1} / {session.items.length}
           </span>
           <div className="progress-track" aria-hidden="true">
             <span style={{ width: `${progress}%` }} />
@@ -254,7 +248,9 @@ function TodayView({
         >
           <span className="direction-label">{directionLabel}</span>
           <span className="card-term">{isRevealed ? answer : prompt}</span>
-          <span className="card-hint">{isRevealed ? currentCard.partOfSpeech : "Tap to reveal"}</span>
+          <span className="card-hint">
+            {isRevealed ? `${currentCard.partOfSpeech} · ${currentItem.kind}` : "Tap to reveal"}
+          </span>
         </button>
 
         <div className="practice-actions" aria-label="Recall quality">
@@ -276,11 +272,11 @@ function TodayView({
   return (
     <section className="practice-stage" aria-label="Today practice">
       <div className="practice-copy">
-        <p className="set-label">{activeSet.title}</p>
+        <p className="set-label">Daily practice</p>
         <h2>Today's practice is ready.</h2>
         <p>
-          Start with {Math.min(50, activeSet.cards.length)} fast flipcards. You will see prompts in
-          both directions and repeat missed words inside the same session.
+          {previewSession.items.length} prompts are planned: {previewSession.introducedCount} new
+          words and {previewSession.reviewCount} scheduled reviews. Progress saves on this device.
         </p>
       </div>
       <button className="primary-action" type="button" onClick={onStart}>
@@ -294,32 +290,40 @@ function TodayView({
 function StatsView({
   answeredCount,
   qualityCounts,
+  summary,
 }: {
   answeredCount: number;
   qualityCounts: Record<RecallQuality, number>;
+  summary: SetSummary;
 }) {
   return (
     <section className="plain-panel" aria-label="Stats">
-      <p className="set-label">This session</p>
+      <p className="set-label">Learning state</p>
       <h2>Recall snapshot</h2>
       <div className="stat-list">
-        <span>Reviewed</span>
+        <span>Reviewed this load</span>
         <strong>{answeredCount}</strong>
-        <span>Forgot</span>
+        <span>Forgot this load</span>
         <strong>{qualityCounts.forgot}</strong>
-        <span>Strong answers</span>
-        <strong>{qualityCounts.good + qualityCounts.easy}</strong>
+        <span>Learning</span>
+        <strong>{summary.learning}</strong>
+        <span>Learned</span>
+        <strong>{summary.learned}</strong>
+        <span>Mastered</span>
+        <strong>{summary.mastered}</strong>
       </div>
     </section>
   );
 }
 
-function SetView() {
+function SetView({ activeSet }: { activeSet: ContentSet }) {
   const verbs = activeSet.cards.filter((card) => card.type === "verb").length;
 
   return (
     <section className="plain-panel" aria-label="Content set">
-      <p className="set-label">{activeSet.sourceLanguage.toUpperCase()} to {activeSet.targetLanguage.toUpperCase()}</p>
+      <p className="set-label">
+        {activeSet.sourceLanguage.toUpperCase()} to {activeSet.targetLanguage.toUpperCase()}
+      </p>
       <h2>{activeSet.title}</h2>
       <div className="stat-list">
         <span>Cards loaded</span>
@@ -387,4 +391,40 @@ function CardDetail({ card, onClose }: { card: ContentCard; onClose: () => void 
       ))}
     </section>
   );
+}
+
+interface SetSummary {
+  new: number;
+  seen: number;
+  learning: number;
+  learned: number;
+  mastered: number;
+  dueToday: number;
+}
+
+function summarizeSet(set: ContentSet, state: UserState, dateKey: string): SetSummary {
+  const summary: SetSummary = {
+    new: 0,
+    seen: 0,
+    learning: 0,
+    learned: 0,
+    mastered: 0,
+    dueToday: 0,
+  };
+
+  for (const card of set.cards) {
+    const progress = getCardProgress(state, card.id);
+    const bucket = getLearningBucket(progress);
+    summary[bucket] += 1;
+
+    if (!progress?.introducedAt) {
+      continue;
+    }
+
+    if (Object.values(progress.directions).some((direction) => direction.dueDate <= dateKey)) {
+      summary.dueToday += 1;
+    }
+  }
+
+  return summary;
 }
