@@ -31,11 +31,10 @@ export function getCardProgress(state: UserState, cardId: string) {
 export function planDailySession(set: ContentSet, state: UserState, dateKey = todayKey()): DailySessionState {
   const targetTotal = state.settings.dailyNewTarget + state.settings.dailyReviewTarget;
   const dueReviews = collectDueReviews(set.cards, state, dateKey);
-  const reviewLimit = dueReviews.length > state.settings.dailyReviewTarget ? targetTotal : state.settings.dailyReviewTarget;
-  const selectedReviews = dueReviews.slice(0, reviewLimit);
-  const newSlots = Math.max(0, targetTotal - selectedReviews.length);
-  const selectedNew = collectNewCards(set.cards, state).slice(0, newSlots);
-  const items = [...selectedReviews, ...selectedNew].map((item, index) => ({
+  const selectedNew = collectNewCards(set.cards, state).slice(0, Math.min(state.settings.dailyNewTarget, targetTotal));
+  const reviewSlots = Math.max(0, targetTotal - selectedNew.length);
+  const selectedReviews = dueReviews.slice(0, reviewSlots);
+  const items = [...selectedNew, ...selectedReviews].map((item, index) => ({
     ...item,
     id: `${dateKey}-${index}-${item.cardId}-${item.direction}`,
   }));
@@ -58,6 +57,10 @@ export function planDailySession(set: ContentSet, state: UserState, dateKey = to
 
 export function getTodaySession(set: ContentSet, state: UserState, dateKey = todayKey()) {
   if (state.session?.setId === set.id && state.session.date === dateKey) {
+    if (shouldReplaceUnstartedSession(set, state)) {
+      return null;
+    }
+
     return state.session;
   }
 
@@ -236,6 +239,20 @@ function collectNewCards(cards: ContentCard[], state: UserState): StoredPractice
       direction: "source_to_target" as const,
       kind: "new" as const,
     }));
+}
+
+function shouldReplaceUnstartedSession(set: ContentSet, state: UserState) {
+  const session = state.session;
+
+  if (!session || session.completed || session.currentIndex > 0 || !hasUnseenCards(set.cards, state)) {
+    return false;
+  }
+
+  return session.items[0]?.kind !== "new";
+}
+
+function hasUnseenCards(cards: ContentCard[], state: UserState) {
+  return cards.some((card) => !state.cards[card.id]?.introducedAt);
 }
 
 function scheduleDirection(

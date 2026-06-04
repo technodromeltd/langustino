@@ -6,3 +6,4 @@
 - [x] user should be able to click card to show again in source word freely
 - [x] knew didnt knew etc buttons should sit in one row, so easier to compare
 - [x] long card text should scale down so words like "something" fit on mobile
+- [x] every new day should start with new words when unseen words remain
