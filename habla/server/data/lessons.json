@@ -1,0 +1,50 @@
+[
+  {
+    "id": "intro",
+    "title": "Introduce yourself",
+    "title_es": "Presentarte",
+    "goal": "Say your name, where you are from, where you live and what you do.",
+    "scenario": "You just met the learner at a language exchange (intercambio) in a café in Madrid. You are curious about them.",
+    "words": ["llamar", "ser", "de", "vivir", "trabajar", "país", "ciudad", "nombre", "hablar"]
+  },
+  {
+    "id": "cafe",
+    "title": "At the café",
+    "title_es": "En el café",
+    "goal": "Order something to drink and eat, ask the price, ask for the bill.",
+    "scenario": "You are a friendly waiter (camarero) at a small café in Sevilla. The learner is the customer. Stay in the role.",
+    "words": ["querer", "café", "agua", "pedir", "cuánto", "cuenta", "favor", "comer", "beber", "pan"]
+  },
+  {
+    "id": "day",
+    "title": "Your day",
+    "title_es": "Tu día",
+    "goal": "Describe a normal day: when you get up, eat, work and what you do in the evening.",
+    "scenario": "You and the learner are friends chatting about your daily routines.",
+    "words": ["mañana", "tarde", "noche", "comer", "trabajar", "casa", "hora", "siempre", "después"]
+  },
+  {
+    "id": "family",
+    "title": "Family & friends",
+    "title_es": "Familia y amigos",
+    "goal": "Talk about the people in your life: family members, friends, what they are like.",
+    "scenario": "You are showing each other photos on your phones and talking about family and friends.",
+    "words": ["familia", "padre", "madre", "hermano", "hijo", "tener", "amigo", "mayor", "pequeño"]
+  },
+  {
+    "id": "weekend",
+    "title": "Last weekend",
+    "title_es": "El fin de semana",
+    "goal": "Tell what you did last weekend using the past tense (fui, hice, vi, comí).",
+    "scenario": "It is Monday morning. You ask the learner about their weekend and share yours.",
+    "words": ["ayer", "ir", "hacer", "ver", "semana", "fin", "amigo", "gustar", "comprar"]
+  },
+  {
+    "id": "free",
+    "title": "Free conversation",
+    "title_es": "Conversación libre",
+    "goal": "Talk about anything you like — Sofía follows your lead.",
+    "scenario": "A relaxed chat. Follow the learner's interests and ask about their life.",
+    "words": []
+  }
+]

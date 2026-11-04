@@ -1,0 +1,19 @@
+[project]
+name = "habla-server"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "es-core-news-sm",
+    "fastapi>=0.162.0",
+    "httpx>=0.28.1",
+    "kokoro-onnx>=0.6.1",
+    "mlx-whisper>=0.4.3",
+    "numpy>=2.4.6",
+    "soundfile>=0.14.0",
+    "spacy>=3.8.18",
+    "uvicorn[standard]>=0.54.0",
+    "wordfreq>=3.1.1",
+]
+
+[tool.uv.sources]
+es-core-news-sm = { url = "https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.8.0/es_core_news_sm-3.8.0-py3-none-any.whl" }

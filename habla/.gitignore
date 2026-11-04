@@ -1,0 +1,6 @@
+server/.venv/
+server/models/
+server/data/*.db
+__pycache__/
+client/node_modules/
+client/dist/

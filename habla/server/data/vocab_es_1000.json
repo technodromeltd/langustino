@@ -1,0 +1,7002 @@
+[
+  {
+    "rank": 1,
+    "article": "",
+    "word": "de",
+    "translation": "of",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 2,
+    "article": "",
+    "word": "que",
+    "translation": "that",
+    "partOfSpeech": "conjunction"
+  },
+  {
+    "rank": 3,
+    "article": "",
+    "word": "no",
+    "translation": "no",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 4,
+    "article": "",
+    "word": "a",
+    "translation": "to",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 5,
+    "article": "",
+    "word": "y",
+    "translation": "and",
+    "partOfSpeech": "conjunction"
+  },
+  {
+    "rank": 6,
+    "article": "",
+    "word": "ser",
+    "translation": "to be",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 7,
+    "article": "",
+    "word": "en",
+    "translation": "in",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 8,
+    "article": "",
+    "word": "por",
+    "translation": "for",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 9,
+    "article": "",
+    "word": "qué",
+    "translation": "what",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 10,
+    "article": "",
+    "word": "con",
+    "translation": "with",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 11,
+    "article": "",
+    "word": "para",
+    "translation": "for",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 12,
+    "article": "",
+    "word": "estar",
+    "translation": "to be",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 13,
+    "article": "",
+    "word": "mi",
+    "translation": "my",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 14,
+    "article": "",
+    "word": "pero",
+    "translation": "but",
+    "partOfSpeech": "conjunction"
+  },
+  {
+    "rank": 15,
+    "article": "",
+    "word": "sí",
+    "translation": "yes",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 16,
+    "article": "",
+    "word": "si",
+    "translation": "if",
+    "partOfSpeech": "conjunction"
+  },
+  {
+    "rank": 17,
+    "article": "",
+    "word": "bien",
+    "translation": "well",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 18,
+    "article": "",
+    "word": "ese",
+    "translation": "that",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 19,
+    "article": "",
+    "word": "su",
+    "translation": "his/her",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 20,
+    "article": "",
+    "word": "yo",
+    "translation": "I",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 21,
+    "article": "",
+    "word": "como",
+    "translation": "like",
+    "partOfSpeech": "conjunction"
+  },
+  {
+    "rank": 22,
+    "article": "",
+    "word": "aquí",
+    "translation": "here",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 23,
+    "article": "",
+    "word": "tu",
+    "translation": "your",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 24,
+    "article": "",
+    "word": "más",
+    "translation": "more",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 25,
+    "article": "",
+    "word": "este",
+    "translation": "this",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 26,
+    "article": "",
+    "word": "todo",
+    "translation": "all",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 27,
+    "article": "",
+    "word": "ya",
+    "translation": "already",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 28,
+    "article": "",
+    "word": "ahora",
+    "translation": "now",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 29,
+    "article": "",
+    "word": "muy",
+    "translation": "very",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 30,
+    "article": "",
+    "word": "haber",
+    "translation": "to have",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 31,
+    "article": "",
+    "word": "así",
+    "translation": "like that",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 32,
+    "article": "",
+    "word": "ir",
+    "translation": "to go",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 33,
+    "article": "",
+    "word": "algo",
+    "translation": "something",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 34,
+    "article": "",
+    "word": "bueno",
+    "translation": "good",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 35,
+    "article": "",
+    "word": "tener",
+    "translation": "to have",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 36,
+    "article": "",
+    "word": "él",
+    "translation": "he",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 37,
+    "article": "",
+    "word": "cuando",
+    "translation": "when",
+    "partOfSpeech": "conjunction"
+  },
+  {
+    "rank": 38,
+    "article": "",
+    "word": "saber",
+    "translation": "to know",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 39,
+    "article": "",
+    "word": "tú",
+    "translation": "you (informal)",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 40,
+    "article": "",
+    "word": "nos",
+    "translation": "us",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 41,
+    "article": "",
+    "word": "nada",
+    "translation": "nothing",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 42,
+    "article": "",
+    "word": "cómo",
+    "translation": "how",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 43,
+    "article": "",
+    "word": "o",
+    "translation": "or",
+    "partOfSpeech": "conjunction"
+  },
+  {
+    "rank": 44,
+    "article": "",
+    "word": "poder",
+    "translation": "to be able",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 45,
+    "article": "",
+    "word": "ella",
+    "translation": "she",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 46,
+    "article": "",
+    "word": "querer",
+    "translation": "to want",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 47,
+    "article": "",
+    "word": "hacer",
+    "translation": "to do",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 48,
+    "article": "la",
+    "word": "gracia",
+    "translation": "thanks",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 49,
+    "article": "la",
+    "word": "vez",
+    "translation": "time",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 50,
+    "article": "",
+    "word": "solo",
+    "translation": "only",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 51,
+    "article": "",
+    "word": "porque",
+    "translation": "because",
+    "partOfSpeech": "conjunction"
+  },
+  {
+    "rank": 52,
+    "article": "",
+    "word": "creer",
+    "translation": "to believe",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 53,
+    "article": "",
+    "word": "usted",
+    "translation": "you (formal)",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 54,
+    "article": "",
+    "word": "entonces",
+    "translation": "then",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 55,
+    "article": "",
+    "word": "hola",
+    "translation": "hello",
+    "partOfSpeech": "interjection"
+  },
+  {
+    "rank": 56,
+    "article": "la",
+    "word": "verdad",
+    "translation": "true",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 57,
+    "article": "la",
+    "word": "casa",
+    "translation": "home",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 58,
+    "article": "",
+    "word": "tan",
+    "translation": "so",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 59,
+    "article": "",
+    "word": "quién",
+    "translation": "who",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 60,
+    "article": "el",
+    "word": "tiempo",
+    "translation": "time",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 61,
+    "article": "",
+    "word": "dos",
+    "translation": "two",
+    "partOfSpeech": "number"
+  },
+  {
+    "rank": 62,
+    "article": "",
+    "word": "nunca",
+    "translation": "never",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 63,
+    "article": "",
+    "word": "dónde",
+    "translation": "where",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 64,
+    "article": "el",
+    "word": "favor",
+    "translation": "please",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 65,
+    "article": "",
+    "word": "mucho",
+    "translation": "a lot",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 66,
+    "article": "",
+    "word": "mí",
+    "translation": "me",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 67,
+    "article": "",
+    "word": "sentir",
+    "translation": "to feel",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 68,
+    "article": "el",
+    "word": "señor",
+    "translation": "msiter",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 69,
+    "article": "",
+    "word": "mejor",
+    "translation": "better",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 70,
+    "article": "",
+    "word": "decir",
+    "translation": "to say",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 71,
+    "article": "",
+    "word": "también",
+    "translation": "also",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 72,
+    "article": "",
+    "word": "sobre",
+    "translation": "about",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 73,
+    "article": "el",
+    "word": "dios",
+    "translation": "god",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 74,
+    "article": "",
+    "word": "sin",
+    "translation": "without",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 75,
+    "article": "",
+    "word": "ver",
+    "translation": "to see",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 76,
+    "article": "el",
+    "word": "hombre",
+    "translation": "man",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 77,
+    "article": "la",
+    "word": "vida",
+    "translation": "life",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 78,
+    "article": "",
+    "word": "alguien",
+    "translation": "someone",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 79,
+    "article": "la",
+    "word": "cosa",
+    "translation": "thing",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 80,
+    "article": "",
+    "word": "siempre",
+    "translation": "always",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 81,
+    "article": "",
+    "word": "hasta",
+    "translation": "until",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 82,
+    "article": "",
+    "word": "ahí",
+    "translation": "there",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 83,
+    "article": "el",
+    "word": "año",
+    "translation": "year",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 84,
+    "article": "",
+    "word": "antes",
+    "translation": "before",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 85,
+    "article": "",
+    "word": "ni",
+    "translation": "neither",
+    "partOfSpeech": "conjunction"
+  },
+  {
+    "rank": 86,
+    "article": "",
+    "word": "poco",
+    "translation": "a little",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 87,
+    "article": "el",
+    "word": "día",
+    "translation": "day",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 88,
+    "article": "",
+    "word": "uno",
+    "translation": "one",
+    "partOfSpeech": "article"
+  },
+  {
+    "rank": 89,
+    "article": "la",
+    "word": "noche",
+    "translation": "night",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 90,
+    "article": "",
+    "word": "otro",
+    "translation": "another",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 91,
+    "article": "el",
+    "word": "acuerdo",
+    "translation": "agreement",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 92,
+    "article": "el",
+    "word": "trabajo",
+    "translation": "work",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 93,
+    "article": "",
+    "word": "nosotros",
+    "translation": "we",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 94,
+    "article": "",
+    "word": "parecer",
+    "translation": "to seem",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 95,
+    "article": "la",
+    "word": "gente",
+    "translation": "people",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 96,
+    "article": "el",
+    "word": "padre",
+    "translation": "father",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 97,
+    "article": "",
+    "word": "mirar",
+    "translation": "to look",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 98,
+    "article": "",
+    "word": "mismo",
+    "translation": "same",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 99,
+    "article": "",
+    "word": "nadie",
+    "translation": "nobody",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 100,
+    "article": "",
+    "word": "hablar",
+    "translation": "to speak",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 101,
+    "article": "",
+    "word": "ellos",
+    "translation": "they",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 102,
+    "article": "",
+    "word": "tal",
+    "translation": "such",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 103,
+    "article": "",
+    "word": "pasar",
+    "translation": "to happen",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 104,
+    "article": "",
+    "word": "después",
+    "translation": "after",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 105,
+    "article": "",
+    "word": "desde",
+    "translation": "from",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 106,
+    "article": "el",
+    "word": "dinero",
+    "translation": "money",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 107,
+    "article": "el",
+    "word": "mundo",
+    "translation": "world",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 108,
+    "article": "",
+    "word": "claro",
+    "translation": "of course",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 109,
+    "article": "el",
+    "word": "momento",
+    "translation": "moment",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 110,
+    "article": "el",
+    "word": "estado",
+    "translation": "state",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 111,
+    "article": "la",
+    "word": "mañana",
+    "translation": "tomorrow",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 112,
+    "article": "la",
+    "word": "madre",
+    "translation": "mother",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 113,
+    "article": "",
+    "word": "valer",
+    "translation": "to be worth",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 114,
+    "article": "el",
+    "word": "lugar",
+    "translation": "place",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 115,
+    "article": "",
+    "word": "donde",
+    "translation": "where",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 116,
+    "article": "",
+    "word": "seguro",
+    "translation": "sure",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 117,
+    "article": "",
+    "word": "esperar",
+    "translation": "to wait",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 118,
+    "article": "",
+    "word": "nuevo",
+    "translation": "new",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 119,
+    "article": "el",
+    "word": "hijo",
+    "translation": "son",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 120,
+    "article": "",
+    "word": "allí",
+    "translation": "there",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 121,
+    "article": "",
+    "word": "menos",
+    "translation": "less",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 122,
+    "article": "el",
+    "word": "tipo",
+    "translation": "type",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 123,
+    "article": "el",
+    "word": "amigo",
+    "translation": "friend",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 124,
+    "article": "",
+    "word": "gran",
+    "translation": "great",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 125,
+    "article": "",
+    "word": "nuestro",
+    "translation": "our",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 126,
+    "article": "la",
+    "word": "mujer",
+    "translation": "woman",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 127,
+    "article": "la",
+    "word": "mamá",
+    "translation": "mom",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 128,
+    "article": "",
+    "word": "luego",
+    "translation": "then",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 129,
+    "article": "el",
+    "word": "papá",
+    "translation": "dad",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 130,
+    "article": "",
+    "word": "hoy",
+    "translation": "today",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 131,
+    "article": "",
+    "word": "tres",
+    "translation": "three",
+    "partOfSpeech": "number"
+  },
+  {
+    "rank": 132,
+    "article": "",
+    "word": "necesitar",
+    "translation": "to need",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 133,
+    "article": "",
+    "word": "oír",
+    "translation": "to hear",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 134,
+    "article": "",
+    "word": "gustar",
+    "translation": "to like",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 135,
+    "article": "la",
+    "word": "parte",
+    "translation": "part",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 136,
+    "article": "",
+    "word": "conmigo",
+    "translation": "with me",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 137,
+    "article": "el",
+    "word": "nombre",
+    "translation": "name",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 138,
+    "article": "",
+    "word": "mal",
+    "translation": "bad",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 139,
+    "article": "",
+    "word": "deber",
+    "translation": "should",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 140,
+    "article": "",
+    "word": "realmente",
+    "translation": "really",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 141,
+    "article": "",
+    "word": "aún",
+    "translation": "still",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 142,
+    "article": "",
+    "word": "mío",
+    "translation": "mine",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 143,
+    "article": "",
+    "word": "cada",
+    "translation": "each",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 144,
+    "article": "",
+    "word": "importar",
+    "translation": "to matter",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 145,
+    "article": "",
+    "word": "contigo",
+    "translation": "with you",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 146,
+    "article": "la",
+    "word": "razón",
+    "translation": "reason",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 147,
+    "article": "",
+    "word": "alguno",
+    "translation": "some",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 148,
+    "article": "",
+    "word": "tanto",
+    "translation": "so much",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 149,
+    "article": "",
+    "word": "serio",
+    "translation": "serious",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 150,
+    "article": "",
+    "word": "venir",
+    "translation": "to come",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 151,
+    "article": "la",
+    "word": "idea",
+    "translation": "idea",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 152,
+    "article": "la",
+    "word": "tarde",
+    "translation": "afternoon",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 153,
+    "article": "el",
+    "word": "problema",
+    "translation": "problem",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 154,
+    "article": "la",
+    "word": "hora",
+    "translation": "hour",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 155,
+    "article": "",
+    "word": "cierto",
+    "translation": "surely",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 156,
+    "article": "",
+    "word": "quien",
+    "translation": "who",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 157,
+    "article": "",
+    "word": "demasiado",
+    "translation": "too much",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 158,
+    "article": "el",
+    "word": "amor",
+    "translation": "love",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 159,
+    "article": "",
+    "word": "entre",
+    "translation": "between",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 160,
+    "article": "la",
+    "word": "familia",
+    "translation": "family",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 161,
+    "article": "la",
+    "word": "policía",
+    "translation": "police",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 162,
+    "article": "la",
+    "word": "chica",
+    "translation": "girl",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 163,
+    "article": "el",
+    "word": "chico",
+    "translation": "boy",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 164,
+    "article": "la",
+    "word": "cuenta",
+    "translation": "account",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 165,
+    "article": "",
+    "word": "todavía",
+    "translation": "still",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 166,
+    "article": "",
+    "word": "salir",
+    "translation": "to go out",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 167,
+    "article": "",
+    "word": "algún",
+    "translation": "some",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 168,
+    "article": "el",
+    "word": "hermano",
+    "translation": "brother",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 169,
+    "article": "",
+    "word": "pensar",
+    "translation": "to think",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 170,
+    "article": "la",
+    "word": "cabeza",
+    "translation": "head",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 171,
+    "article": "el",
+    "word": "cariño",
+    "translation": "darling",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 172,
+    "article": "",
+    "word": "cualquier",
+    "translation": "any",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 173,
+    "article": "la",
+    "word": "forma",
+    "translation": "form",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 174,
+    "article": "",
+    "word": "mientras",
+    "translation": "while",
+    "partOfSpeech": "conjunction"
+  },
+  {
+    "rank": 175,
+    "article": "el",
+    "word": "lado",
+    "translation": "side",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 176,
+    "article": "el",
+    "word": "caso",
+    "translation": "case",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 177,
+    "article": "",
+    "word": "primero",
+    "translation": "first",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 178,
+    "article": "",
+    "word": "genial",
+    "translation": "great",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 179,
+    "article": "",
+    "word": "suponer",
+    "translation": "to suppose",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 180,
+    "article": "",
+    "word": "pues",
+    "translation": "well",
+    "partOfSpeech": "conjunction"
+  },
+  {
+    "rank": 181,
+    "article": "",
+    "word": "adiós",
+    "translation": "goodbye",
+    "partOfSpeech": "interjection"
+  },
+  {
+    "rank": 182,
+    "article": "la",
+    "word": "persona",
+    "translation": "person",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 183,
+    "article": "la",
+    "word": "señora",
+    "translation": "mrs.",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 184,
+    "article": "",
+    "word": "volver",
+    "translation": "to return",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 185,
+    "article": "",
+    "word": "contra",
+    "translation": "against",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 186,
+    "article": "el",
+    "word": "camino",
+    "translation": "path",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 187,
+    "article": "",
+    "word": "durante",
+    "translation": "during",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 188,
+    "article": "la",
+    "word": "manera",
+    "translation": "way",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 189,
+    "article": "",
+    "word": "muerto",
+    "translation": "dead",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 190,
+    "article": "",
+    "word": "rápido",
+    "translation": "fast",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 191,
+    "article": "",
+    "word": "cuál",
+    "translation": "which",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 192,
+    "article": "la",
+    "word": "ayuda",
+    "translation": "help",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 193,
+    "article": "la",
+    "word": "historia",
+    "translation": "history",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 194,
+    "article": "",
+    "word": "entender",
+    "translation": "to understand",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 195,
+    "article": "",
+    "word": "dentro",
+    "translation": "inside",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 196,
+    "article": "",
+    "word": "casi",
+    "translation": "almost",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 197,
+    "article": "la",
+    "word": "puerta",
+    "translation": "door",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 198,
+    "article": "",
+    "word": "significar",
+    "translation": "to mean",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 199,
+    "article": "la",
+    "word": "semana",
+    "translation": "week",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 200,
+    "article": "",
+    "word": "hacia",
+    "translation": "toward",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 201,
+    "article": "",
+    "word": "quizás",
+    "translation": "maybe",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 202,
+    "article": "",
+    "word": "junto",
+    "translation": "together",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 203,
+    "article": "el",
+    "word": "niño",
+    "translation": "kid",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 204,
+    "article": "",
+    "word": "pronto",
+    "translation": "soon",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 205,
+    "article": "el",
+    "word": "tío",
+    "translation": "uncle",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 206,
+    "article": "la",
+    "word": "suerte",
+    "translation": "luck",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 207,
+    "article": "la",
+    "word": "ciudad",
+    "translation": "city",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 208,
+    "article": "",
+    "word": "siquiera",
+    "translation": "not even",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 209,
+    "article": "",
+    "word": "feliz",
+    "translation": "happy",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 210,
+    "article": "la",
+    "word": "hija",
+    "translation": "daughter",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 211,
+    "article": "el",
+    "word": "minuto",
+    "translation": "minute",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 212,
+    "article": "",
+    "word": "cuánto",
+    "translation": "how much",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 213,
+    "article": "",
+    "word": "os",
+    "translation": "you all",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 214,
+    "article": "la",
+    "word": "muerte",
+    "translation": "death",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 215,
+    "article": "",
+    "word": "dejar",
+    "translation": "to let",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 216,
+    "article": "la",
+    "word": "realidad",
+    "translation": "reality",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 217,
+    "article": "",
+    "word": "dar",
+    "translation": "to give",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 218,
+    "article": "",
+    "word": "importante",
+    "translation": "important",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 219,
+    "article": "el",
+    "word": "corazón",
+    "translation": "heart",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 220,
+    "article": "el",
+    "word": "miedo",
+    "translation": "fear",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 221,
+    "article": "el",
+    "word": "jefe",
+    "translation": "boss",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 222,
+    "article": "la",
+    "word": "agua",
+    "translation": "water",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 223,
+    "article": "",
+    "word": "justo",
+    "translation": "just",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 224,
+    "article": "la",
+    "word": "esposa",
+    "translation": "wife",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 225,
+    "article": "la",
+    "word": "mano",
+    "translation": "hand",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 226,
+    "article": "el",
+    "word": "ojo",
+    "translation": "eye",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 227,
+    "article": "",
+    "word": "adelante",
+    "translation": "ahead",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 228,
+    "article": "",
+    "word": "encontrar",
+    "translation": "to find",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 229,
+    "article": "",
+    "word": "cinco",
+    "translation": "five",
+    "partOfSpeech": "number"
+  },
+  {
+    "rank": 230,
+    "article": "",
+    "word": "ninguno",
+    "translation": "none",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 231,
+    "article": "la",
+    "word": "cara",
+    "translation": "face",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 232,
+    "article": "el",
+    "word": "cuidado",
+    "translation": "care",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 233,
+    "article": "",
+    "word": "bajo",
+    "translation": "under",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 234,
+    "article": "",
+    "word": "cerca",
+    "translation": "near",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 235,
+    "article": "",
+    "word": "viejo",
+    "translation": "old",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 236,
+    "article": "",
+    "word": "bastante",
+    "translation": "enough",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 237,
+    "article": "el",
+    "word": "fin",
+    "translation": "end",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 238,
+    "article": "",
+    "word": "tomar",
+    "translation": "to take",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 239,
+    "article": "",
+    "word": "único",
+    "translation": "only",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 240,
+    "article": "",
+    "word": "escuchar",
+    "translation": "to listen",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 241,
+    "article": "",
+    "word": "ningún",
+    "translation": "none",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 242,
+    "article": "",
+    "word": "suficiente",
+    "translation": "enough",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 243,
+    "article": "el",
+    "word": "punto",
+    "translation": "point",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 244,
+    "article": "",
+    "word": "cuándo",
+    "translation": "when",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 245,
+    "article": "",
+    "word": "seguir",
+    "translation": "to follow",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 246,
+    "article": "el",
+    "word": "equipo",
+    "translation": "team",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 247,
+    "article": "",
+    "word": "grande",
+    "translation": "large",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 248,
+    "article": "",
+    "word": "llegar",
+    "translation": "to arrive",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 249,
+    "article": "",
+    "word": "incluso",
+    "translation": "even",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 250,
+    "article": "el",
+    "word": "doctor",
+    "translation": "doctor",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 251,
+    "article": "",
+    "word": "difícil",
+    "translation": "difficult",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 252,
+    "article": "",
+    "word": "aunque",
+    "translation": "although",
+    "partOfSpeech": "conjunction"
+  },
+  {
+    "rank": 253,
+    "article": "el",
+    "word": "coche",
+    "translation": "car",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 254,
+    "article": "la",
+    "word": "clase",
+    "translation": "class",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 255,
+    "article": "",
+    "word": "cuatro",
+    "translation": "four",
+    "partOfSpeech": "number"
+  },
+  {
+    "rank": 256,
+    "article": "",
+    "word": "pequeño",
+    "translation": "small",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 257,
+    "article": "",
+    "word": "llamar",
+    "translation": "to call",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 258,
+    "article": "",
+    "word": "allá",
+    "translation": "over there",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 259,
+    "article": "",
+    "word": "último",
+    "translation": "last",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 260,
+    "article": "",
+    "word": "arriba",
+    "translation": "up",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 261,
+    "article": "la",
+    "word": "tierra",
+    "translation": "earth",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 262,
+    "article": "la",
+    "word": "guerra",
+    "translation": "war",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 263,
+    "article": "",
+    "word": "igual",
+    "translation": "similar",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 264,
+    "article": "",
+    "word": "loco",
+    "translation": "crazy",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 265,
+    "article": "la",
+    "word": "sangre",
+    "translation": "blood",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 266,
+    "article": "la",
+    "word": "vuelta",
+    "translation": "return",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 267,
+    "article": "",
+    "word": "trabajar",
+    "translation": "to work",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 268,
+    "article": "el",
+    "word": "juego",
+    "translation": "game",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 269,
+    "article": "el",
+    "word": "cuerpo",
+    "translation": "body",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 270,
+    "article": "",
+    "word": "entrar",
+    "translation": "to enter",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 271,
+    "article": "la",
+    "word": "oportunidad",
+    "translation": "opportunity",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 272,
+    "article": "el",
+    "word": "teléfono",
+    "translation": "phone",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 273,
+    "article": "el",
+    "word": "final",
+    "translation": "end",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 274,
+    "article": "",
+    "word": "listo",
+    "translation": "ready",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 275,
+    "article": "la",
+    "word": "fiesta",
+    "translation": "party",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 276,
+    "article": "el",
+    "word": "auto",
+    "translation": "car",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 277,
+    "article": "",
+    "word": "vivir",
+    "translation": "to live",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 278,
+    "article": "",
+    "word": "posible",
+    "translation": "possible",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 279,
+    "article": "la",
+    "word": "hermana",
+    "translation": "sister",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 280,
+    "article": "el",
+    "word": "número",
+    "translation": "number",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 281,
+    "article": "el",
+    "word": "mes",
+    "translation": "month",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 282,
+    "article": "",
+    "word": "exactamente",
+    "translation": "exactly",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 283,
+    "article": "la",
+    "word": "culpa",
+    "translation": "fault",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 284,
+    "article": "",
+    "word": "abajo",
+    "translation": "down",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 285,
+    "article": "la",
+    "word": "escuela",
+    "translation": "school",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 286,
+    "article": "",
+    "word": "fuerte",
+    "translation": "strong",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 287,
+    "article": "",
+    "word": "ello",
+    "translation": "it",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 288,
+    "article": "la",
+    "word": "pregunta",
+    "translation": "question",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 289,
+    "article": "",
+    "word": "atrás",
+    "translation": "back",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 290,
+    "article": "",
+    "word": "malo",
+    "translation": "bad",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 291,
+    "article": "el",
+    "word": "capitán",
+    "translation": "captain",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 292,
+    "article": "el",
+    "word": "bebé",
+    "translation": "baby",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 293,
+    "article": "",
+    "word": "segundo",
+    "translation": "second",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 294,
+    "article": "",
+    "word": "mayor",
+    "translation": "older",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 295,
+    "article": "la",
+    "word": "comida",
+    "translation": "food",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 296,
+    "article": "",
+    "word": "morir",
+    "translation": "to die",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 297,
+    "article": "",
+    "word": "conocer",
+    "translation": "to meet",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 298,
+    "article": "",
+    "word": "fácil",
+    "translation": "easy",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 299,
+    "article": "",
+    "word": "comer",
+    "translation": "to eat",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 300,
+    "article": "la",
+    "word": "lista",
+    "translation": "list",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 301,
+    "article": "",
+    "word": "probablemente",
+    "translation": "probably",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 302,
+    "article": "la",
+    "word": "habitación",
+    "translation": "room",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 303,
+    "article": "",
+    "word": "tratar",
+    "translation": "to try",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 304,
+    "article": "",
+    "word": "buscar",
+    "translation": "to search",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 305,
+    "article": "",
+    "word": "tampoco",
+    "translation": "neither",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 306,
+    "article": "",
+    "word": "amar",
+    "translation": "to love",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 307,
+    "article": "",
+    "word": "joven",
+    "translation": "young",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 308,
+    "article": "el",
+    "word": "par",
+    "translation": "pair",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 309,
+    "article": "",
+    "word": "simplemente",
+    "translation": "simply",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 310,
+    "article": "el",
+    "word": "medio",
+    "translation": "middle",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 311,
+    "article": "el",
+    "word": "sentido",
+    "translation": "sense",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 312,
+    "article": "",
+    "word": "lejos",
+    "translation": "far",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 313,
+    "article": "la",
+    "word": "arma",
+    "translation": "weapon",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 314,
+    "article": "",
+    "word": "alto",
+    "translation": "tall",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 315,
+    "article": "el",
+    "word": "dólar",
+    "translation": "dollar",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 316,
+    "article": "",
+    "word": "seis",
+    "translation": "six",
+    "partOfSpeech": "number"
+  },
+  {
+    "rank": 317,
+    "article": "la",
+    "word": "seguridad",
+    "translation": "security",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 318,
+    "article": "",
+    "word": "preocupar",
+    "translation": "to worry",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 319,
+    "article": "la",
+    "word": "palabra",
+    "translation": "word",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 320,
+    "article": "",
+    "word": "quedar",
+    "translation": "to stay",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 321,
+    "article": "la",
+    "word": "oficina",
+    "translation": "office",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 322,
+    "article": "",
+    "word": "matar",
+    "translation": "to kill",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 323,
+    "article": "la",
+    "word": "cama",
+    "translation": "bed",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 324,
+    "article": "",
+    "word": "además",
+    "translation": "besides",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 325,
+    "article": "el",
+    "word": "recuerdo",
+    "translation": "memory",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 326,
+    "article": "",
+    "word": "acerca",
+    "translation": "about",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 327,
+    "article": "la",
+    "word": "luz",
+    "translation": "light",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 328,
+    "article": "",
+    "word": "correcto",
+    "translation": "right",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 329,
+    "article": "el",
+    "word": "demonio",
+    "translation": "demon",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 330,
+    "article": "",
+    "word": "dormir",
+    "translation": "to sleep",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 331,
+    "article": "el",
+    "word": "sitio",
+    "translation": "place",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 332,
+    "article": "",
+    "word": "ayudar",
+    "translation": "to help",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 333,
+    "article": "",
+    "word": "conseguir",
+    "translation": "to get",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 334,
+    "article": "el",
+    "word": "marido",
+    "translation": "husband",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 335,
+    "article": "la",
+    "word": "paz",
+    "translation": "peace",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 336,
+    "article": "la",
+    "word": "idiota",
+    "translation": "idiot",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 337,
+    "article": "el",
+    "word": "plan",
+    "translation": "plan",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 338,
+    "article": "",
+    "word": "cuanto",
+    "translation": "how much",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 339,
+    "article": "",
+    "word": "peor",
+    "translation": "worse",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 340,
+    "article": "el",
+    "word": "pueblo",
+    "translation": "town",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 341,
+    "article": "",
+    "word": "vivo",
+    "translation": "alive",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 342,
+    "article": "el",
+    "word": "john",
+    "translation": "John",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 343,
+    "article": "",
+    "word": "bastar",
+    "translation": "to suffice",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 344,
+    "article": "el",
+    "word": "paso",
+    "translation": "step",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 345,
+    "article": "la",
+    "word": "música",
+    "translation": "music",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 346,
+    "article": "",
+    "word": "anoche",
+    "translation": "last night",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 347,
+    "article": "el",
+    "word": "país",
+    "translation": "country",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 348,
+    "article": "el",
+    "word": "rey",
+    "translation": "king",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 349,
+    "article": "el",
+    "word": "perdón",
+    "translation": "forgiveness",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 350,
+    "article": "",
+    "word": "faltar",
+    "translation": "to lack",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 351,
+    "article": "el",
+    "word": "diablo",
+    "translation": "devil",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 352,
+    "article": "",
+    "word": "perder",
+    "translation": "to lose",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 353,
+    "article": "la",
+    "word": "niña",
+    "translation": "girl",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 354,
+    "article": "la",
+    "word": "señorita",
+    "translation": "miss",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 355,
+    "article": "",
+    "word": "diez",
+    "translation": "ten",
+    "partOfSpeech": "number"
+  },
+  {
+    "rank": 356,
+    "article": "",
+    "word": "llevar",
+    "translation": "to carry",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 357,
+    "article": "el",
+    "word": "hospital",
+    "translation": "hospital",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 358,
+    "article": "",
+    "word": "maldito",
+    "translation": "damn",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 359,
+    "article": "el",
+    "word": "fuego",
+    "translation": "fire",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 360,
+    "article": "",
+    "word": "poner",
+    "translation": "to put",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 361,
+    "article": "la",
+    "word": "calle",
+    "translation": "street",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 362,
+    "article": "",
+    "word": "acabar",
+    "translation": "to finish",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 363,
+    "article": "la",
+    "word": "prueba",
+    "translation": "test",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 364,
+    "article": "",
+    "word": "increíble",
+    "translation": "incredible",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 365,
+    "article": "",
+    "word": "real",
+    "translation": "real",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 366,
+    "article": "el",
+    "word": "libro",
+    "translation": "book",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 367,
+    "article": "el",
+    "word": "orden",
+    "translation": "order",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 368,
+    "article": "",
+    "word": "especial",
+    "translation": "special",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 369,
+    "article": "el",
+    "word": "café",
+    "translation": "coffee",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 370,
+    "article": "",
+    "word": "duro",
+    "translation": "hard",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 371,
+    "article": "",
+    "word": "empezar",
+    "translation": "to start",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 372,
+    "article": "",
+    "word": "afuera",
+    "translation": "outside",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 373,
+    "article": "el",
+    "word": "perro",
+    "translation": "dog",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 374,
+    "article": "el",
+    "word": "cielo",
+    "translation": "sky",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 375,
+    "article": "el",
+    "word": "puesto",
+    "translation": "position",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 376,
+    "article": "el",
+    "word": "viaje",
+    "translation": "trip",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 377,
+    "article": "",
+    "word": "detrás",
+    "translation": "behind",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 378,
+    "article": "el",
+    "word": "cuarto",
+    "translation": "room",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 379,
+    "article": "",
+    "word": "querido",
+    "translation": "dear",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 380,
+    "article": "",
+    "word": "libre",
+    "translation": "free",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 381,
+    "article": "",
+    "word": "cual",
+    "translation": "which",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 382,
+    "article": "",
+    "word": "sonar",
+    "translation": "to sound",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 383,
+    "article": "",
+    "word": "jugar",
+    "translation": "to play",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 384,
+    "article": "el",
+    "word": "cambio",
+    "translation": "change",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 385,
+    "article": "la",
+    "word": "película",
+    "translation": "movie",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 386,
+    "article": "el",
+    "word": "millón",
+    "translation": "million",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 387,
+    "article": "la",
+    "word": "llamada",
+    "translation": "call",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 388,
+    "article": "el",
+    "word": "resto",
+    "translation": "rest",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 389,
+    "article": "",
+    "word": "extraño",
+    "translation": "strange",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 390,
+    "article": "el",
+    "word": "presidente",
+    "translation": "president",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 391,
+    "article": "la",
+    "word": "ropa",
+    "translation": "clothes",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 392,
+    "article": "el",
+    "word": "agente",
+    "translation": "agent",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 393,
+    "article": "la",
+    "word": "información",
+    "translation": "information",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 394,
+    "article": "",
+    "word": "raro",
+    "translation": "rare",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 395,
+    "article": "",
+    "word": "general",
+    "translation": "general",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 396,
+    "article": "el",
+    "word": "trato",
+    "translation": "deal",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 397,
+    "article": "",
+    "word": "usar",
+    "translation": "to use",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 398,
+    "article": "",
+    "word": "perfecto",
+    "translation": "perfect",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 399,
+    "article": "el",
+    "word": "derecho",
+    "translation": "right",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 400,
+    "article": "el",
+    "word": "modo",
+    "translation": "way",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 401,
+    "article": "",
+    "word": "ayer",
+    "translation": "yesterday",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 402,
+    "article": "",
+    "word": "demás",
+    "translation": "others",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 403,
+    "article": "la",
+    "word": "noticia",
+    "translation": "news",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 404,
+    "article": "el",
+    "word": "asesino",
+    "translation": "killer",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 405,
+    "article": "el",
+    "word": "control",
+    "translation": "control",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 406,
+    "article": "el",
+    "word": "odio",
+    "translation": "hate",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 407,
+    "article": "el",
+    "word": "frente",
+    "translation": "front",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 408,
+    "article": "",
+    "word": "divertido",
+    "translation": "funny",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 409,
+    "article": "",
+    "word": "recordar",
+    "translation": "to remember",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 410,
+    "article": "la",
+    "word": "amiga",
+    "translation": "friend",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 411,
+    "article": "el",
+    "word": "grupo",
+    "translation": "group",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 412,
+    "article": "el",
+    "word": "asunto",
+    "translation": "matter",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 413,
+    "article": "el",
+    "word": "mensaje",
+    "translation": "message",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 414,
+    "article": "",
+    "word": "encima",
+    "translation": "above",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 415,
+    "article": "la",
+    "word": "atención",
+    "translation": "attention",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 416,
+    "article": "",
+    "word": "diferente",
+    "translation": "different",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 417,
+    "article": "",
+    "word": "callar",
+    "translation": "to be quiet",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 418,
+    "article": "el",
+    "word": "daño",
+    "translation": "damage",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 419,
+    "article": "",
+    "word": "suceder",
+    "translation": "to happen",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 420,
+    "article": "",
+    "word": "cambiar",
+    "translation": "to change",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 421,
+    "article": "",
+    "word": "siguiente",
+    "translation": "next",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 422,
+    "article": "",
+    "word": "sino",
+    "translation": "but",
+    "partOfSpeech": "conjunction"
+  },
+  {
+    "rank": 423,
+    "article": "el",
+    "word": "médico",
+    "translation": "doctor",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 424,
+    "article": "la",
+    "word": "boca",
+    "translation": "mouth",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 425,
+    "article": "el",
+    "word": "error",
+    "translation": "mistake",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 426,
+    "article": "",
+    "word": "jamás",
+    "translation": "never",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 427,
+    "article": "",
+    "word": "largo",
+    "translation": "long",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 428,
+    "article": "la",
+    "word": "pena",
+    "translation": "sorrow",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 429,
+    "article": "la",
+    "word": "voz",
+    "translation": "voice",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 430,
+    "article": "el",
+    "word": "futuro",
+    "translation": "future",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 431,
+    "article": "el",
+    "word": "secreto",
+    "translation": "secret",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 432,
+    "article": "el",
+    "word": "baño",
+    "translation": "bathroom",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 433,
+    "article": "",
+    "word": "mil",
+    "translation": "thousand",
+    "partOfSpeech": "number"
+  },
+  {
+    "rank": 434,
+    "article": "la",
+    "word": "novia",
+    "translation": "girlfriend",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 435,
+    "article": "",
+    "word": "propio",
+    "translation": "own",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 436,
+    "article": "el",
+    "word": "sueño",
+    "translation": "dream",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 437,
+    "article": "la",
+    "word": "fuerza",
+    "translation": "strength",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 438,
+    "article": "",
+    "word": "ambos",
+    "translation": "both",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 439,
+    "article": "el",
+    "word": "dolor",
+    "translation": "pain",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 440,
+    "article": "",
+    "word": "encantar",
+    "translation": "to love",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 441,
+    "article": "la",
+    "word": "edad",
+    "translation": "age",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 442,
+    "article": "el",
+    "word": "pie",
+    "translation": "foot",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 443,
+    "article": "",
+    "word": "negro",
+    "translation": "black",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 444,
+    "article": "",
+    "word": "ganar",
+    "translation": "to win",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 445,
+    "article": "el",
+    "word": "aire",
+    "translation": "air",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 446,
+    "article": "",
+    "word": "lamentar",
+    "translation": "to regret",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 447,
+    "article": "",
+    "word": "adónde",
+    "translation": "where",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 448,
+    "article": "",
+    "word": "disculpar",
+    "translation": "to forgive",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 449,
+    "article": "la",
+    "word": "cita",
+    "translation": "appointment",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 450,
+    "article": "el",
+    "word": "sistema",
+    "translation": "system",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 451,
+    "article": "el",
+    "word": "gusto",
+    "translation": "taste",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 452,
+    "article": "",
+    "word": "pobre",
+    "translation": "poor",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 453,
+    "article": "el",
+    "word": "negocio",
+    "translation": "business",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 454,
+    "article": "la",
+    "word": "mente",
+    "translation": "mind",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 455,
+    "article": "",
+    "word": "tuyo",
+    "translation": "yours",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 456,
+    "article": "el",
+    "word": "campo",
+    "translation": "countryside",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 457,
+    "article": "la",
+    "word": "situación",
+    "translation": "situation",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 458,
+    "article": "",
+    "word": "tras",
+    "translation": "behind",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 459,
+    "article": "el",
+    "word": "hotel",
+    "translation": "hotel",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 460,
+    "article": "",
+    "word": "vosotros",
+    "translation": "you all (informal)",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 461,
+    "article": "",
+    "word": "funcionar",
+    "translation": "to function",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 462,
+    "article": "la",
+    "word": "foto",
+    "translation": "photo",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 463,
+    "article": "el",
+    "word": "abogado",
+    "translation": "lawyer",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 464,
+    "article": "",
+    "word": "alrededor",
+    "translation": "around",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 465,
+    "article": "",
+    "word": "próximo",
+    "translation": "next",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 466,
+    "article": "",
+    "word": "terminar",
+    "translation": "to finish",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 467,
+    "article": "",
+    "word": "pagar",
+    "translation": "to pay",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 468,
+    "article": "",
+    "word": "personal",
+    "translation": "personal",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 469,
+    "article": "",
+    "word": "ocurrir",
+    "translation": "to occur",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 470,
+    "article": "la",
+    "word": "mitad",
+    "translation": "half",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 471,
+    "article": "el",
+    "word": "pelo",
+    "translation": "hair",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 472,
+    "article": "el",
+    "word": "oficial",
+    "translation": "officer",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 473,
+    "article": "la",
+    "word": "compañía",
+    "translation": "company",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 474,
+    "article": "la",
+    "word": "relación",
+    "translation": "relationship",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 475,
+    "article": "el",
+    "word": "montón",
+    "translation": "a lot",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 476,
+    "article": "la",
+    "word": "cena",
+    "translation": "dinner",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 477,
+    "article": "el",
+    "word": "través",
+    "translation": "across",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 478,
+    "article": "el",
+    "word": "accidente",
+    "translation": "accident",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 479,
+    "article": "la",
+    "word": "caja",
+    "translation": "box",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 480,
+    "article": "",
+    "word": "tranquilo",
+    "translation": "calm",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 481,
+    "article": "",
+    "word": "bonito",
+    "translation": "pretty",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 482,
+    "article": "la",
+    "word": "vista",
+    "translation": "view",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 483,
+    "article": "",
+    "word": "estúpido",
+    "translation": "stupid",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 484,
+    "article": "la",
+    "word": "línea",
+    "translation": "line",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 485,
+    "article": "el",
+    "word": "caballero",
+    "translation": "gentleman",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 486,
+    "article": "la",
+    "word": "tienda",
+    "translation": "store",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 487,
+    "article": "",
+    "word": "comprar",
+    "translation": "to buy",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 488,
+    "article": "el",
+    "word": "centro",
+    "translation": "center",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 489,
+    "article": "",
+    "word": "salvo",
+    "translation": "except",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 490,
+    "article": "el",
+    "word": "sol",
+    "translation": "sun",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 491,
+    "article": "",
+    "word": "tonto",
+    "translation": "fool",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 492,
+    "article": "la",
+    "word": "hambre",
+    "translation": "hunger",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 493,
+    "article": "la",
+    "word": "mesa",
+    "translation": "table",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 494,
+    "article": "la",
+    "word": "respuesta",
+    "translation": "answer",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 495,
+    "article": "",
+    "word": "completamente",
+    "translation": "completely",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 496,
+    "article": "la",
+    "word": "carta",
+    "translation": "letter",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 497,
+    "article": "",
+    "word": "totalmente",
+    "translation": "totally",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 498,
+    "article": "",
+    "word": "imposible",
+    "translation": "impossible",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 499,
+    "article": "el",
+    "word": "novio",
+    "translation": "boyfriend",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 500,
+    "article": "",
+    "word": "normal",
+    "translation": "normal",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 501,
+    "article": "el",
+    "word": "traje",
+    "translation": "suit",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 502,
+    "article": "la",
+    "word": "dirección",
+    "translation": "address",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 503,
+    "article": "",
+    "word": "siete",
+    "translation": "seven",
+    "partOfSpeech": "number"
+  },
+  {
+    "rank": 504,
+    "article": "el",
+    "word": "placer",
+    "translation": "pleasure",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 505,
+    "article": "el",
+    "word": "barco",
+    "translation": "ship",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 506,
+    "article": "",
+    "word": "blanco",
+    "translation": "white",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 507,
+    "article": "el",
+    "word": "profesor",
+    "translation": "teacher",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 508,
+    "article": "el",
+    "word": "servicio",
+    "translation": "service",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 509,
+    "article": "el",
+    "word": "muchacho",
+    "translation": "boy",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 510,
+    "article": "la",
+    "word": "reunión",
+    "translation": "meeting",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 511,
+    "article": "la",
+    "word": "ley",
+    "translation": "law",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 512,
+    "article": "el",
+    "word": "programa",
+    "translation": "program",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 513,
+    "article": "la",
+    "word": "carrera",
+    "translation": "career",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 514,
+    "article": "el",
+    "word": "cumpleaños",
+    "translation": "birthday",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 515,
+    "article": "la",
+    "word": "canción",
+    "translation": "song",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 516,
+    "article": "",
+    "word": "hermoso",
+    "translation": "beautiful",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 517,
+    "article": "la",
+    "word": "universidad",
+    "translation": "university",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 518,
+    "article": "la",
+    "word": "boda",
+    "translation": "wedding",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 519,
+    "article": "",
+    "word": "cualquiera",
+    "translation": "anyone",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 520,
+    "article": "la",
+    "word": "sala",
+    "translation": "room",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 521,
+    "article": "la",
+    "word": "decisión",
+    "translation": "decision",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 522,
+    "article": "el",
+    "word": "don",
+    "translation": "gift",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 523,
+    "article": "",
+    "word": "necesario",
+    "translation": "necessary",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 524,
+    "article": "la",
+    "word": "prisa",
+    "translation": "hurry",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 525,
+    "article": "el",
+    "word": "embargo",
+    "translation": "embargo",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 526,
+    "article": "",
+    "word": "interesante",
+    "translation": "interesting",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 527,
+    "article": "la",
+    "word": "abuela",
+    "translation": "grandmother",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 528,
+    "article": "el",
+    "word": "detective",
+    "translation": "detective",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 529,
+    "article": "",
+    "word": "horrible",
+    "translation": "horrible",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 530,
+    "article": "el",
+    "word": "suelo",
+    "translation": "ground",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 531,
+    "article": "la",
+    "word": "cárcel",
+    "translation": "jail",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 532,
+    "article": "",
+    "word": "acá",
+    "translation": "here",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 533,
+    "article": "",
+    "word": "sentar",
+    "translation": "to sit",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 534,
+    "article": "",
+    "word": "intentar",
+    "translation": "to try",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 535,
+    "article": "la",
+    "word": "maldición",
+    "translation": "curse",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 536,
+    "article": "el",
+    "word": "silencio",
+    "translation": "silence",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 537,
+    "article": "",
+    "word": "capaz",
+    "translation": "able",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 538,
+    "article": "el",
+    "word": "club",
+    "translation": "club",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 539,
+    "article": "",
+    "word": "temer",
+    "translation": "to fear",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 540,
+    "article": "la",
+    "word": "broma",
+    "translation": "joke",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 541,
+    "article": "el",
+    "word": "gobierno",
+    "translation": "government",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 542,
+    "article": "",
+    "word": "prometer",
+    "translation": "to promise",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 543,
+    "article": "la",
+    "word": "cámara",
+    "translation": "camera",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 544,
+    "article": "",
+    "word": "terrible",
+    "translation": "terrible",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 545,
+    "article": "el",
+    "word": "regalo",
+    "translation": "gift",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 546,
+    "article": "",
+    "word": "amable",
+    "translation": "kind",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 547,
+    "article": "",
+    "word": "dulce",
+    "translation": "sweet",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 548,
+    "article": "el",
+    "word": "ataque",
+    "translation": "attack",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 549,
+    "article": "la",
+    "word": "navidad",
+    "translation": "Christmas",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 550,
+    "article": "",
+    "word": "ocho",
+    "translation": "eight",
+    "partOfSpeech": "number"
+  },
+  {
+    "rank": 551,
+    "article": "el",
+    "word": "avión",
+    "translation": "airplane",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 552,
+    "article": "la",
+    "word": "investigación",
+    "translation": "investigation",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 553,
+    "article": "",
+    "word": "jurar",
+    "translation": "to swear",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 554,
+    "article": "",
+    "word": "mantener",
+    "translation": "to maintain",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 555,
+    "article": "el",
+    "word": "ejército",
+    "translation": "army",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 556,
+    "article": "el",
+    "word": "papel",
+    "translation": "paper",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 557,
+    "article": "",
+    "word": "gracioso",
+    "translation": "funny",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 558,
+    "article": "el",
+    "word": "principio",
+    "translation": "beginning",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 559,
+    "article": "",
+    "word": "delante",
+    "translation": "in front",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 560,
+    "article": "el",
+    "word": "teniente",
+    "translation": "lieutenant",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 561,
+    "article": "el",
+    "word": "deseo",
+    "translation": "desire",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 562,
+    "article": "la",
+    "word": "nave",
+    "translation": "ship",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 563,
+    "article": "la",
+    "word": "basura",
+    "translation": "trash",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 564,
+    "article": "el",
+    "word": "contacto",
+    "translation": "contact",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 565,
+    "article": "el",
+    "word": "esposo",
+    "translation": "husband",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 566,
+    "article": "el",
+    "word": "tren",
+    "translation": "train",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 567,
+    "article": "",
+    "word": "verdadero",
+    "translation": "TRUE",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 568,
+    "article": "la",
+    "word": "alma",
+    "translation": "soul",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 569,
+    "article": "la",
+    "word": "disculpa",
+    "translation": "apology",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 570,
+    "article": "",
+    "word": "andar",
+    "translation": "to walk",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 571,
+    "article": "el",
+    "word": "matrimonio",
+    "translation": "marriage",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 572,
+    "article": "la",
+    "word": "locura",
+    "translation": "madness",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 573,
+    "article": "el",
+    "word": "oro",
+    "translation": "gold",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 574,
+    "article": "el",
+    "word": "permiso",
+    "translation": "permission",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 575,
+    "article": "el",
+    "word": "director",
+    "translation": "director",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 576,
+    "article": "el",
+    "word": "peligro",
+    "translation": "danger",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 577,
+    "article": "la",
+    "word": "libertad",
+    "translation": "freedom",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 578,
+    "article": "",
+    "word": "alegrar",
+    "translation": "to cheer",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 579,
+    "article": "",
+    "word": "bajar",
+    "translation": "to go down",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 580,
+    "article": "la",
+    "word": "derecha",
+    "translation": "right",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 581,
+    "article": "",
+    "word": "maravilloso",
+    "translation": "wonderful",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 582,
+    "article": "el",
+    "word": "espacio",
+    "translation": "space",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 583,
+    "article": "el",
+    "word": "rato",
+    "translation": "moment",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 584,
+    "article": "el",
+    "word": "abuelo",
+    "translation": "grandfather",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 585,
+    "article": "la",
+    "word": "salud",
+    "translation": "health",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 586,
+    "article": "la",
+    "word": "sorpresa",
+    "translation": "surprise",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 587,
+    "article": "",
+    "word": "triste",
+    "translation": "sad",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 588,
+    "article": "",
+    "word": "aun",
+    "translation": "even",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 589,
+    "article": "el",
+    "word": "maestro",
+    "translation": "teacher",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 590,
+    "article": "",
+    "word": "según",
+    "translation": "according to",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 591,
+    "article": "el",
+    "word": "infierno",
+    "translation": "hell",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 592,
+    "article": "la",
+    "word": "tía",
+    "translation": "aunt",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 593,
+    "article": "el",
+    "word": "crimen",
+    "translation": "crime",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 594,
+    "article": "",
+    "word": "conocido",
+    "translation": "acquaintance",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 595,
+    "article": "el",
+    "word": "consejo",
+    "translation": "advice",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 596,
+    "article": "",
+    "word": "ante",
+    "translation": "before",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 597,
+    "article": "la",
+    "word": "iglesia",
+    "translation": "church",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 598,
+    "article": "el",
+    "word": "intento",
+    "translation": "attempt",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 599,
+    "article": "la",
+    "word": "mayoría",
+    "translation": "majority",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 600,
+    "article": "la",
+    "word": "escena",
+    "translation": "scene",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 601,
+    "article": "el",
+    "word": "piso",
+    "translation": "floor",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 602,
+    "article": "la",
+    "word": "señal",
+    "translation": "signal",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 603,
+    "article": "el",
+    "word": "honor",
+    "translation": "honor",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 604,
+    "article": "",
+    "word": "abrir",
+    "translation": "to open",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 605,
+    "article": "el",
+    "word": "cerebro",
+    "translation": "brain",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 606,
+    "article": "",
+    "word": "preguntar",
+    "translation": "to ask",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 607,
+    "article": "la",
+    "word": "cocina",
+    "translation": "kitchen",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 608,
+    "article": "el",
+    "word": "vestido",
+    "translation": "dress",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 609,
+    "article": "",
+    "word": "inteligente",
+    "translation": "smart",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 610,
+    "article": "el",
+    "word": "caballo",
+    "translation": "horse",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 611,
+    "article": "el",
+    "word": "bar",
+    "translation": "bar",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 612,
+    "article": "el",
+    "word": "corte",
+    "translation": "court",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 613,
+    "article": "",
+    "word": "adentro",
+    "translation": "inside",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 614,
+    "article": "la",
+    "word": "droga",
+    "translation": "drug",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 615,
+    "article": "",
+    "word": "enseguida",
+    "translation": "immediately",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 616,
+    "article": "",
+    "word": "agradable",
+    "translation": "pleasant",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 617,
+    "article": "la",
+    "word": "carne",
+    "translation": "meat",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 618,
+    "article": "el",
+    "word": "departamento",
+    "translation": "apartment",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 619,
+    "article": "",
+    "word": "lindo",
+    "translation": "cute",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 620,
+    "article": "el",
+    "word": "mar",
+    "translation": "sea",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 621,
+    "article": "la",
+    "word": "duda",
+    "translation": "doubt",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 622,
+    "article": "el",
+    "word": "edificio",
+    "translation": "building",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 623,
+    "article": "el",
+    "word": "cargo",
+    "translation": "position",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 624,
+    "article": "la",
+    "word": "víctima",
+    "translation": "victim",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 625,
+    "article": "la",
+    "word": "luna",
+    "translation": "moon",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 626,
+    "article": "la",
+    "word": "energía",
+    "translation": "energy",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 627,
+    "article": "el",
+    "word": "frío",
+    "translation": "cold",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 628,
+    "article": "el",
+    "word": "baile",
+    "translation": "dance",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 629,
+    "article": "la",
+    "word": "misión",
+    "translation": "mission",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 630,
+    "article": "la",
+    "word": "izquierda",
+    "translation": "left",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 631,
+    "article": "",
+    "word": "beber",
+    "translation": "to drink",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 632,
+    "article": "",
+    "word": "finalmente",
+    "translation": "finally",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 633,
+    "article": "",
+    "word": "simple",
+    "translation": "simple",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 634,
+    "article": "",
+    "word": "regresar",
+    "translation": "to return",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 635,
+    "article": "",
+    "word": "sacar",
+    "translation": "to take out",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 636,
+    "article": "",
+    "word": "traer",
+    "translation": "to bring",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 637,
+    "article": "la",
+    "word": "opinión",
+    "translation": "opinion",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 638,
+    "article": "",
+    "word": "apenas",
+    "translation": "hardly",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 639,
+    "article": "la",
+    "word": "cerveza",
+    "translation": "beer",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 640,
+    "article": "la",
+    "word": "reina",
+    "translation": "queen",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 641,
+    "article": "",
+    "word": "temprano",
+    "translation": "early",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 642,
+    "article": "el",
+    "word": "tema",
+    "translation": "topic",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 643,
+    "article": "la",
+    "word": "prisión",
+    "translation": "prison",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 644,
+    "article": "el",
+    "word": "porqué",
+    "translation": "reason",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 645,
+    "article": "el",
+    "word": "público",
+    "translation": "public",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 646,
+    "article": "",
+    "word": "salvar",
+    "translation": "to save",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 647,
+    "article": "el",
+    "word": "partido",
+    "translation": "game",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 648,
+    "article": "la",
+    "word": "causa",
+    "translation": "cause",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 649,
+    "article": "",
+    "word": "caliente",
+    "translation": "hot",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 650,
+    "article": "el",
+    "word": "sargento",
+    "translation": "sergeant",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 651,
+    "article": "",
+    "word": "cenar",
+    "translation": "to have dinner",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 652,
+    "article": "el",
+    "word": "compañero",
+    "translation": "partner",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 653,
+    "article": "el",
+    "word": "banco",
+    "translation": "bank",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 654,
+    "article": "",
+    "word": "existir",
+    "translation": "to exist",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 655,
+    "article": "el",
+    "word": "ben",
+    "translation": "Ben",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 656,
+    "article": "la",
+    "word": "zona",
+    "translation": "zone",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 657,
+    "article": "el",
+    "word": "destino",
+    "translation": "destiny",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 658,
+    "article": "la",
+    "word": "base",
+    "translation": "base",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 659,
+    "article": "",
+    "word": "soler",
+    "translation": "to tend to",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 660,
+    "article": "el",
+    "word": "cliente",
+    "translation": "client",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 661,
+    "article": "el",
+    "word": "encuentro",
+    "translation": "meeting",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 662,
+    "article": "la",
+    "word": "pelea",
+    "translation": "fight",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 663,
+    "article": "",
+    "word": "san",
+    "translation": "Saint",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 664,
+    "article": "el",
+    "word": "norte",
+    "translation": "north",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 665,
+    "article": "el",
+    "word": "coronel",
+    "translation": "colonel",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 666,
+    "article": "",
+    "word": "apuesto",
+    "translation": "handsome",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 667,
+    "article": "",
+    "word": "peligroso",
+    "translation": "dangerous",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 668,
+    "article": "el",
+    "word": "té",
+    "translation": "tea",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 669,
+    "article": "",
+    "word": "excepto",
+    "translation": "except",
+    "partOfSpeech": "preposition"
+  },
+  {
+    "rank": 670,
+    "article": "el",
+    "word": "juicio",
+    "translation": "trial",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 671,
+    "article": "la",
+    "word": "llave",
+    "translation": "key",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 672,
+    "article": "",
+    "word": "equivocado",
+    "translation": "wrong",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 673,
+    "article": "la",
+    "word": "posición",
+    "translation": "position",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 674,
+    "article": "el",
+    "word": "trasero",
+    "translation": "butt",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 675,
+    "article": "la",
+    "word": "espalda",
+    "translation": "back",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 676,
+    "article": "",
+    "word": "excelente",
+    "translation": "excellent",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 677,
+    "article": "el",
+    "word": "éxito",
+    "translation": "success",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 678,
+    "article": "la",
+    "word": "ventana",
+    "translation": "window",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 679,
+    "article": "la",
+    "word": "especie",
+    "translation": "species",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 680,
+    "article": "la",
+    "word": "diferencia",
+    "translation": "difference",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 681,
+    "article": "",
+    "word": "pedir",
+    "translation": "to ask",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 682,
+    "article": "el",
+    "word": "ejemplo",
+    "translation": "example",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 683,
+    "article": "la",
+    "word": "radio",
+    "translation": "radio",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 684,
+    "article": "",
+    "word": "leer",
+    "translation": "to read",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 685,
+    "article": "la",
+    "word": "calma",
+    "translation": "calm",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 686,
+    "article": "el",
+    "word": "hogar",
+    "translation": "home",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 687,
+    "article": "el",
+    "word": "fondo",
+    "translation": "bottom",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 688,
+    "article": "",
+    "word": "humano",
+    "translation": "human",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 689,
+    "article": "",
+    "word": "tí",
+    "translation": "you",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 690,
+    "article": "",
+    "word": "unido",
+    "translation": "united",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 691,
+    "article": "el",
+    "word": "planeta",
+    "translation": "planet",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 692,
+    "article": "el",
+    "word": "respecto",
+    "translation": "respect",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 693,
+    "article": "el",
+    "word": "regreso",
+    "translation": "return",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 694,
+    "article": "",
+    "word": "debido",
+    "translation": "due",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 695,
+    "article": "",
+    "word": "parar",
+    "translation": "to stop",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 696,
+    "article": "",
+    "word": "lleno",
+    "translation": "full",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 697,
+    "article": "el",
+    "word": "respeto",
+    "translation": "respect",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 698,
+    "article": "",
+    "word": "debajo",
+    "translation": "under",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 699,
+    "article": "",
+    "word": "escribir",
+    "translation": "to write",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 700,
+    "article": "la",
+    "word": "estación",
+    "translation": "station",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 701,
+    "article": "la",
+    "word": "pista",
+    "translation": "track",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 702,
+    "article": "la",
+    "word": "estrella",
+    "translation": "star",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 703,
+    "article": "",
+    "word": "enfermo",
+    "translation": "sick",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 704,
+    "article": "",
+    "word": "doler",
+    "translation": "to hurt",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 705,
+    "article": "",
+    "word": "ocupado",
+    "translation": "busy",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 706,
+    "article": "",
+    "word": "correr",
+    "translation": "to run",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 707,
+    "article": "el",
+    "word": "nivel",
+    "translation": "level",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 708,
+    "article": "la",
+    "word": "experiencia",
+    "translation": "experience",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 709,
+    "article": "la",
+    "word": "salida",
+    "translation": "exit",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 710,
+    "article": "",
+    "word": "confiar",
+    "translation": "to trust",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 711,
+    "article": "el",
+    "word": "zapato",
+    "translation": "shoe",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 712,
+    "article": "el",
+    "word": "color",
+    "translation": "color",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 713,
+    "article": "el",
+    "word": "vistazo",
+    "translation": "glance",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 714,
+    "article": "la",
+    "word": "nena",
+    "translation": "girl",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 715,
+    "article": "el",
+    "word": "juez",
+    "translation": "judge",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 716,
+    "article": "el",
+    "word": "paciente",
+    "translation": "patient",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 717,
+    "article": "la",
+    "word": "bolsa",
+    "translation": "bag",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 718,
+    "article": "el",
+    "word": "arte",
+    "translation": "art",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 719,
+    "article": "",
+    "word": "bailar",
+    "translation": "to dance",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 720,
+    "article": "el",
+    "word": "sur",
+    "translation": "south",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 721,
+    "article": "la",
+    "word": "banda",
+    "translation": "band",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 722,
+    "article": "",
+    "word": "aprender",
+    "translation": "to learn",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 723,
+    "article": "el",
+    "word": "precio",
+    "translation": "price",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 724,
+    "article": "",
+    "word": "completo",
+    "translation": "complete",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 725,
+    "article": "",
+    "word": "santo",
+    "translation": "saint",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 726,
+    "article": "",
+    "word": "culpable",
+    "translation": "guilty",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 727,
+    "article": "la",
+    "word": "gana",
+    "translation": "desire",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 728,
+    "article": "",
+    "word": "azul",
+    "translation": "blue",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 729,
+    "article": "el",
+    "word": "comandante",
+    "translation": "commander",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 730,
+    "article": "la",
+    "word": "acción",
+    "translation": "action",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 731,
+    "article": "la",
+    "word": "regla",
+    "translation": "rule",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 732,
+    "article": "la",
+    "word": "obra",
+    "translation": "work",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 733,
+    "article": "la",
+    "word": "esperanza",
+    "translation": "hope",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 734,
+    "article": "la",
+    "word": "cuestión",
+    "translation": "question",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 735,
+    "article": "",
+    "word": "molestar",
+    "translation": "to annoy",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 736,
+    "article": "el",
+    "word": "bill",
+    "translation": "bill",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 737,
+    "article": "el",
+    "word": "informe",
+    "translation": "report",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 738,
+    "article": "el",
+    "word": "río",
+    "translation": "river",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 739,
+    "article": "",
+    "word": "bienvenido",
+    "translation": "welcome",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 740,
+    "article": "",
+    "word": "tocar",
+    "translation": "to touch",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 741,
+    "article": "",
+    "word": "contar",
+    "translation": "to count",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 742,
+    "article": "el",
+    "word": "interior",
+    "translation": "interior",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 743,
+    "article": "el",
+    "word": "apartamento",
+    "translation": "apartment",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 744,
+    "article": "",
+    "word": "principal",
+    "translation": "main",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 745,
+    "article": "",
+    "word": "perdonar",
+    "translation": "to forgive",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 746,
+    "article": "el",
+    "word": "golpe",
+    "translation": "blow",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 747,
+    "article": "el",
+    "word": "estilo",
+    "translation": "style",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 748,
+    "article": "",
+    "word": "nueve",
+    "translation": "nine",
+    "partOfSpeech": "number"
+  },
+  {
+    "rank": 749,
+    "article": "",
+    "word": "definitivamente",
+    "translation": "definitely",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 750,
+    "article": "la",
+    "word": "bomba",
+    "translation": "bomb",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 751,
+    "article": "el",
+    "word": "guardia",
+    "translation": "guard",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 752,
+    "article": "la",
+    "word": "pistola",
+    "translation": "gun",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 753,
+    "article": "",
+    "word": "probar",
+    "translation": "to try",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 754,
+    "article": "la",
+    "word": "majestad",
+    "translation": "majesty",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 755,
+    "article": "la",
+    "word": "marcha",
+    "translation": "parade",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 756,
+    "article": "",
+    "word": "común",
+    "translation": "common",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 757,
+    "article": "",
+    "word": "aquel",
+    "translation": "that",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 758,
+    "article": "el",
+    "word": "vuelo",
+    "translation": "flight",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 759,
+    "article": "la",
+    "word": "nota",
+    "translation": "note",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 760,
+    "article": "el",
+    "word": "valor",
+    "translation": "value",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 761,
+    "article": "",
+    "word": "suyo",
+    "translation": "theirs",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 762,
+    "article": "el",
+    "word": "objetivo",
+    "translation": "objective",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 763,
+    "article": "el",
+    "word": "repente",
+    "translation": "sudden",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 764,
+    "article": "",
+    "word": "rojo",
+    "translation": "red",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 765,
+    "article": "",
+    "word": "bromear",
+    "translation": "to joke",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 766,
+    "article": "la",
+    "word": "entrada",
+    "translation": "entry",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 767,
+    "article": "",
+    "word": "doble",
+    "translation": "double",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 768,
+    "article": "",
+    "word": "evitar",
+    "translation": "to avoid",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 769,
+    "article": "la",
+    "word": "máquina",
+    "translation": "machine",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 770,
+    "article": "el",
+    "word": "cuello",
+    "translation": "neck",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 771,
+    "article": "el",
+    "word": "animal",
+    "translation": "animal",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 772,
+    "article": "",
+    "word": "acaso",
+    "translation": "perhaps",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 773,
+    "article": "la",
+    "word": "pareja",
+    "translation": "couple",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 774,
+    "article": "el",
+    "word": "verano",
+    "translation": "summer",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 775,
+    "article": "la",
+    "word": "mentira",
+    "translation": "lie",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 776,
+    "article": "la",
+    "word": "tarjeta",
+    "translation": "card",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 777,
+    "article": "",
+    "word": "preparado",
+    "translation": "prepared",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 778,
+    "article": "la",
+    "word": "flor",
+    "translation": "flower",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 779,
+    "article": "",
+    "word": "vos",
+    "translation": "you (informal)",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 780,
+    "article": "la",
+    "word": "opción",
+    "translation": "option",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 781,
+    "article": "la",
+    "word": "isla",
+    "translation": "island",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 782,
+    "article": "",
+    "word": "cerrar",
+    "translation": "to close",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 783,
+    "article": "la",
+    "word": "piel",
+    "translation": "skin",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 784,
+    "article": "el",
+    "word": "enemigo",
+    "translation": "enemy",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 785,
+    "article": "",
+    "word": "exacto",
+    "translation": "exact",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 786,
+    "article": "la",
+    "word": "justicia",
+    "translation": "justice",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 787,
+    "article": "",
+    "word": "obviamente",
+    "translation": "obviously",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 788,
+    "article": "",
+    "word": "despertar",
+    "translation": "to wake up",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 789,
+    "article": "el",
+    "word": "calor",
+    "translation": "heat",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 790,
+    "article": "",
+    "word": "referir",
+    "translation": "to refer",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 791,
+    "article": "la",
+    "word": "batalla",
+    "translation": "battle",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 792,
+    "article": "",
+    "word": "fantástico",
+    "translation": "fantastic",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 793,
+    "article": "el",
+    "word": "brazo",
+    "translation": "arm",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 794,
+    "article": "",
+    "word": "absolutamente",
+    "translation": "absolutely",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 795,
+    "article": "",
+    "word": "escapar",
+    "translation": "to escape",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 796,
+    "article": "el",
+    "word": "bosque",
+    "translation": "forest",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 797,
+    "article": "",
+    "word": "gay",
+    "translation": "gay",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 798,
+    "article": "la",
+    "word": "pierna",
+    "translation": "leg",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 799,
+    "article": "la",
+    "word": "visita",
+    "translation": "visit",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 800,
+    "article": "el",
+    "word": "movimiento",
+    "translation": "movement",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 801,
+    "article": "",
+    "word": "rico",
+    "translation": "rich",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 802,
+    "article": "",
+    "word": "inocente",
+    "translation": "innocent",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 803,
+    "article": "el",
+    "word": "pesar",
+    "translation": "sorrow",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 804,
+    "article": "",
+    "word": "absoluto",
+    "translation": "absolute",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 805,
+    "article": "la",
+    "word": "vacaciones",
+    "translation": "vacation",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 806,
+    "article": "el",
+    "word": "cine",
+    "translation": "cinema",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 807,
+    "article": "",
+    "word": "brillante",
+    "translation": "brilliant",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 808,
+    "article": "la",
+    "word": "confianza",
+    "translation": "confidence",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 809,
+    "article": "",
+    "word": "vuestro",
+    "translation": "yours (informal plural)",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 810,
+    "article": "",
+    "word": "especialmente",
+    "translation": "especially",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 811,
+    "article": "",
+    "word": "embarazada",
+    "translation": "pregnant",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 812,
+    "article": "el",
+    "word": "pantalón",
+    "translation": "pants",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 813,
+    "article": "la",
+    "word": "defensa",
+    "translation": "defense",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 814,
+    "article": "",
+    "word": "estupendo",
+    "translation": "great",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 815,
+    "article": "la",
+    "word": "presión",
+    "translation": "pressure",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 816,
+    "article": "",
+    "word": "inmediatamente",
+    "translation": "immediately",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 817,
+    "article": "el",
+    "word": "testigo",
+    "translation": "witness",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 818,
+    "article": "",
+    "word": "olvidar",
+    "translation": "to forget",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 819,
+    "article": "el",
+    "word": "soldado",
+    "translation": "soldier",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 820,
+    "article": "",
+    "word": "resultar",
+    "translation": "to result",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 821,
+    "article": "",
+    "word": "depender",
+    "translation": "to depend",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 822,
+    "article": "el",
+    "word": "motivo",
+    "translation": "motive",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 823,
+    "article": "el",
+    "word": "inglés",
+    "translation": "English",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 824,
+    "article": "el",
+    "word": "estudio",
+    "translation": "study",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 825,
+    "article": "el",
+    "word": "sentimiento",
+    "translation": "feeling",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 826,
+    "article": "el",
+    "word": "propósito",
+    "translation": "purpose",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 827,
+    "article": "",
+    "word": "partir",
+    "translation": "to depart",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 828,
+    "article": "el",
+    "word": "metro",
+    "translation": "subway",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 829,
+    "article": "",
+    "word": "ridículo",
+    "translation": "ridiculous",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 830,
+    "article": "la",
+    "word": "dama",
+    "translation": "lady",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 831,
+    "article": "la",
+    "word": "operación",
+    "translation": "operation",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 832,
+    "article": "la",
+    "word": "empresa",
+    "translation": "company",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 833,
+    "article": "el",
+    "word": "laboratorio",
+    "translation": "laboratory",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 834,
+    "article": "la",
+    "word": "elección",
+    "translation": "choice",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 835,
+    "article": "el",
+    "word": "menudo",
+    "translation": "often",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 836,
+    "article": "el",
+    "word": "beso",
+    "translation": "kiss",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 837,
+    "article": "la",
+    "word": "copa",
+    "translation": "glass",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 838,
+    "article": "la",
+    "word": "conversación",
+    "translation": "conversation",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 839,
+    "article": "el",
+    "word": "espíritu",
+    "translation": "spirit",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 840,
+    "article": "",
+    "word": "cansado",
+    "translation": "tired",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 841,
+    "article": "",
+    "word": "interesar",
+    "translation": "to interest",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 842,
+    "article": "",
+    "word": "casado",
+    "translation": "married",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 843,
+    "article": "",
+    "word": "enorme",
+    "translation": "huge",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 844,
+    "article": "la",
+    "word": "fe",
+    "translation": "faith",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 845,
+    "article": "",
+    "word": "mostrar",
+    "translation": "to show",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 846,
+    "article": "la",
+    "word": "trampa",
+    "translation": "trap",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 847,
+    "article": "la",
+    "word": "memoria",
+    "translation": "memory",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 848,
+    "article": "el",
+    "word": "contrario",
+    "translation": "opposite",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 849,
+    "article": "",
+    "word": "subir",
+    "translation": "to go up",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 850,
+    "article": "el",
+    "word": "turno",
+    "translation": "turn",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 851,
+    "article": "",
+    "word": "preocupado",
+    "translation": "worried",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 852,
+    "article": "el",
+    "word": "restaurante",
+    "translation": "restaurant",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 853,
+    "article": "",
+    "word": "calmar",
+    "translation": "to calm",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 854,
+    "article": "",
+    "word": "caer",
+    "translation": "to fall",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 855,
+    "article": "la",
+    "word": "leche",
+    "translation": "milk",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 856,
+    "article": "",
+    "word": "preferir",
+    "translation": "to prefer",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 857,
+    "article": "la",
+    "word": "red",
+    "translation": "net",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 858,
+    "article": "",
+    "word": "solamente",
+    "translation": "only",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 859,
+    "article": "el",
+    "word": "taxi",
+    "translation": "taxi",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 860,
+    "article": "el",
+    "word": "anillo",
+    "translation": "ring",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 861,
+    "article": "el",
+    "word": "héroe",
+    "translation": "hero",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 862,
+    "article": "",
+    "word": "decidir",
+    "translation": "to decide",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 863,
+    "article": "",
+    "word": "responsable",
+    "translation": "responsible",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 864,
+    "article": "el",
+    "word": "trago",
+    "translation": "drink",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 865,
+    "article": "el",
+    "word": "árbol",
+    "translation": "tree",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 866,
+    "article": "el",
+    "word": "diente",
+    "translation": "tooth",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 867,
+    "article": "",
+    "word": "encantado",
+    "translation": "delighted",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 868,
+    "article": "el",
+    "word": "camión",
+    "translation": "truck",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 869,
+    "article": "",
+    "word": "vender",
+    "translation": "to sell",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 870,
+    "article": "",
+    "word": "detener",
+    "translation": "to stop",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 871,
+    "article": "",
+    "word": "luchar",
+    "translation": "to fight",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 872,
+    "article": "el",
+    "word": "cabo",
+    "translation": "end",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 873,
+    "article": "el",
+    "word": "ruido",
+    "translation": "noise",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 874,
+    "article": "la",
+    "word": "lucha",
+    "translation": "struggle",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 875,
+    "article": "el",
+    "word": "reloj",
+    "translation": "watch",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 876,
+    "article": "el",
+    "word": "gato",
+    "translation": "cat",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 877,
+    "article": "",
+    "word": "averiguar",
+    "translation": "to find out",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 878,
+    "article": "",
+    "word": "volar",
+    "translation": "to fly",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 879,
+    "article": "el",
+    "word": "colegio",
+    "translation": "school",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 880,
+    "article": "el",
+    "word": "sonido",
+    "translation": "sound",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 881,
+    "article": "",
+    "word": "pasado",
+    "translation": "past",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 882,
+    "article": "el",
+    "word": "código",
+    "translation": "code",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 883,
+    "article": "la",
+    "word": "imagen",
+    "translation": "image",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 884,
+    "article": "el",
+    "word": "riesgo",
+    "translation": "risk",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 885,
+    "article": "el",
+    "word": "pan",
+    "translation": "bread",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 886,
+    "article": "el",
+    "word": "hielo",
+    "translation": "ice",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 887,
+    "article": "la",
+    "word": "prensa",
+    "translation": "press",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 888,
+    "article": "",
+    "word": "caminar",
+    "translation": "to walk",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 889,
+    "article": "la",
+    "word": "televisión",
+    "translation": "television",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 890,
+    "article": "",
+    "word": "coger",
+    "translation": "to grab",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 891,
+    "article": "la",
+    "word": "posibilidad",
+    "translation": "possibility",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 892,
+    "article": "el",
+    "word": "asiento",
+    "translation": "seat",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 893,
+    "article": "",
+    "word": "herir",
+    "translation": "to hurt",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 894,
+    "article": "",
+    "word": "seguramente",
+    "translation": "surely",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 895,
+    "article": "el",
+    "word": "proyecto",
+    "translation": "project",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 896,
+    "article": "la",
+    "word": "pared",
+    "translation": "wall",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 897,
+    "article": "el",
+    "word": "sospechoso",
+    "translation": "suspect",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 898,
+    "article": "la",
+    "word": "naturaleza",
+    "translation": "nature",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 899,
+    "article": "la",
+    "word": "silla",
+    "translation": "chair",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 900,
+    "article": "",
+    "word": "arreglar",
+    "translation": "to fix",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 901,
+    "article": "",
+    "word": "obtener",
+    "translation": "to obtain",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 902,
+    "article": "la",
+    "word": "señoría",
+    "translation": "Your Honor",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 903,
+    "article": "la",
+    "word": "cantidad",
+    "translation": "quantity",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 904,
+    "article": "el",
+    "word": "papa",
+    "translation": "Pope",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 905,
+    "article": "",
+    "word": "llorar",
+    "translation": "to cry",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 906,
+    "article": "",
+    "word": "familiar",
+    "translation": "family",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 907,
+    "article": "el",
+    "word": "desastre",
+    "translation": "disaster",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 908,
+    "article": "la",
+    "word": "política",
+    "translation": "politics",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 909,
+    "article": "",
+    "word": "nosotras",
+    "translation": "we (feminine)",
+    "partOfSpeech": "pronoun"
+  },
+  {
+    "rank": 910,
+    "article": "la",
+    "word": "enfermedad",
+    "translation": "illness",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 911,
+    "article": "el",
+    "word": "colega",
+    "translation": "colleague",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 912,
+    "article": "el",
+    "word": "príncipe",
+    "translation": "prince",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 913,
+    "article": "",
+    "word": "verde",
+    "translation": "green",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 914,
+    "article": "",
+    "word": "nervioso",
+    "translation": "nervous",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 915,
+    "article": "el",
+    "word": "inspector",
+    "translation": "inspector",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 916,
+    "article": "",
+    "word": "servir",
+    "translation": "to serve",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 917,
+    "article": "la",
+    "word": "playa",
+    "translation": "beach",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 918,
+    "article": "",
+    "word": "cantar",
+    "translation": "to sing",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 919,
+    "article": "la",
+    "word": "velocidad",
+    "translation": "speed",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 920,
+    "article": "",
+    "word": "total",
+    "translation": "total",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 921,
+    "article": "el",
+    "word": "cabello",
+    "translation": "hair",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 922,
+    "article": "",
+    "word": "suficientemente",
+    "translation": "sufficiently",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 923,
+    "article": "la",
+    "word": "huella",
+    "translation": "trace",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 924,
+    "article": "la",
+    "word": "unidad",
+    "translation": "unit",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 925,
+    "article": "el",
+    "word": "cuchillo",
+    "translation": "knife",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 926,
+    "article": "la",
+    "word": "tontería",
+    "translation": "nonsense",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 927,
+    "article": "la",
+    "word": "emergencia",
+    "translation": "emergency",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 928,
+    "article": "el",
+    "word": "robo",
+    "translation": "robbery",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 929,
+    "article": "",
+    "word": "permitir",
+    "translation": "to permit",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 930,
+    "article": "el",
+    "word": "parque",
+    "translation": "park",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 931,
+    "article": "",
+    "word": "roto",
+    "translation": "broken",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 932,
+    "article": "la",
+    "word": "serie",
+    "translation": "series",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 933,
+    "article": "la",
+    "word": "evidencia",
+    "translation": "evidence",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 934,
+    "article": "la",
+    "word": "botella",
+    "translation": "bottle",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 935,
+    "article": "el",
+    "word": "viento",
+    "translation": "wind",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 936,
+    "article": "el",
+    "word": "mando",
+    "translation": "command",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 937,
+    "article": "el",
+    "word": "apoyo",
+    "translation": "support",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 938,
+    "article": "la",
+    "word": "bala",
+    "translation": "bullet",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 939,
+    "article": "el",
+    "word": "tiro",
+    "translation": "shot",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 940,
+    "article": "la",
+    "word": "época",
+    "translation": "era",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 941,
+    "article": "el",
+    "word": "puente",
+    "translation": "bridge",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 942,
+    "article": "la",
+    "word": "distancia",
+    "translation": "distance",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 943,
+    "article": "",
+    "word": "desear",
+    "translation": "to wish",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 944,
+    "article": "",
+    "word": "pelear",
+    "translation": "to fight",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 945,
+    "article": "",
+    "word": "echar",
+    "translation": "to throw",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 946,
+    "article": "el",
+    "word": "descanso",
+    "translation": "break",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 947,
+    "article": "la",
+    "word": "área",
+    "translation": "area",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 948,
+    "article": "",
+    "word": "orgulloso",
+    "translation": "proud",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 949,
+    "article": "el",
+    "word": "dato",
+    "translation": "data",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 950,
+    "article": "el",
+    "word": "espectáculo",
+    "translation": "show",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 951,
+    "article": "la",
+    "word": "magia",
+    "translation": "magic",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 952,
+    "article": "",
+    "word": "nacional",
+    "translation": "national",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 953,
+    "article": "el",
+    "word": "universo",
+    "translation": "universe",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 954,
+    "article": "la",
+    "word": "nariz",
+    "translation": "nose",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 955,
+    "article": "la",
+    "word": "vergüenza",
+    "translation": "shame",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 956,
+    "article": "el",
+    "word": "monstruo",
+    "translation": "monster",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 957,
+    "article": "la",
+    "word": "princesa",
+    "translation": "princess",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 958,
+    "article": "el",
+    "word": "autobús",
+    "translation": "bus",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 959,
+    "article": "",
+    "word": "cuidar",
+    "translation": "to take care of",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 960,
+    "article": "el",
+    "word": "huevo",
+    "translation": "egg",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 961,
+    "article": "el",
+    "word": "paseo",
+    "translation": "walk",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 962,
+    "article": "el",
+    "word": "detalle",
+    "translation": "detail",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 963,
+    "article": "la",
+    "word": "belleza",
+    "translation": "beauty",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 964,
+    "article": "",
+    "word": "abierto",
+    "translation": "open",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 965,
+    "article": "",
+    "word": "enviar",
+    "translation": "to send",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 966,
+    "article": "el",
+    "word": "ministro",
+    "translation": "minister",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 967,
+    "article": "",
+    "word": "conducir",
+    "translation": "to drive",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 968,
+    "article": "",
+    "word": "aceptar",
+    "translation": "to accept",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 969,
+    "article": "el",
+    "word": "contrato",
+    "translation": "contract",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 970,
+    "article": "el",
+    "word": "viernes",
+    "translation": "Friday",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 971,
+    "article": "el",
+    "word": "hecho",
+    "translation": "fact",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 972,
+    "article": "la",
+    "word": "sociedad",
+    "translation": "society",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 973,
+    "article": "la",
+    "word": "carga",
+    "translation": "load",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 974,
+    "article": "",
+    "word": "presente",
+    "translation": "present",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 975,
+    "article": "el",
+    "word": "uso",
+    "translation": "use",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 976,
+    "article": "el",
+    "word": "dedo",
+    "translation": "finger",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 977,
+    "article": "la",
+    "word": "oferta",
+    "translation": "offer",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 978,
+    "article": "",
+    "word": "proteger",
+    "translation": "to protect",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 979,
+    "article": "",
+    "word": "recibir",
+    "translation": "to receive",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 980,
+    "article": "",
+    "word": "agradecer",
+    "translation": "to thank",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 981,
+    "article": "",
+    "word": "robar",
+    "translation": "to steal",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 982,
+    "article": "",
+    "word": "enamorado",
+    "translation": "in love",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 983,
+    "article": "el",
+    "word": "oeste",
+    "translation": "west",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 984,
+    "article": "la",
+    "word": "herida",
+    "translation": "wound",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 985,
+    "article": "",
+    "word": "despacio",
+    "translation": "slowly",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 986,
+    "article": "",
+    "word": "directamente",
+    "translation": "directly",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 987,
+    "article": "",
+    "word": "inmediato",
+    "translation": "immediate",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 988,
+    "article": "el",
+    "word": "profesional",
+    "translation": "professional",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 989,
+    "article": "",
+    "word": "oscuro",
+    "translation": "dark",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 990,
+    "article": "el",
+    "word": "mercado",
+    "translation": "market",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 991,
+    "article": "el",
+    "word": "cerdo",
+    "translation": "pig",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 992,
+    "article": "el",
+    "word": "líder",
+    "translation": "leader",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 993,
+    "article": "el",
+    "word": "jurado",
+    "translation": "jury",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 994,
+    "article": "",
+    "word": "acordar",
+    "translation": "to agree",
+    "partOfSpeech": "verb"
+  },
+  {
+    "rank": 995,
+    "article": "",
+    "word": "desaparecido",
+    "translation": "missing",
+    "partOfSpeech": "adjective"
+  },
+  {
+    "rank": 996,
+    "article": "",
+    "word": "últimamente",
+    "translation": "lately",
+    "partOfSpeech": "adverb"
+  },
+  {
+    "rank": 997,
+    "article": "la",
+    "word": "piedra",
+    "translation": "stone",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 998,
+    "article": "la",
+    "word": "intención",
+    "translation": "intention",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 999,
+    "article": "el",
+    "word": "humor",
+    "translation": "humor",
+    "partOfSpeech": "noun"
+  },
+  {
+    "rank": 1000,
+    "article": "el",
+    "word": "ángel",
+    "translation": "angel",
+    "partOfSpeech": "noun"
+  }
+]
