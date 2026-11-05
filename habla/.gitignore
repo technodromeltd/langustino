@@ -4,3 +4,5 @@ server/data/*.db
 __pycache__/
 client/node_modules/
 client/dist/
+server/scripts/eval_last.json
+.env

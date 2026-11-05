@@ -23,10 +23,8 @@ def _score(word: str) -> tuple[float, float]:
     return zipf_frequency(w, "en"), zipf_frequency(w, "es")
 
 
-def english_spans(text: str, whole_utterance_english: bool = False) -> list[str]:
+def english_spans(text: str) -> list[str]:
     words = WORD.findall(text)
-    if whole_utterance_english:
-        return [" ".join(words)] if words else []
     spans: list[str] = []
     cur: list[str] = []
     for w in words:

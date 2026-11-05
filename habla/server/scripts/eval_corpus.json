@@ -1,0 +1,16 @@
+[
+  {"text": "Yo quiero un cerveza", "lesson": "free", "expect_right": "una cerveza", "kind": "error"},
+  {"text": "Sí, yo gusta comer comida española", "lesson": "free", "expect_right": "me gusta", "kind": "error"},
+  {"text": "No tengo hijo", "lesson": "free", "expect_right": "hijos", "kind": "error"},
+  {"text": "Tengo dos hermano", "lesson": "free", "expect_right": "dos hermanos", "kind": "error"},
+  {"text": "Mi ciudad es muy frío en invierno", "lesson": "free", "expect_right": "fría", "kind": "error"},
+  {"text": "Ayer yo va a la playa con mi amiga", "lesson": "free", "expect_right": "fui", "kind": "error"},
+  {"text": "Yo no saber cocinar paella", "lesson": "free", "expect_right": "sé", "kind": "error"},
+  {"text": "Yo soy cansado hoy", "lesson": "free", "expect_right": "estoy cansado", "kind": "error"},
+  {"text": "Soy de Finland", "lesson": "free", "expect_right": "Finlandia", "kind": "english"},
+  {"text": "Quiero un coffee con milk", "lesson": "free", "expect_right": "leche", "kind": "english"},
+  {"text": "Mi madre es muy simpática y trabaja en un hospital.", "lesson": "free", "expect_right": null, "kind": "correct"},
+  {"text": "Quiero un café con leche, por favor.", "lesson": "free", "expect_right": null, "kind": "correct"},
+  {"text": "Vivo en Helsinki con mi familia.", "lesson": "free", "expect_right": null, "kind": "correct"},
+  {"text": "Me gusta cocinar los domingos.", "lesson": "free", "expect_right": null, "kind": "correct"}
+]

@@ -5,15 +5,47 @@
     "title_es": "Presentarte",
     "goal": "Say your name, where you are from, where you live and what you do.",
     "scenario": "You just met the learner at a language exchange (intercambio) in a café in Madrid. You are curious about them.",
-    "words": ["llamar", "ser", "de", "vivir", "trabajar", "país", "ciudad", "nombre", "hablar"]
+    "words": ["llamar: to be called (me llamo)", "nombre", "vivir", "trabajar", "país", "ciudad", "hablar", "conocer: to meet", "gente", "trabajo", "edad", "inglés"],
+    "themes": ["work_school"],
+    "examples": {
+      "llamar": ["Me llamo Eero.", "My name is Eero."],
+      "nombre": ["¿Cuál es tu nombre?", "What is your name?"],
+      "vivir": ["Vivo en Helsinki.", "I live in Helsinki."],
+      "trabajar": ["Trabajo en una oficina.", "I work in an office."],
+      "país": ["Mi país es Finlandia.", "My country is Finland."],
+      "ciudad": ["Mi ciudad es pequeña.", "My city is small."],
+      "hablar": ["Hablo un poco de español.", "I speak a little Spanish."],
+      "conocer": ["Encantado de conocerte.", "Nice to meet you."],
+      "gente": ["La gente aquí es muy amable.", "People here are very kind."],
+      "trabajo": ["Me gusta mi trabajo.", "I like my job."],
+      "edad": ["¿Qué edad tienes?", "How old are you?"],
+      "inglés": ["Hablo inglés y finlandés.", "I speak English and Finnish."]
+    }
   },
   {
     "id": "cafe",
     "title": "At the café",
     "title_es": "En el café",
     "goal": "Order something to drink and eat, ask the price, ask for the bill.",
-    "scenario": "You are a friendly waiter (camarero) at a small café in Sevilla. The learner is the customer. Stay in the role.",
-    "words": ["querer", "café", "agua", "pedir", "cuánto", "cuenta", "favor", "comer", "beber", "pan"]
+    "scenario": "You are a friendly waitress (camarera) at a small café in Sevilla. The learner is the customer. Stay in the role.",
+    "words": ["querer", "pedir: to order", "cuenta: the bill", "agua", "café", "pagar", "comida", "beber", "mesa", "precio", "pan", "leche", "cerveza", "carne"],
+    "themes": ["food_drink"],
+    "examples": {
+      "querer": ["Quiero un té, por favor.", "I'd like a tea, please."],
+      "pedir": ["Quiero pedir un café.", "I want to order a coffee."],
+      "cuenta": ["La cuenta, por favor.", "The bill, please."],
+      "agua": ["Un agua sin gas, por favor.", "A still water, please."],
+      "café": ["Un café solo, por favor.", "A black coffee, please."],
+      "pagar": ["¿Puedo pagar con tarjeta?", "Can I pay by card?"],
+      "comida": ["La comida está muy rica.", "The food is delicious."],
+      "beber": ["Quiero beber algo frío.", "I want to drink something cold."],
+      "mesa": ["Una mesa para dos, por favor.", "A table for two, please."],
+      "precio": ["¿Cuál es el precio?", "What is the price?"],
+      "pan": ["¿Me trae más pan, por favor?", "Could you bring me more bread, please?"],
+      "leche": ["Un café con leche, por favor.", "A coffee with milk, please."],
+      "cerveza": ["Una cerveza, por favor.", "A beer, please."],
+      "carne": ["No como carne.", "I don't eat meat."]
+    }
   },
   {
     "id": "day",
@@ -21,7 +53,25 @@
     "title_es": "Tu día",
     "goal": "Describe a normal day: when you get up, eat, work and what you do in the evening.",
     "scenario": "You and the learner are friends chatting about your daily routines.",
-    "words": ["mañana", "tarde", "noche", "comer", "trabajar", "casa", "hora", "siempre", "después"]
+    "words": ["día", "mañana: morning", "tarde", "noche", "hora", "siempre", "después", "antes", "salir", "volver", "dormir", "cenar", "empezar", "terminar", "temprano"],
+    "themes": ["daily_actions", "time_calendar"],
+    "examples": {
+      "día": ["Mi día empieza a las siete.", "My day starts at seven."],
+      "mañana": ["Por la mañana bebo café.", "In the morning I drink coffee."],
+      "tarde": ["Por la tarde trabajo en casa.", "In the afternoon I work at home."],
+      "noche": ["Por la noche veo la tele.", "In the evening I watch TV."],
+      "hora": ["¿A qué hora cenas?", "What time do you have dinner?"],
+      "siempre": ["Siempre desayuno en casa.", "I always have breakfast at home."],
+      "después": ["Después del trabajo, voy al gimnasio.", "After work, I go to the gym."],
+      "antes": ["Leo un poco antes de dormir.", "I read a little before bed."],
+      "salir": ["Salgo de casa a las ocho.", "I leave home at eight."],
+      "volver": ["Vuelvo a casa a las seis.", "I get back home at six."],
+      "dormir": ["Duermo ocho horas.", "I sleep eight hours."],
+      "cenar": ["Ceno a las nueve.", "I have dinner at nine."],
+      "empezar": ["Empiezo a trabajar a las nueve.", "I start work at nine."],
+      "terminar": ["Termino de trabajar a las cinco.", "I finish work at five."],
+      "temprano": ["Me levanto temprano.", "I get up early."]
+    }
   },
   {
     "id": "family",
@@ -29,7 +79,26 @@
     "title_es": "Familia y amigos",
     "goal": "Talk about the people in your life: family members, friends, what they are like.",
     "scenario": "You are showing each other photos on your phones and talking about family and friends.",
-    "words": ["familia", "padre", "madre", "hermano", "hijo", "tener", "amigo", "mayor", "pequeño"]
+    "words": ["familia", "padre", "madre", "hermano", "hermana", "hijo", "hija", "tener", "amigo", "mayor: older", "pequeño", "esposa", "marido", "abuelo", "niño", "joven"],
+    "themes": ["family_people"],
+    "examples": {
+      "familia": ["Mi familia es grande.", "My family is big."],
+      "padre": ["Mi padre es profesor.", "My father is a teacher."],
+      "madre": ["Mi madre vive en Tampere.", "My mother lives in Tampere."],
+      "hermano": ["Tengo un hermano.", "I have a brother."],
+      "hermana": ["Mi hermana es muy simpática.", "My sister is very nice."],
+      "hijo": ["Mi hijo tiene cinco años.", "My son is five years old."],
+      "hija": ["Tengo una hija pequeña.", "I have a little daughter."],
+      "tener": ["Tengo dos hermanas.", "I have two sisters."],
+      "amigo": ["Él es mi mejor amigo.", "He is my best friend."],
+      "mayor": ["Mi hermano mayor vive en Madrid.", "My older brother lives in Madrid."],
+      "pequeño": ["Mi hermana pequeña tiene diez años.", "My little sister is ten years old."],
+      "esposa": ["Mi esposa es de Finlandia.", "My wife is from Finland."],
+      "marido": ["¿Cómo se llama tu marido?", "What is your husband's name?"],
+      "abuelo": ["Mi abuelo tiene ochenta años.", "My grandfather is eighty years old."],
+      "niño": ["Tengo dos niños pequeños.", "I have two young children."],
+      "joven": ["Mi madre es muy joven.", "My mother is very young."]
+    }
   },
   {
     "id": "weekend",
@@ -37,14 +106,31 @@
     "title_es": "El fin de semana",
     "goal": "Tell what you did last weekend using the past tense (fui, hice, vi, comí).",
     "scenario": "It is Monday morning. You ask the learner about their weekend and share yours.",
-    "words": ["ayer", "ir", "hacer", "ver", "semana", "fin", "amigo", "gustar", "comprar"]
+    "words": ["ir", "hacer", "ver", "salir", "ayer", "comprar", "película", "fiesta", "amigo", "viaje", "playa", "bailar", "cine", "gustar"],
+    "themes": ["leisure_sports"],
+    "examples": {
+      "ir": ["El sábado fui al mercado.", "On Saturday I went to the market."],
+      "hacer": ["No hice nada especial.", "I didn't do anything special."],
+      "ver": ["Ayer vi a mis padres.", "Yesterday I saw my parents."],
+      "salir": ["El viernes salí con amigos.", "On Friday I went out with friends."],
+      "ayer": ["Ayer comí con mi familia.", "Yesterday I had lunch with my family."],
+      "comprar": ["Compré ropa nueva.", "I bought new clothes."],
+      "película": ["Vi una película muy buena.", "I saw a really good film."],
+      "fiesta": ["Fui a una fiesta el sábado.", "I went to a party on Saturday."],
+      "amigo": ["Cené con un amigo.", "I had dinner with a friend."],
+      "viaje": ["Hice un viaje corto.", "I took a short trip."],
+      "playa": ["El domingo fui a la playa.", "On Sunday I went to the beach."],
+      "bailar": ["Bailé toda la noche.", "I danced all night."],
+      "cine": ["Fui al cine el domingo.", "I went to the cinema on Sunday."],
+      "gustar": ["Me gustó mucho la película.", "I really liked the film."]
+    }
   },
   {
     "id": "free",
     "title": "Free conversation",
     "title_es": "Conversación libre",
-    "goal": "Talk about anything you like — Sofía follows your lead.",
+    "goal": "Talk about anything you like. Sofía slips in the most common words you haven't learned yet.",
     "scenario": "A relaxed chat. Follow the learner's interests and ask about their life.",
-    "words": []
+    "auto_words": true
   }
 ]
