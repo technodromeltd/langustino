@@ -69,7 +69,7 @@ CHAT_TIP_SCHEMA = {
     "required": [*CHAT_SCHEMA["required"], "tip_es", "tip_en"],
 }
 TIP_RULES = """Two more JSON fields, written after "reply" (shown on screen as a tip, never spoken):
-- "tip_es": one natural sample answer the learner could give to the question at the end of your reply, in the first person, 4–10 words, at their level, true to what they told you so far where possible. If the lesson step names a word to use, use it when it fits the answer naturally. "" if your reply has no question.
+- "tip_es": one natural sample answer the learner could give to the question at the end of your reply, in the first person, 4–10 words, at their level, true to what they told you so far where possible. If the lesson step names a word or phrase to use, use it when it fits the answer naturally. "" if your reply has no question.
 - "tip_en": its English translation ("" if tip_es is "")."""
 TRANSLATE_SCHEMA = {"type": "object", "properties": {"reply_en": {"type": "string"}}, "required": ["reply_en"]}
 # Runaway guards: small models sometimes loop inside a JSON string until the context is full (minutes).

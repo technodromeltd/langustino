@@ -4,6 +4,7 @@ import { AttemptButton, ResultLine } from "./AttemptView";
 import { Review } from "./Review";
 import { SettingsPanel } from "./SettingsPanel";
 import { Words } from "./Words";
+import { ScenarioSheet, Scenarios } from "./Scenarios";
 import { listLabel, MISTAKE_LABEL } from "./types";
 import type {
   Attempt,
@@ -12,6 +13,7 @@ import type {
   Attempts,
   Lesson,
   LessonState,
+  Scenario,
   Msg,
   Phase,
   Progress,
@@ -483,6 +485,13 @@ export function App() {
         if (soundsRef.current) chime();
         break;
       }
+      case "phrase_used": {
+        const ps: string[] = m.phrases ?? [];
+        if (!ps.length) break;
+        flash(`✓ ¡Dijiste ${ps.map((p) => `«${p}»`).join(" y ")}!`);
+        if (soundsRef.current) chime();
+        break;
+      }
       case "introduce":
         lastTutorId.current = m.id;
         updateTutor(m.id, (t) => ({ ...t, words: m.words }));
@@ -715,7 +724,7 @@ export function App() {
     if (!pressWasRecording.current && Date.now() - pressAt.current > HOLD_MS) stopTalk();
   };
 
-  const startLesson = (l: Lesson) => {
+  const startLesson = (l: Lesson, mode: "easy" | "real" = "easy") => {
     void ensureMic(); // ask for mic permission now, but don't block the lesson on the prompt
     player.stop();
     cancelAttempt();
@@ -738,7 +747,7 @@ export function App() {
     setAttemptResults({});
     setLesson(l);
     setScreen("lesson");
-    send({ type: "start", lesson: l.id });
+    send({ type: "start", lesson: l.id, mode });
   };
 
   const finishLesson = () => {
@@ -902,6 +911,8 @@ export function App() {
               ↩ Continue “{lesson.title_es}”
             </button>
           )}
+          <Scenarios connected={connected} speak={speak} onStart={(s, mode) => startLesson(s, mode)} />
+          <h3 className="section-title">Lessons</h3>
           <div className="lesson-grid">
             {lessons.map((l) => {
               const done = progress?.lessons?.[l.id];
@@ -936,6 +947,12 @@ export function App() {
 
   const sideContent = (
     <>
+      {lesson?.custom && (
+        <div className="card">
+          <h3>Cheat sheet</h3>
+          <ScenarioSheet s={lesson as Scenario} speak={speak} connected={connected} />
+        </div>
+      )}
       <div className="card">
         <h3>This session</h3>
         <div className="stats">
@@ -1564,6 +1581,8 @@ function LessonStrip({
 }) {
   const current = st.phase === "free" ? PHASES.length : PHASES.findIndex((p) => p.id === st.phase);
   const shown = st.targets.filter((t) => t.state !== "known" || t.kind === "new");
+  const phrases = st.phrases ?? [];
+  const phrasesUsed = phrases.filter((p) => p.used).length;
   return (
     <div className="strip">
       <div className="steps">
@@ -1573,7 +1592,11 @@ function LessonStrip({
           </span>
         ))}
         <span className="spacer" />
-        {st.goal > 0 && (
+        {phrases.length > 0 ? (
+          <span className={`goal ${phrasesUsed >= (st.phrase_goal ?? 0) ? "met" : ""}`}>
+            {phrasesUsed}/{st.phrase_goal} phrases said
+          </span>
+        ) : st.goal > 0 && (
           <span className={`goal ${st.used >= st.goal ? "met" : ""}`}>
             {st.used}/{st.goal} words used
           </span>
@@ -1584,6 +1607,16 @@ function LessonStrip({
           </button>
         )}
       </div>
+      {phrases.length > 0 && (
+        <div className="targets phrases">
+          {phrases.map((p) => (
+            <span key={p.es} className={`target phrase ${p.used ? "used" : "pending"}`} title={p.en}>
+              <i />
+              {p.es}
+            </span>
+          ))}
+        </div>
+      )}
       {shown.length > 0 && (
         <div className="targets">
           {shown.map((t) => (
@@ -1609,11 +1642,26 @@ function RecapCard({ r, onNext }: { r: Recap; onNext: () => void }) {
   return (
     <div className="recap">
       <div className="recap-head">
-        <h2>{r.used >= r.goal && r.goal > 0 ? "¡Lección completada!" : "Fin de la lección"}</h2>
+        <h2>{(r.phrases?.length ? r.phrases.filter((p) => p.used).length >= Math.ceil(r.phrases.length * 0.6) : r.used >= r.goal && r.goal > 0) ? "¡Lección completada!" : "Fin de la lección"}</h2>
         <span className="muted small">
           {r.turns} turns · {r.minutes} min · {r.said_ok} different words said right
         </span>
       </div>
+      {(r.phrases?.length ?? 0) > 0 && (
+        <>
+          <h4>Your phrases</h4>
+          <ul className="recap-words">
+            {r.phrases!.map((p) => (
+              <li key={p.es} className={p.used ? "used" : "pending"}>
+                <i />
+                <b>{p.es}</b> <span>{p.en}</span>
+                <small>{p.used ? "said it" : "practise this one"}</small>
+              </li>
+            ))}
+          </ul>
+          <p className="muted small">The full cheat sheet stays on the home screen under “Practise a real situation”.</p>
+        </>
+      )}
       <h4>Today's words</h4>
       <ul className="recap-words">
         {learned.map((t) => (

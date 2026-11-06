@@ -53,6 +53,7 @@ HISTORY_TURNS_CLOUD = 80
 def history_turns() -> int:
     return HISTORY_TURNS_CLOUD if LLM_BACKEND == "openai" else HISTORY_TURNS
 ENGLISH_VOICE = os.environ.get("HABLA_ENGLISH_VOICE", "Samantha")  # macOS voice for the teacher's English answers
+CITY = os.environ.get("HABLA_CITY", "Sevilla")  # where the learner lives: scenarios use its everyday Spanish
 L1 = os.environ.get("HABLA_L1", "Finnish")  # the learner's first language, for fix explanations
 
 

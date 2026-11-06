@@ -72,11 +72,12 @@ from difflib import SequenceMatcher
 from typing import Any
 
 import numpy as np
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from . import config
+from . import scenario
 from .english import english_spans
 from .fixes import build_mistakes, clean_mistakes, diff_fixes
 from .stt import STT
@@ -412,11 +413,13 @@ class Session:
             await self.send(type="status", state="idle")
 
     # ---------- turns ----------
-    async def start(self, lesson_id: str) -> None:
+    async def start(self, lesson_id: str, mode: str = "easy") -> None:
         self.leaving = False
         self.last_commit, self.pending_heard = None, {}
         self.open_turn = None
-        self.lesson = LESSONS.get(lesson_id, LESSONS["intro"])
+        custom = scenario.get(E.vocab.db, lesson_id) if lesson_id.startswith("sc-") else None
+        self.mode = "real" if mode == "real" else "easy"
+        self.lesson = scenario.for_run(custom, self.mode) if custom else LESSONS.get(lesson_id, LESSONS["intro"])
         self.history = []
         self.flush_unanswered()
         self.fixes_shown = []
@@ -664,6 +667,9 @@ class Session:
             said = set() if clarify else {
                 t.lemma for t in E.vocab.tokens(text, prefer=prefer)
                 if t.in_list and t.text.lower() not in en_words and t.text.lower() not in skip}
+            if not clarify and (got := self.director.observe_text(text)):  # scenario phrases said on their own
+                log.info("turn %s: phrases said: %s", turn_id, "; ".join(got))
+                self.side(self.send(type="phrase_used", phrases=got))
             self.director.observe(said, echoed=echo, continuation=continuation is not None and continuation.observed)
             o.observed = True
             recap = self.director.phase == "recap"
@@ -1161,6 +1167,9 @@ class Session:
                     if rec.recap:
                         summary = d.recap()
                         E.vocab.save_lesson(sid, summary)
+                        if d.lesson.get("custom"):
+                            scenario.update_result(E.vocab.db, d.lesson["id"], d.lesson.get("mode", "easy"),
+                                                   summary["phrases"])
                         # The recap's teacher card: built now, so it includes this last turn's check (the earlier
                         # turns' analyses ran before this one, under the lock).
                         recap_coach = d.recap_text()
@@ -1259,7 +1268,7 @@ async def ws_endpoint(ws: WebSocket) -> None:
             if kind == "start":
                 s.leaving = True
                 await s.cancel()
-                s.run(s.start(data.get("lesson", "intro")))
+                s.run(s.start(str(data.get("lesson") or "intro"), str(data.get("mode") or "easy")))
             elif kind == "text" and data.get("text", "").strip():
                 await s.cancel()
                 s.run(s.learner_said(data["text"].strip(), "es", time.time()))
@@ -1310,6 +1319,34 @@ async def ws_endpoint(ws: WebSocket) -> None:
 @app.get("/api/progress")
 async def progress() -> JSONResponse:
     return JSONResponse(progress_payload())
+
+
+@app.get("/api/scenarios")
+async def scenarios() -> JSONResponse:
+    return JSONResponse(scenario.load_all(E.vocab.db))
+
+
+@app.post("/api/scenarios")
+async def new_scenario(req: Request) -> JSONResponse:
+    prompt = str((await req.json()).get("prompt") or "").strip()
+    if not prompt:
+        return JSONResponse({"error": "Describe the situation first."}, status_code=400)
+    try:
+        lesson = await scenario.generate(E.tutor.llm, prompt, current_settings()["level"], E.vocab)
+    except Exception as e:  # noqa: BLE001 (shown to the learner)
+        log.warning("scenario generation failed: %s", e)
+        return JSONResponse({"error": "Couldn't build that scenario — try again or describe it differently."},
+                            status_code=502)
+    scenario.save(E.vocab.db, lesson)
+    log.info("scenario %s: %s (%d phrases, %d words)", lesson["id"], lesson["title_es"], len(lesson["say"]),
+             len(lesson["words"]))
+    return JSONResponse(lesson)
+
+
+@app.delete("/api/scenarios/{sid}")
+async def delete_scenario(sid: str) -> JSONResponse:
+    scenario.delete(E.vocab.db, sid)
+    return JSONResponse({"ok": True})
 
 
 @app.get("/api/review")

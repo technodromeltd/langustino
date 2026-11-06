@@ -32,6 +32,7 @@ import unicodedata
 from dataclasses import asdict, dataclass
 from typing import NamedTuple
 
+from .practice import grade
 from .vocab import EL_FEMININE, Vocab
 
 NEW_PER_LESSON = 5
@@ -39,6 +40,8 @@ MAX_REVIEW = 3
 INTRO_PER_TURN = 1  # new words per introduce turn (the intro -> elicit alternation is built around one)
 MAX_PRACTICE_TURNS = 14
 MAX_LESSON_TURNS = 20  # hard cap: the recap comes at this learner turn, whatever the phase
+PHRASE_GOAL_RATIO = 0.6  # scenario lessons: say 5 of 8 phrases on your own
+PHRASE_MATCH = 0.75  # share of a phrase's words said (in order) for it to count
 GOAL_RATIO = 0.8  # use 4 of 5 new words on your own to finish the lesson
 LESSON_PHASES = ("warmup", "introduce", "practice")
 GOODBYES = ("adios", "hasta luego", "hasta pronto", "nos vemos")  # accent-stripped, lowercase
@@ -70,6 +73,16 @@ class Target:
 
     def quoted(self) -> str:
         return f"«{self.display}» ({self.english})"
+
+
+def phrase_said(phrase: str, text: str) -> bool:
+    """The learner said this phrase (loosely). Courtesy words don't count toward it ("Medio kilo, por favor" is not
+    said by "un kilo de cerezas, por favor"); a short phrase needs all of its words, a longer one most."""
+    core = re.sub(r"\b(por favor|y)\b", " ", phrase, flags=re.I)
+    if len(re.findall(r"\w+", core)) == 0:
+        core = phrase
+    n = len(re.findall(r"\w+", core))
+    return grade(core, text)["score"] >= (1.0 if n <= 3 else PHRASE_MATCH)
 
 
 class Step(NamedTuple):
@@ -109,6 +122,9 @@ class Director:
         self._intro_now: list[Target] = []  # introduced by the latest instruction: saw_reply checks them
         self.no_goodbye = False  # Sofía said goodbye before the recap: the next note says the scene goes on
         self._pacing: tuple | None = None  # pacing state before the latest learner turn (see observe)
+        # Scenario lessons: phrases the learner should say on their own ({es, en, used, elicited}).
+        self.phrases: list[dict] = [{"es": p["es"], "en": p["en"], "used": False, "elicited": 0}
+                                    for p in lesson.get("say") or []]
 
     # ---------- target selection ----------
     def _target(self, entry: str, kind: str) -> Target | None:
@@ -240,8 +256,27 @@ class Director:
         for t in self.targets:
             t.elicited = elicited.get(t.lemma, t.elicited)
 
+    @property
+    def phrase_goal(self) -> int:
+        return math.ceil(PHRASE_GOAL_RATIO * len(self.phrases))
+
+    def phrases_used(self) -> int:
+        return sum(1 for p in self.phrases if p["used"])
+
+    def observe_text(self, text: str) -> list[str]:
+        """Scenario phrases the learner just said (loosely: most of the phrase's words, in order). Returns them."""
+        out = []
+        for p in self.phrases:
+            if not p["used"] and phrase_said(p["es"], text):
+                p["used"] = True
+                out.append(p["es"])
+        return out  # call before observe(): its goal check then sees them
+
     def _goal_reached(self) -> bool:
-        """Enough new words used on their own, and every review word asked for at least once (or already used)."""
+        """Enough new words used on their own, and every review word asked for at least once (or already used).
+        A scenario lesson is about its phrases: enough of them said on their own."""
+        if self.phrases:
+            return self.phrases_used() >= max(self.phrase_goal, 1)
         new_ok = self.used_new() >= max(self.goal, 1) if self.new else True
         review_ok = all(t.elicited >= 1 or t.state in ("used", "known") for t in self.targets if t.kind == "review")
         return new_ok and review_ok
@@ -391,6 +426,13 @@ class Director:
         return Step(f"[Lesson step: when it fits the conversation, ask a question they could answer with "
                     f"{t.quoted()}.]", [], self._hint_coach(t) if t.elicited == 2 else "")
 
+    def _elicit_phrase(self, p: dict) -> Step:
+        p["elicited"] += 1
+        note = (f"[Lesson step: steer the scene so the learner would naturally need to say something like «{p['es']}» "
+                f"({p['en']}); don't say it for them. Following up on what they said comes first.]")
+        coach = self._once(f"Try: «{p['es']}» — {p['en']}") if p["elicited"] >= 2 else ""
+        return Step(note, [], coach)
+
     def _pick(self, open_: list[Target]) -> Target:
         """Practice elicitations alternate kinds: even picks prefer a review word, odd picks a new one (falling
         back to the other kind); the least-asked word of that kind first."""
@@ -419,10 +461,14 @@ class Director:
 
         if self.phase == "practice":
             open_ = [t for t in self.targets if t.state not in ("used", "known")]
-            if not open_ or self.phase_turns % 2 == 0:  # every other turn: just keep the conversation going
+            open_p = [p for p in self.phrases if not p["used"]]
+            if (not open_ and not open_p) or self.phase_turns % 2 == 0:  # every other turn: just keep the conversation going
                 return "continue", cont
             if pending := self._pending_new():  # a replacement for a word they knew, arrived during practice
                 return "introduce", self._introduce(pending[0])
+            if open_p and (not open_ or self.picks % 2 == 0):
+                self.picks += 1
+                return "elicit", self._elicit_phrase(min(open_p, key=lambda p: p["elicited"]))
             return "elicit", self._elicit(self._pick(open_))
 
         if self.phase == "recap":
@@ -443,6 +489,8 @@ class Director:
             "targets": [asdict(t) for t in self.targets],
             "goal": self.goal,
             "used": self.used_new(),
+            "phrases": [{"es": p["es"], "en": p["en"], "used": p["used"]} for p in self.phrases],
+            "phrase_goal": self.phrase_goal,
         }
 
     def recap(self) -> dict:
@@ -457,6 +505,7 @@ class Director:
             "goal": self.goal,
             "used": self.used_new(),
             "said_ok": len(self.said_ok),
+            "phrases": [{"es": p["es"], "en": p["en"], "used": p["used"]} for p in self.phrases],
             "turns": self.turn,
             "minutes": round((time.time() - self.started) / 60, 1),
             "mistakes": fixes,

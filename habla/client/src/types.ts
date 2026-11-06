@@ -1,4 +1,16 @@
-export type Lesson = { id: string; title: string; title_es: string; goal: string };
+export type Lesson = { id: string; title: string; title_es: string; goal: string; custom?: boolean };
+export type Phrase = { es: string; en: string; used?: boolean };
+export type Scenario = Lesson & {
+  custom: true;
+  prompt: string;
+  role: string;
+  setting: string;
+  say: Phrase[];
+  hear: Phrase[];
+  words: string[];
+  twists: string[];
+  runs?: { easy?: { at: number; used: string[] }; real?: { at: number; used: string[] } };
+};
 export type Mistake = { wrong: string; right: string; why: string; right_en?: string; type?: string };
 export type Teach = { english: string; spanish: string; lemma?: string; rank?: number | null };
 
@@ -14,7 +26,7 @@ export type Target = {
   elicited?: number; // times Sofía was told to ask for it
 };
 export type Phase = "warmup" | "introduce" | "practice" | "recap" | "free";
-export type LessonState = { phase: Phase; targets: Target[]; goal: number; used: number };
+export type LessonState = { phase: Phase; targets: Target[]; goal: number; used: number; phrases?: Phrase[]; phrase_goal?: number };
 export type Recap = {
   lesson: string;
   targets: Target[];
@@ -26,6 +38,7 @@ export type Recap = {
   mistakes: Mistake[];
   taught: Teach[];
   review_next: string[];
+  phrases?: Phrase[];
 };
 
 export type TutorMsg = {
